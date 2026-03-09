@@ -32,7 +32,7 @@
                     <span class="nav-ic"><i class="bi bi-grid"></i></span>
                     <span class="nav-text">Dashboard</span>
                 </a>
-                <a class="nav-item" href="#">
+                <a class="nav-item" href="my-projects.html">
                     <span class="nav-ic"><i class="bi bi-briefcase"></i></span>
                     <span class="nav-text">My Projects</span>
                 </a>
@@ -64,12 +64,13 @@
         </aside>
 
         <div class="app-main">
-            <header class="app-header">
+            <header class="app-header" data-active-page="dashboard">
                 <div class="header-left">
                     <button class="icon-btn mobile-menu-btn d-lg-none" type="button" aria-label="Menu" id="mobileMenuBtn">
                         <i class="bi bi-list"></i>
                         <i class="bi bi-x-lg"></i>
                     </button>
+
                     <div class="header-logos">
                         <img class="header-gov-logo" src="assets/images/govt-logo-dark.png" alt="Government logo">
                         <img class="header-ft-logo" src="assets/images/fasttrack-logo-dark.png" alt="FastTrack logo">
@@ -156,7 +157,7 @@
                                                         <div class="dash-sub">Apply Regulatory Clearances | Incentive / Service</div>
                                                     </div>
                                                 </div>
-                                                <a class="pill-btn" href="#">Click here</a>
+                                                <a class="pill-btn" href="my-projects.html">Click here</a>
                                             </div>
                                         </div>
 
@@ -195,7 +196,7 @@
                                                         <div class="dash-sub">View And Share Project Document</div>
                                                     </div>
                                                 </div>
-                                                <a class="pill-btn pill-muted" href="#">Coming Soon!</a>
+                                                <a class="pill-btn" href="#">Click here</a>
                                             </div>
                                         </div>
 
@@ -208,7 +209,7 @@
                                                         <div class="dash-sub">View Status and Progress of Application</div>
                                                     </div>
                                                 </div>
-                                                <a class="pill-btn pill-muted" href="#">Coming Soon!</a>
+                                                <a class="pill-btn" href="#">Click here</a>
                                             </div>
                                         </div>
                                     </div>
@@ -342,7 +343,7 @@
                                                                 <div class="dash-sub">Apply Regulatory Clearances | Incentive / Service</div>
                                                             </div>
                                                         </div>
-                                                        <a class="pill-btn" href="#">Click here</a>
+                                                        <a class="pill-btn" href="my-projects.html">Click here</a>
                                                     </div>
                                                 </div>
 
@@ -381,7 +382,7 @@
                                                                 <div class="dash-sub">View And Share Project Document</div>
                                                             </div>
                                                         </div>
-                                                        <a class="pill-btn pill-muted" href="#">Coming Soon!</a>
+                                                        <a class="pill-btn" href="#">Click here</a>
                                                     </div>
                                                 </div>
 
@@ -394,7 +395,7 @@
                                                                 <div class="dash-sub">View Status and Progress of Application</div>
                                                             </div>
                                                         </div>
-                                                        <a class="pill-btn pill-muted" href="#">Coming Soon!</a>
+                                                        <a class="pill-btn" href="#">Click here</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -551,7 +552,7 @@
                 </div>
                 <div class="modal-body p-0">
                     <video id="walkthroughVideo" class="walkthrough-video" controls preload="metadata">
-                        <source src="assets/images/walkthrough.mp4" type="video/mp4">
+                        <source src="https://pbindustries.gov.in/static/assets/video/Invest_Punjab.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -559,6 +560,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/shared-ui.js"></script>
     <script>
         (function () {
             var modalEl = document.getElementById('walkthroughModal');
@@ -580,17 +582,6 @@
                     if (videoEl.requestFullscreen) videoEl.requestFullscreen();
                 });
             }
-
-            var menuBtn = document.getElementById('mobileMenuBtn');
-            var backdrop = document.getElementById('sidebarBackdrop');
-            function closeSidebar() { document.body.classList.remove('sidebar-open'); }
-            function toggleSidebar() { document.body.classList.toggle('sidebar-open'); }
-
-            if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
-            if (backdrop) backdrop.addEventListener('click', closeSidebar);
-            window.addEventListener('resize', function () {
-                if (window.innerWidth >= 992) closeSidebar();
-            });
         })();
     </script>
 </body>

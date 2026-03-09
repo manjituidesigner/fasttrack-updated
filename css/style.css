@@ -222,7 +222,7 @@ body {
     max-width: 200px;
 }
 .header-logos img {
-    height: 52px;
+    height: 56px;
 }
 
 .header-gov-logo {
@@ -745,6 +745,9 @@ body.sidebar-open .sidebar-backdrop {
   padding: 10px 12px;
   background: #ffffff;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .video-modal-title {
@@ -757,6 +760,7 @@ body.sidebar-open .sidebar-backdrop {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: auto;
 }
 
 .video-modal-btn {
