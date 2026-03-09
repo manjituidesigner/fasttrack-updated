@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="app-shell">
+        <aside class="app-sidebar" aria-label="Sidebar">
+            <div class="sidebar-expand">
+                <button class="sidebar-expand-btn" type="button" aria-label="Expand sidebar">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+            <div class="sidebar-brand">
+                <img class="sidebar-gov-logo" src="assets/images/govt-logo-white.png" alt="Government logo">
+                <img class="sidebar-ft-logo" src="assets/images/fasttrack-logo-white.png" alt="FastTrack logo">
+            </div>
+
+            <nav class="sidebar-nav">
+                <a class="nav-item active" href="#">
+                    <span class="nav-ic"><i class="bi bi-grid"></i></span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-briefcase"></i></span>
+                    <span class="nav-text">My Projects</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-file-earmark-text"></i></span>
+                    <span class="nav-text">My Applications</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-currency-rupee"></i></span>
+                    <span class="nav-text">Fiscal Incentives</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-card-list"></i></span>
+                    <span class="nav-text">Fiscal Registrations</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-patch-check"></i></span>
+                    <span class="nav-text">Know your Approvals</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-person"></i></span>
+                    <span class="nav-text">My Account</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-box-arrow-right"></i></span>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <div class="app-main">
+            <header class="app-header">
+                <div class="header-left">
+                    <button class="icon-btn mobile-menu-btn d-lg-none" type="button" aria-label="Menu" id="mobileMenuBtn">
+                        <i class="bi bi-list"></i>
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                    <div class="header-logos">
+                        <img class="header-gov-logo" src="assets/images/govt-logo-dark.png" alt="Government logo">
+                        <img class="header-ft-logo" src="assets/images/fasttrack-logo-dark.png" alt="FastTrack logo">
+                    </div>
+                </div>
+
+                <div class="header-center">
+                    <div class="helpline">
+                        <div class="helpline-ic"><i class="fa-solid fa-headset"></i></div>
+                        <div class="helpline-txt">
+                            <div class="small text-muted fw-semibold">HELP LINE : 0172-4866999</div>
+                            <div class="small text-muted">9:00 AM TO 5:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <button class="icon-btn d-none d-lg-grid" type="button" aria-label="Theme">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button class="icon-btn shortcut-btn" type="button" aria-label="Shortcut" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shortcut-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-text"></i>Fill CAF</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-richtext"></i>Fill S-CAF</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-clock-history"></i>Applied Application</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-patch-check"></i>Issued Application</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-x-circle"></i>Rejected Application</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-counterclockwise"></i>Withdrawn Application</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-list-ul"></i>View Logs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="user-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="user-ic"><i class="fa-solid fa-user"></i></span>
+                            <span class="user-name">Welcome Ankit Kumar</span>
+                            <span class="user-caret"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end user-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-translate"></i>Change Language</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>My Account</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-key"></i>Change Password</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="app-body">
+                <main class="content-area">
+                    <div class="container-fluid px-3 px-lg-4">
+                        <div class="d-flex align-items-center justify-content-between py-3 page-head">
+                            <div class="page-title">Dashboard</div>
+                            <div class="breadcrumb-mini">Fasttrack Portal / <span class="fw-semibold">Dashboard</span></div>
+                        </div>
+
+                        <div class="desktop-layout d-none d-lg-block">
+                            <div class="row g-3">
+                                <div class="col-12 col-lg-9">
+                                    <div class="row g-4">
+                                        <div class="col-12 col-md-6 col-xl-4">
+                                            <div class="dash-card">
+                                                <div class="dash-card-top">
+                                                    <div class="dash-ic bg-soft-blue"><i class="fa-solid fa-sack-dollar"></i></div>
+                                                    <div class="dash-txt">
+                                                        <div class="dash-title">INVESTMENT PROJECT</div>
+                                                        <div class="dash-sub">Apply New Project / Expansion</div>
+                                                    </div>
+                                                </div>
+                                                <a class="pill-btn" href="#">Click here</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-4">
+                                            <div class="dash-card">
+                                                <div class="dash-card-top">
+                                                    <div class="dash-ic bg-soft-pink"><i class="fa-solid fa-clipboard-check"></i></div>
+                                                    <div class="dash-txt">
+                                                        <div class="dash-title">MANAGE PROJECT APPLICATIONS</div>
+                                                        <div class="dash-sub">Apply Regulatory Clearances | Incentive / Service</div>
+                                                    </div>
+                                                </div>
+                                                <a class="pill-btn" href="#">Click here</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-4">
+                                            <div class="dash-card">
+                                                <div class="dash-card-top">
+                                                    <div class="dash-ic bg-soft-amber"><i class="fa-regular fa-file-lines"></i></div>
+                                                    <div class="dash-txt">
+                                                        <div class="dash-title">MY APPLICATIONS</div>
+                                                        <div class="dash-sub">View And Share Project Document</div>
+                                                    </div>
+                                                </div>
+                                                <a class="pill-btn" href="#">Click here</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-4">
+                                            <div class="dash-card">
+                                                <div class="dash-card-top">
+                                                    <div class="dash-ic bg-soft-green"><i class="fa-regular fa-circle-check"></i></div>
+                                                    <div class="dash-txt">
+                                                        <div class="dash-title">KNOW YOUR APPROVALS</div>
+                                                        <div class="dash-sub">View Status and Progress of Application</div>
+                                                    </div>
+                                                </div>
+                                                <a class="pill-btn" href="#">Click here</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-4">
+                                            <div class="dash-card">
+                                                <div class="dash-card-top">
+                                                    <div class="dash-ic bg-soft-gray"><i class="fa-solid fa-vault"></i></div>
+                                                    <div class="dash-txt">
+                                                        <div class="dash-title">ENTITY VAULT</div>
+                                                        <div class="dash-sub">View And Share Project Document</div>
+                                                    </div>
+                                                </div>
+                                                <a class="pill-btn pill-muted" href="#">Coming Soon!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-xl-4">
+                                            <div class="dash-card">
+                                                <div class="dash-card-top">
+                                                    <div class="dash-ic bg-soft-blue"><i class="fa-solid fa-desktop"></i></div>
+                                                    <div class="dash-txt">
+                                                        <div class="dash-title">PROJECT DASHBOARD</div>
+                                                        <div class="dash-sub">View Status and Progress of Application</div>
+                                                    </div>
+                                                </div>
+                                                <a class="pill-btn pill-muted" href="#">Coming Soon!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 mt-1">
+                                        <div class="col-12 col-xl-6">
+                                            <div class="panel-card h-100">
+                                                <div class="panel-head">
+                                                    <div class="panel-title"><i class="fa-regular fa-bell me-2"></i>ACTION ALERTS</div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="d-flex flex-wrap gap-2">
+                                                        <a class="chip" href="#">Pending <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                                        <a class="chip" href="#">Approval issued <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-xl-6">
+                                            <div class="video-card h-100">
+                                                <div class="video-thumb" role="button" data-bs-toggle="modal" data-bs-target="#walkthroughModal" aria-label="Open walkthrough video">
+                                                    <img class="video-img" src="assets/images/thumbnail.png" alt="Investors walkthrough thumbnail">
+                                                    <button class="play-btn" type="button" aria-label="Play">
+                                                        <i class="fa-brands fa-youtube"></i>
+                                                    </button>
+                                                    <div class="video-caption">INVESTORS WALKTHROUGH</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-3">
+                                    <aside class="logs-panel" aria-label="Logs">
+                                        <div class="logs-head">
+                                            <div class="logs-title">LOGS</div>
+                                            <a class="pill-btn pill-outline" href="#">View All</a>
+                                        </div>
+                                        <div class="logs-search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <input class="form-control" type="search" placeholder="Search" aria-label="Search logs">
+                                        </div>
+
+                                        <div class="logs-list">
+                                            <div class="log-item">
+                                                <div class="log-left">
+                                                    <div class="avatar">AK</div>
+                                                </div>
+                                                <div class="log-mid">
+                                                    <div class="log-name">Amit Kumar</div>
+                                                    <div class="log-meta">(Assistance Labour Commissioner)</div>
+                                                    <div class="log-line">To : PB Labour(Other) (Industry User)</div>
+                                                    <div class="log-line">Status : <span class="status ok">Clearance Issued</span></div>
+                                                    <div class="log-line">Comments: ok</div>
+                                                    <div class="log-time">25 Aug 2025 | 11:30 AM</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="log-item">
+                                                <div class="log-left">
+                                                    <div class="avatar">VK</div>
+                                                </div>
+                                                <div class="log-mid">
+                                                    <div class="log-name">Vinod Kumar</div>
+                                                    <div class="log-meta">(Investor)</div>
+                                                    <div class="log-line">To : PB Labour(Other) (Industry User)</div>
+                                                    <div class="log-line">Status : <span class="status warn">Objection Resolved</span></div>
+                                                    <div class="log-line">Comments: Observation resolve kindly check now</div>
+                                                    <div class="log-time">24 Aug 2025 | 1:40 AM</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="log-item">
+                                                <div class="log-left">
+                                                    <div class="avatar">VK</div>
+                                                </div>
+                                                <div class="log-mid">
+                                                    <div class="log-name">Vinod Kumar</div>
+                                                    <div class="log-meta">(Investor)</div>
+                                                    <div class="log-line">To : PB Labour(Other) (Industry User)</div>
+                                                    <div class="log-line">Status : <span class="status bad">Objection Raised</span></div>
+                                                    <div class="log-line">Comments: Please update documents</div>
+                                                    <div class="log-time">21 Aug 2025 | 9:10 AM</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile-layout d-lg-none">
+                            <ul class="nav nav-tabs mobile-tabs" id="mobileTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#homePane" type="button" role="tab" aria-controls="homePane" aria-selected="true">
+                                        <i class="bi bi-house me-2"></i>HOME
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="logs-tab" data-bs-toggle="tab" data-bs-target="#logsPane" type="button" role="tab" aria-controls="logsPane" aria-selected="false">
+                                        <i class="bi bi-list-ul me-2"></i>LOGS
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content mobile-tab-content" id="mobileTabsContent">
+                                <div class="tab-pane fade show active" id="homePane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <div class="row g-4">
+                                                <div class="col-12 col-md-6 col-xl-4">
+                                                    <div class="dash-card">
+                                                        <div class="dash-card-top">
+                                                            <div class="dash-ic bg-soft-blue"><i class="fa-solid fa-sack-dollar"></i></div>
+                                                            <div class="dash-txt">
+                                                                <div class="dash-title">INVESTMENT PROJECT</div>
+                                                                <div class="dash-sub">Apply New Project / Expansion</div>
+                                                            </div>
+                                                        </div>
+                                                        <a class="pill-btn" href="#">Click here</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-md-6 col-xl-4">
+                                                    <div class="dash-card">
+                                                        <div class="dash-card-top">
+                                                            <div class="dash-ic bg-soft-pink"><i class="fa-solid fa-clipboard-check"></i></div>
+                                                            <div class="dash-txt">
+                                                                <div class="dash-title">MANAGE PROJECT APPLICATIONS</div>
+                                                                <div class="dash-sub">Apply Regulatory Clearances | Incentive / Service</div>
+                                                            </div>
+                                                        </div>
+                                                        <a class="pill-btn" href="#">Click here</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-md-6 col-xl-4">
+                                                    <div class="dash-card">
+                                                        <div class="dash-card-top">
+                                                            <div class="dash-ic bg-soft-amber"><i class="fa-regular fa-file-lines"></i></div>
+                                                            <div class="dash-txt">
+                                                                <div class="dash-title">MY APPLICATIONS</div>
+                                                                <div class="dash-sub">View And Share Project Document</div>
+                                                            </div>
+                                                        </div>
+                                                        <a class="pill-btn" href="#">Click here</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-md-6 col-xl-4">
+                                                    <div class="dash-card">
+                                                        <div class="dash-card-top">
+                                                            <div class="dash-ic bg-soft-green"><i class="fa-regular fa-circle-check"></i></div>
+                                                            <div class="dash-txt">
+                                                                <div class="dash-title">KNOW YOUR APPROVALS</div>
+                                                                <div class="dash-sub">View Status and Progress of Application</div>
+                                                            </div>
+                                                        </div>
+                                                        <a class="pill-btn" href="#">Click here</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-md-6 col-xl-4">
+                                                    <div class="dash-card">
+                                                        <div class="dash-card-top">
+                                                            <div class="dash-ic bg-soft-gray"><i class="fa-solid fa-vault"></i></div>
+                                                            <div class="dash-txt">
+                                                                <div class="dash-title">ENTITY VAULT</div>
+                                                                <div class="dash-sub">View And Share Project Document</div>
+                                                            </div>
+                                                        </div>
+                                                        <a class="pill-btn pill-muted" href="#">Coming Soon!</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-md-6 col-xl-4">
+                                                    <div class="dash-card">
+                                                        <div class="dash-card-top">
+                                                            <div class="dash-ic bg-soft-blue"><i class="fa-solid fa-desktop"></i></div>
+                                                            <div class="dash-txt">
+                                                                <div class="dash-title">PROJECT DASHBOARD</div>
+                                                                <div class="dash-sub">View Status and Progress of Application</div>
+                                                            </div>
+                                                        </div>
+                                                        <a class="pill-btn pill-muted" href="#">Coming Soon!</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row g-3 mt-1">
+                                                <div class="col-12">
+                                                    <div class="panel-card">
+                                                        <div class="panel-head">
+                                                            <div class="panel-title"><i class="fa-regular fa-bell me-2"></i>ACTION ALERTS</div>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <div class="d-flex flex-wrap gap-2">
+                                                                <a class="chip" href="#">Pending <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                                                <a class="chip" href="#">Approval issued <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="video-card">
+                                                        <div class="video-thumb" role="button" data-bs-toggle="modal" data-bs-target="#walkthroughModal" aria-label="Open walkthrough video">
+                                                            <img class="video-img" src="assets/images/thumbnail.png" alt="Investors walkthrough thumbnail">
+                                                            <button class="play-btn" type="button" aria-label="Play">
+                                                                <i class="fa-brands fa-youtube"></i>
+                                                            </button>
+                                                            <div class="video-caption">INVESTORS WALKTHROUGH</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="logsPane" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <aside class="logs-panel" aria-label="Logs">
+                                                <div class="logs-head">
+                                                    <div class="logs-title">LOGS</div>
+                                                    <a class="pill-btn pill-outline" href="#">View All</a>
+                                                </div>
+                                                <div class="logs-search">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search logs">
+                                                </div>
+
+                                                <div class="logs-list">
+                                                    <div class="log-item">
+                                                        <div class="log-left">
+                                                            <div class="avatar">AK</div>
+                                                        </div>
+                                                        <div class="log-mid">
+                                                            <div class="log-name">Amit Kumar</div>
+                                                            <div class="log-meta">(Assistance Labour Commissioner)</div>
+                                                            <div class="log-line">To : PB Labour(Other) (Industry User)</div>
+                                                            <div class="log-line">Status : <span class="status ok">Clearance Issued</span></div>
+                                                            <div class="log-line">Comments: ok</div>
+                                                            <div class="log-time">25 Aug 2025 | 11:30 AM</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="log-item">
+                                                        <div class="log-left">
+                                                            <div class="avatar">VK</div>
+                                                        </div>
+                                                        <div class="log-mid">
+                                                            <div class="log-name">Vinod Kumar</div>
+                                                            <div class="log-meta">(Investor)</div>
+                                                            <div class="log-line">To : PB Labour(Other) (Industry User)</div>
+                                                            <div class="log-line">Status : <span class="status warn">Objection Resolved</span></div>
+                                                            <div class="log-line">Comments: Observation resolve kindly check now</div>
+                                                            <div class="log-time">24 Aug 2025 | 1:40 AM</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="log-item">
+                                                        <div class="log-left">
+                                                            <div class="avatar">VK</div>
+                                                        </div>
+                                                        <div class="log-mid">
+                                                            <div class="log-name">Vinod Kumar</div>
+                                                            <div class="log-meta">(Investor)</div>
+                                                            <div class="log-line">To : PB Labour(Other) (Industry User)</div>
+                                                            <div class="log-line">Status : <span class="status bad">Objection Raised</span></div>
+                                                            <div class="log-line">Comments: Please update documents</div>
+                                                            <div class="log-time">21 Aug 2025 | 9:10 AM</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </aside>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+    <button class="chatbot-fab" type="button" data-bs-toggle="offcanvas" data-bs-target="#chatbotOffcanvas" aria-controls="chatbotOffcanvas" aria-label="Open chatbot">
+        <img src="assets/images/chatbot-icon.png" alt="Chatbot">
+    </button>
+
+    <div class="offcanvas offcanvas-end chatbot-canvas" tabindex="-1" id="chatbotOffcanvas" aria-labelledby="chatbotOffcanvasLabel">
+        <div class="offcanvas-header chatbot-head">
+            <div class="chatbot-title" id="chatbotOffcanvasLabel">
+                <img class="chatbot-head-ic" src="assets/images/chatbot-icon.png" alt="Chatbot">
+                <div>
+                    <div class="chatbot-name">Ease Punjab AI</div>
+                </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body chatbot-body">
+            <div class="chatbot-label">Please provide Application ID or PIN</div>
+            <input class="form-control chatbot-input" type="text" placeholder="Enter application ID">
+
+            <div class="chatbot-label mt-3">How can I assist you today?</div>
+            <div class="chatbot-msgs">
+                <div class="chatbot-pill">What is the status of my application?</div>
+                <div class="chatbot-card">
+                    <div class="chatbot-card-h">ID: 25087917</div>
+                    <div class="chatbot-card-b">Vishav Monga <span class="text-muted">To</span> Vinod Kumar</div>
+                    <div class="chatbot-card-b">On: 05-Aug-2025</div>
+                    <div class="chatbot-card-b">Status : <span class="chatbot-status">Verified</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input class="form-control chatbot-input" type="text" placeholder="Write your message here...">
+            <button class="chatbot-send" type="button" aria-label="Send">
+                <i class="bi bi-send"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="walkthroughModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content video-modal">
+                <div class="modal-header video-modal-head">
+                    <div class="video-modal-title">Investors Walkthrough</div>
+                    <div class="video-modal-actions">
+                        <button class="video-modal-btn" type="button" id="walkthroughFullscreen" aria-label="Fullscreen">
+                            <i class="bi bi-arrows-fullscreen"></i>
+                        </button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body p-0">
+                    <video id="walkthroughVideo" class="walkthrough-video" controls preload="metadata">
+                        <source src="assets/images/walkthrough.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            var modalEl = document.getElementById('walkthroughModal');
+            var videoEl = document.getElementById('walkthroughVideo');
+            var fsBtn = document.getElementById('walkthroughFullscreen');
+
+            if (modalEl && videoEl) {
+                modalEl.addEventListener('shown.bs.modal', function () {
+                    try { videoEl.play(); } catch (e) {}
+                });
+
+                modalEl.addEventListener('hidden.bs.modal', function () {
+                    try { videoEl.pause(); videoEl.currentTime = 0; } catch (e) {}
+                });
+            }
+
+            if (fsBtn && videoEl) {
+                fsBtn.addEventListener('click', function () {
+                    if (videoEl.requestFullscreen) videoEl.requestFullscreen();
+                });
+            }
+
+            var menuBtn = document.getElementById('mobileMenuBtn');
+            var backdrop = document.getElementById('sidebarBackdrop');
+            function closeSidebar() { document.body.classList.remove('sidebar-open'); }
+            function toggleSidebar() { document.body.classList.toggle('sidebar-open'); }
+
+            if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
+            if (backdrop) backdrop.addEventListener('click', closeSidebar);
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 992) closeSidebar();
+            });
+        })();
+    </script>
+</body>
+</html>
