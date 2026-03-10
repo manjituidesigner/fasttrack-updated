@@ -1,0 +1,143 @@
+@media (max-width: 992px) {
+  .mobile-tabs {
+    border-bottom: 0;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 22px;
+    padding-left: 18px;
+    padding-right: 12px;
+    position: relative;
+  }
+
+  .mobile-tabs::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #dbe4f7;
+  }
+
+  .mobile-tabs .nav-item {
+    flex: 0 0 auto;
+  }
+
+  .mobile-tabs .nav-link {
+    border: 0;
+    color: #3b4e68;
+    font-weight: 800;
+    font-size: 0.8125rem;
+    padding: 12px 8px;
+    width: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+  }
+
+  .mobile-tabs .nav-link i {
+    font-size: 0.875rem;
+  }
+
+  .mobile-tabs .nav-link.active {
+    color: var(--brand);
+    border-bottom: 0;
+    background: transparent;
+  }
+
+  .mobile-tabs .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    height: 2px;
+    background: var(--brand);
+    border-radius: 2px;
+  }
+
+  .mobile-tab-content {
+    padding-top: 8px;
+  }
+
+  .mobile-layout .dash-card,
+  .mobile-layout .panel-card,
+  .mobile-layout .video-card,
+  .mobile-layout .logs-panel {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobile-layout .dash-card {
+    padding: 14px;
+    min-height: 0;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .mobile-layout .row.g-4 {
+    --bs-gutter-x: 0.9rem;
+    --bs-gutter-y: 0.9rem;
+  }
+
+  .mobile-layout .row.g-4 > [class*="col-"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .mobile-layout .dash-card {
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(18, 38, 63, 0.08);
+  }
+
+  .mobile-layout .dash-card:hover {
+    transform: none;
+    box-shadow: 0 10px 24px rgba(18, 38, 63, 0.08);
+    border-color: var(--border);
+  }
+
+  .mobile-layout .dash-card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .mobile-layout .dash-ic {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    font-size: 20px;
+  }
+
+  .mobile-layout .dash-title {
+    font-size: 0.875rem;
+    line-height: 1.2;
+  }
+
+  .mobile-layout .dash-sub {
+    font-size: 0.6875rem;
+    line-height: 1.25;
+  }
+
+  .mobile-layout .dash-txt {
+    width: 100%;
+  }
+
+  .logs-panel {
+    max-width: none;
+  }
+
+  .logs-list {
+    max-height: 58vh;
+  }
+
+  .mobile-layout .dash-card .pill-btn {
+    display: none;
+  }
+}
