@@ -945,8 +945,10 @@ body.sidebar-open .sidebar-backdrop {
   }
 
   .mobile-menu-btn i {
-    font-size: 20px;
-    color: #4b5563;
+        font-size: 29px;
+        color: #12161a;
+        position: relative;
+        top: -4px;
   }
 
   .shortcut-btn {
