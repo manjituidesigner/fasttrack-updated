@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css?v=20260311">
     <link rel="stylesheet" href="my-project.css">
     <link rel="stylesheet" href="my-project-mob.css">
     <title>My Projects</title>
@@ -32,35 +33,35 @@
             <nav class="sidebar-nav">
                 <a class="nav-item" href="../index.html">
                     <span class="nav-ic"><i class="bi bi-grid"></i></span>
-                    <span class="nav-text">Home</span>
+                    <span class="nav-text" data-i18n="nav.home">Home</span>
                 </a>
                 <a class="nav-item active" href="my-projects.html">
                     <span class="nav-ic"><i class="bi bi-briefcase"></i></span>
-                    <span class="nav-text">My Projects</span>
+                    <span class="nav-text" data-i18n="nav.my_projects">My Projects</span>
                 </a>
-                <a class="nav-item" href="#">
+                <a class="nav-item" href="../My-Application/my-applications.html">
                     <span class="nav-ic"><i class="bi bi-file-earmark-text"></i></span>
-                    <span class="nav-text">My Applications</span>
+                    <span class="nav-text" data-i18n="nav.my_applications">My Applications</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-currency-rupee"></i></span>
-                    <span class="nav-text">Fiscal Incentives</span>
+                    <span class="nav-text" data-i18n="nav.fiscal_incentives">Fiscal Incentives</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-card-list"></i></span>
-                    <span class="nav-text">Fiscal Registrations</span>
+                    <span class="nav-text" data-i18n="nav.fiscal_registrations">Fiscal Registrations</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-patch-check"></i></span>
-                    <span class="nav-text">Know your Approvals</span>
+                    <span class="nav-text" data-i18n="nav.know_approvals">Know your Approvals</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-person"></i></span>
-                    <span class="nav-text">My Account</span>
+                    <span class="nav-text" data-i18n="nav.my_account">My Account</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-box-arrow-right"></i></span>
-                    <span class="nav-text">Logout</span>
+                    <span class="nav-text" data-i18n="nav.logout">Logout</span>
                 </a>
             </nav>
         </aside>
@@ -128,13 +129,13 @@
                 <main class="content-area">
                     <div class="container-fluid px-3 px-lg-4">
                         <div class="d-flex align-items-center justify-content-between py-3 page-head">
-                            <div class="page-title">My Projects</div>
-                            <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <span class="fw-semibold">My Projects</span></div>
+                            <div class="page-title" data-i18n="page.my_projects_title">My Projects</div>
+                            <div class="breadcrumb-mini"><a href="../index.html" data-i18n="page.home_title">Home</a> / <span class="fw-semibold" data-i18n="page.my_projects_title">My Projects</span></div>
                         </div>
 
                         <div class="projects-actions">
-                            <button class="proj-action-btn active" type="button"><i class="bi bi-plus-circle"></i>Add New Project with CAF</button>
-                            <button class="proj-action-btn" type="button"><i class="bi bi-clipboard-plus"></i>Apply for New Services</button>
+                            <button class="proj-action-btn active" type="button"><i class="bi bi-plus-circle"></i><span data-i18n="projects.actions.add_new_project_caf">Add New Project with CAF</span></button>
+                            <button class="proj-action-btn" type="button"><i class="bi bi-clipboard-plus"></i><span data-i18n="projects.actions.apply_new_services">Apply for New Services</span></button>
                             <!-- <button class="proj-action-btn" type="button"><i class="bi bi-patch-check"></i>Know Your Approval</button> -->
                         </div>
 
@@ -144,7 +145,7 @@
                                     <h2 class="accordion-header" id="rtbaHeading">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rtbaCollapse" aria-expanded="false" aria-controls="rtbaCollapse">
                                             <span class="acc-ic"><i class="bi bi-file-earmark-text"></i></span>
-                                            <span class="acc-title">Right To Business Act (RTBA -CAF)</span>
+                                            <span class="acc-title" data-i18n="projects.accordion.rtba">Right To Business Act (RTBA -CAF)</span>
                                         </button>
                                     </h2>
                                     <div id="rtbaCollapse" class="accordion-collapse collapse" aria-labelledby="rtbaHeading">
@@ -153,15 +154,15 @@
                                                 <table class="table projects-table mb-0">
                                                     <thead>
                                                         <tr>
-                                                            <th><span class="th-lbl">PIN Number</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Date</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Mobile</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Status</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th class="text-end"><span class="th-lbl">Action</span></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.pin">PIN Number</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.date">Date</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.applicant">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.mobile">Mobile</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.project_name">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.sector">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.district">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.status">Status</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th class="text-end"><span class="th-lbl" data-i18n="projects.table.action">Action</span></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -173,7 +174,7 @@
                                                             <td>RTBA Demo Unit</td>
                                                             <td>Other Service Projects</td>
                                                             <td>S.A.S Nagar</td>
-                                                            <td><span class="status-pill pending">Pending For Verification</span></td>
+                                                            <td><span class="status-pill pending" data-i18n="projects.status.pending_verification">Pending For Verification</span></td>
                                                             <td class="text-end">
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
@@ -187,7 +188,7 @@
                                                             <td>RTBA Manufacturing</td>
                                                             <td>Manufacturing</td>
                                                             <td>Ludhiana</td>
-                                                            <td><span class="status-pill progress">Filling In Process</span></td>
+                                                            <td><span class="status-pill progress" data-i18n="projects.status.filling_in_process">Filling In Process</span></td>
                                                             <td class="text-end">
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
@@ -201,7 +202,7 @@
                                                             <td>RTBA Services</td>
                                                             <td>Other Service Projects</td>
                                                             <td>Amritsar</td>
-                                                            <td><span class="status-pill accepted">Accepted</span></td>
+                                                            <td><span class="status-pill accepted" data-i18n="projects.status.accepted">Accepted</span></td>
                                                             <td class="text-end">
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
@@ -215,84 +216,84 @@
                                                 <div class="proj-card">
                                                     <div class="proj-card-top">
                                                         <div class="proj-head-row">
-                                                            <div class="proj-pin">PIN: <a class="pin-link" href="#">310225001</a></div>
+                                                            <div class="proj-pin"><span data-i18n="projects.card.pin_prefix">PIN:</span> <a class="pin-link" href="#">310225001</a></div>
                                                             <span class="proj-meta-sep">|</span>
                                                             <div class="proj-date">02-May-2025</div>
                                                             <div class="dropdown">
                                                                 <button class="proj-more dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                 <ul class="dropdown-menu proj-menu dropdown-menu-end">
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>Know your Approvals</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i>Add Clearance</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>Update Applicant</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i>Update Partners</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i>Update Company Pan Details</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i><span data-i18n="projects.card.menu.know_approvals">Know your Approvals</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i><span data-i18n="projects.card.menu.add_clearance">Add Clearance</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i><span data-i18n="projects.card.menu.update_applicant">Update Applicant</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i><span data-i18n="projects.card.menu.update_partners">Update Partners</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i><span data-i18n="projects.card.menu.update_pan">Update Company Pan Details</span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="proj-card-title">RTBA Demo Unit</div>
-                                                    <div class="proj-card-status"><span class="status-pill pending">Pending For Verification</span></div>
+                                                    <div class="proj-card-status"><span class="status-pill pending" data-i18n="projects.status.pending_verification">Pending For Verification</span></div>
                                                     <div class="proj-kv">
-                                                        <div class="kv-row"><div class="k">Applicant Name</div><div class="c">:</div><div class="v">Mr Rohit Sharma</div></div>
-                                                        <div class="kv-row"><div class="k">Mobile</div><div class="c">:</div><div class="v">+91 - 9876543210</div></div>
-                                                        <div class="kv-row"><div class="k">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
-                                                        <div class="kv-row"><div class="k">District</div><div class="c">:</div><div class="v">S.A.S Nagar</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.applicant">Applicant Name</div><div class="c">:</div><div class="v">Mr Rohit Sharma</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.mobile">Mobile</div><div class="c">:</div><div class="v">+91 - 9876543210</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.sector">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.district">District</div><div class="c">:</div><div class="v">S.A.S Nagar</div></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="proj-card">
                                                     <div class="proj-card-top">
                                                         <div class="proj-head-row">
-                                                            <div class="proj-pin">PIN: <a class="pin-link" href="#">310225002</a></div>
+                                                            <div class="proj-pin"><span data-i18n="projects.card.pin_prefix">PIN:</span> <a class="pin-link" href="#">310225002</a></div>
                                                             <span class="proj-meta-sep">|</span>
                                                             <div class="proj-date">03-May-2025</div>
                                                             <div class="dropdown">
                                                                 <button class="proj-more dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                 <ul class="dropdown-menu proj-menu dropdown-menu-end">
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>Know your Approvals</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i>Add Clearance</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>Update Applicant</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i>Update Partners</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i>Update Company Pan Details</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i><span data-i18n="projects.card.menu.know_approvals">Know your Approvals</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i><span data-i18n="projects.card.menu.add_clearance">Add Clearance</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i><span data-i18n="projects.card.menu.update_applicant">Update Applicant</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i><span data-i18n="projects.card.menu.update_partners">Update Partners</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i><span data-i18n="projects.card.menu.update_pan">Update Company Pan Details</span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="proj-card-title">RTBA Manufacturing</div>
-                                                    <div class="proj-card-status"><span class="status-pill progress">Filling In Process</span></div>
+                                                    <div class="proj-card-status"><span class="status-pill progress" data-i18n="projects.status.filling_in_process">Filling In Process</span></div>
                                                     <div class="proj-kv">
-                                                        <div class="kv-row"><div class="k">Applicant Name</div><div class="c">:</div><div class="v">Ms Pooja Verma</div></div>
-                                                        <div class="kv-row"><div class="k">Mobile</div><div class="c">:</div><div class="v">+91 - 9123456780</div></div>
-                                                        <div class="kv-row"><div class="k">Sector</div><div class="c">:</div><div class="v">Manufacturing</div></div>
-                                                        <div class="kv-row"><div class="k">District</div><div class="c">:</div><div class="v">Ludhiana</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.applicant">Applicant Name</div><div class="c">:</div><div class="v">Ms Pooja Verma</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.mobile">Mobile</div><div class="c">:</div><div class="v">+91 - 9123456780</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.sector">Sector</div><div class="c">:</div><div class="v">Manufacturing</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.district">District</div><div class="c">:</div><div class="v">Ludhiana</div></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="proj-card">
                                                     <div class="proj-card-top">
                                                         <div class="proj-head-row">
-                                                            <div class="proj-pin">PIN: <a class="pin-link" href="#">310225003</a></div>
+                                                            <div class="proj-pin"><span data-i18n="projects.card.pin_prefix">PIN:</span> <a class="pin-link" href="#">310225003</a></div>
                                                             <span class="proj-meta-sep">|</span>
                                                             <div class="proj-date">04-May-2025</div>
                                                             <div class="dropdown">
                                                                 <button class="proj-more dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                 <ul class="dropdown-menu proj-menu dropdown-menu-end">
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>Know your Approvals</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i>Add Clearance</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>Update Applicant</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i>Update Partners</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i>Update Company Pan Details</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i><span data-i18n="projects.card.menu.know_approvals">Know your Approvals</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i><span data-i18n="projects.card.menu.add_clearance">Add Clearance</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i><span data-i18n="projects.card.menu.update_applicant">Update Applicant</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i><span data-i18n="projects.card.menu.update_partners">Update Partners</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i><span data-i18n="projects.card.menu.update_pan">Update Company Pan Details</span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="proj-card-title">RTBA Services</div>
-                                                    <div class="proj-card-status"><span class="status-pill accepted">Accepted</span></div>
+                                                    <div class="proj-card-status"><span class="status-pill accepted" data-i18n="projects.status.accepted">Accepted</span></div>
                                                     <div class="proj-kv">
-                                                        <div class="kv-row"><div class="k">Applicant Name</div><div class="c">:</div><div class="v">Mr Aman Gupta</div></div>
-                                                        <div class="kv-row"><div class="k">Mobile</div><div class="c">:</div><div class="v">+91 - 9000011111</div></div>
-                                                        <div class="kv-row"><div class="k">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
-                                                        <div class="kv-row"><div class="k">District</div><div class="c">:</div><div class="v">Amritsar</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.applicant">Applicant Name</div><div class="c">:</div><div class="v">Mr Aman Gupta</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.mobile">Mobile</div><div class="c">:</div><div class="v">+91 - 9000011111</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.sector">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.district">District</div><div class="c">:</div><div class="v">Amritsar</div></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -306,7 +307,7 @@
                                     <h2 class="accordion-header" id="cafHeading">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cafCollapse" aria-expanded="true" aria-controls="cafCollapse">
                                             <span class="acc-ic"><i class="bi bi-file-earmark-text"></i></span>
-                                            <span class="acc-title">Common Application Form (CAF)</span>
+                                            <span class="acc-title" data-i18n="projects.accordion.caf">Common Application Form (CAF)</span>
                                         </button>
                                     </h2>
                                     <div id="cafCollapse" class="accordion-collapse collapse show" aria-labelledby="cafHeading">
@@ -315,15 +316,15 @@
                                                 <table class="table projects-table mb-0">
                                                     <thead>
                                                         <tr>
-                                                            <th><span class="th-lbl">PIN Number</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Date</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Mobile</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Status</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th class="text-end"><span class="th-lbl">Action</span></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.pin">PIN Number</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.date">Date</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.applicant">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.mobile">Mobile</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.project_name">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.sector">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.district">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.status">Status</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th class="text-end"><span class="th-lbl" data-i18n="projects.table.action">Action</span></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -335,7 +336,7 @@
                                                             <td>K A Demo New</td>
                                                             <td>Other Service Projects</td>
                                                             <td>S.A.S Nagar</td>
-                                                            <td><span class="status-pill pending">Pending For Verification</span></td>
+                                                            <td><span class="status-pill pending" data-i18n="projects.status.pending_verification">Pending For Verification</span></td>
                                                             <td class="text-end">
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
@@ -349,7 +350,7 @@
                                                             <td>Bonds &amp; Associates</td>
                                                             <td>Manufacturing</td>
                                                             <td>S.A.S Nagar</td>
-                                                            <td><span class="status-pill progress">Filling In Process</span></td>
+                                                            <td><span class="status-pill progress" data-i18n="projects.status.filling_in_process">Filling In Process</span></td>
                                                             <td class="text-end">
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
@@ -363,7 +364,7 @@
                                                             <td>New Demo industries</td>
                                                             <td>Other Service Projects</td>
                                                             <td>S.A.S Nagar</td>
-                                                            <td><span class="status-pill accepted">Accepted</span></td>
+                                                            <td><span class="status-pill accepted" data-i18n="projects.status.accepted">Accepted</span></td>
                                                             <td class="text-end">
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
@@ -377,7 +378,7 @@
                                                             <td>K A Demo New</td>
                                                             <td>Other Service Projects</td>
                                                             <td>S.A.S Nagar</td>
-                                                            <td><span class="status-pill pending">Pending For Verification</span></td>
+                                                            <td><span class="status-pill pending" data-i18n="projects.status.pending_verification">Pending For Verification</span></td>
                                                             <td class="text-end">
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
@@ -391,7 +392,7 @@
                                                             <td>Bonds &amp; Associates</td>
                                                             <td>Manufacturing</td>
                                                             <td>S.A.S Nagar</td>
-                                                            <td><span class="status-pill progress">Filling In Process</span></td>
+                                                            <td><span class="status-pill progress" data-i18n="projects.status.filling_in_process">Filling In Process</span></td>
                                                             <td class="text-end">
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
@@ -405,7 +406,7 @@
                                                 <div class="proj-card">
                                                     <div class="proj-card-top">
                                                         <div class="proj-head-row">
-                                                            <div class="proj-pin">PIN: <a class="pin-link" href="#">250535096</a></div>
+                                                            <div class="proj-pin"><span data-i18n="projects.card.pin_prefix">PIN:</span> <a class="pin-link" href="#">250535096</a></div>
                                                             <span class="proj-meta-sep">|</span>
                                                             <div class="proj-date">01-May-2025</div>
                                                             <div class="dropdown">
@@ -421,68 +422,68 @@
                                                         </div>
                                                     </div>
                                                     <div class="proj-card-title">K A Demo New</div>
-                                                    <div class="proj-card-status"><span class="status-pill pending">Pending For Verification</span></div>
+                                                    <div class="proj-card-status"><span class="status-pill pending" data-i18n="projects.status.pending_verification">Pending For Verification</span></div>
                                                     <div class="proj-kv">
-                                                        <div class="kv-row"><div class="k">Applicant Name</div><div class="c">:</div><div class="v">Mr Sunny Kumar</div></div>
-                                                        <div class="kv-row"><div class="k">Mobile</div><div class="c">:</div><div class="v">+91 - 7894561235</div></div>
-                                                        <div class="kv-row"><div class="k">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
-                                                        <div class="kv-row"><div class="k">District</div><div class="c">:</div><div class="v">S.A.S Nagar</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.applicant">Applicant Name</div><div class="c">:</div><div class="v">Mr Sunny Kumar</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.mobile">Mobile</div><div class="c">:</div><div class="v">+91 - 7894561235</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.sector">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.district">District</div><div class="c">:</div><div class="v">S.A.S Nagar</div></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="proj-card">
                                                     <div class="proj-card-top">
                                                         <div class="proj-head-row">
-                                                            <div class="proj-pin">PIN: <a class="pin-link" href="#">250535098</a></div>
+                                                            <div class="proj-pin"><span data-i18n="projects.card.pin_prefix">PIN:</span> <a class="pin-link" href="#">250535098</a></div>
                                                             <span class="proj-meta-sep">|</span>
                                                             <div class="proj-date">01-May-2025</div>
                                                             <div class="dropdown">
                                                                 <button class="proj-more dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                 <ul class="dropdown-menu proj-menu dropdown-menu-end">
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>Know your Approvals</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i>Add Clearance</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>Update Applicant</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i>Update Partners</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i>Update Company Pan Details</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i><span data-i18n="projects.card.menu.know_approvals">Know your Approvals</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i><span data-i18n="projects.card.menu.add_clearance">Add Clearance</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i><span data-i18n="projects.card.menu.update_applicant">Update Applicant</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i><span data-i18n="projects.card.menu.update_partners">Update Partners</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i><span data-i18n="projects.card.menu.update_pan">Update Company Pan Details</span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="proj-card-title">Bonds &amp; Associates</div>
-                                                    <div class="proj-card-status"><span class="status-pill progress">Filling In Process</span></div>
+                                                    <div class="proj-card-status"><span class="status-pill progress" data-i18n="projects.status.filling_in_process">Filling In Process</span></div>
                                                     <div class="proj-kv">
-                                                        <div class="kv-row"><div class="k">Applicant Name</div><div class="c">:</div><div class="v">Mr Ankit Kumar</div></div>
-                                                        <div class="kv-row"><div class="k">Mobile</div><div class="c">:</div><div class="v">+91 - 8712773489</div></div>
-                                                        <div class="kv-row"><div class="k">Sector</div><div class="c">:</div><div class="v">Manufacturing</div></div>
-                                                        <div class="kv-row"><div class="k">District</div><div class="c">:</div><div class="v">S.A.S Nagar</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.applicant">Applicant Name</div><div class="c">:</div><div class="v">Mr Ankit Kumar</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.mobile">Mobile</div><div class="c">:</div><div class="v">+91 - 8712773489</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.sector">Sector</div><div class="c">:</div><div class="v">Manufacturing</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.district">District</div><div class="c">:</div><div class="v">S.A.S Nagar</div></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="proj-card">
                                                     <div class="proj-card-top">
                                                         <div class="proj-head-row">
-                                                            <div class="proj-pin">PIN: <a class="pin-link" href="#">150535024</a></div>
+                                                            <div class="proj-pin"><span data-i18n="projects.card.pin_prefix">PIN:</span> <a class="pin-link" href="#">150535024</a></div>
                                                             <span class="proj-meta-sep">|</span>
                                                             <div class="proj-date">01-May-2025</div>
                                                             <div class="dropdown">
                                                                 <button class="proj-more dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                 <ul class="dropdown-menu proj-menu dropdown-menu-end">
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>Know your Approvals</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i>Add Clearance</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>Update Applicant</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i>Update Partners</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i>Update Company Pan Details</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i><span data-i18n="projects.card.menu.know_approvals">Know your Approvals</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i><span data-i18n="projects.card.menu.add_clearance">Add Clearance</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i><span data-i18n="projects.card.menu.update_applicant">Update Applicant</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i><span data-i18n="projects.card.menu.update_partners">Update Partners</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i><span data-i18n="projects.card.menu.update_pan">Update Company Pan Details</span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="proj-card-title">New Demo industries</div>
-                                                    <div class="proj-card-status"><span class="status-pill verified">Verified</span></div>
+                                                    <div class="proj-card-status"><span class="status-pill verified" data-i18n="projects.status.verified">Verified</span></div>
                                                     <div class="proj-kv">
-                                                        <div class="kv-row"><div class="k">Applicant Name</div><div class="c">:</div><div class="v">Mr Vikas Sharma</div></div>
-                                                        <div class="kv-row"><div class="k">Mobile</div><div class="c">:</div><div class="v">+91 - 7894561235</div></div>
-                                                        <div class="kv-row"><div class="k">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
-                                                        <div class="kv-row"><div class="k">District</div><div class="c">:</div><div class="v">S.A.S Nagar</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.applicant">Applicant Name</div><div class="c">:</div><div class="v">Mr Vikas Sharma</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.mobile">Mobile</div><div class="c">:</div><div class="v">+91 - 7894561235</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.sector">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.district">District</div><div class="c">:</div><div class="v">S.A.S Nagar</div></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -496,7 +497,7 @@
                                     <h2 class="accordion-header" id="scafHeading">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#scafCollapse" aria-expanded="false" aria-controls="scafCollapse">
                                             <span class="acc-ic"><i class="bi bi-file-earmark-text"></i></span>
-                                            <span class="acc-title">Service - Common Application Form (S-CAF)</span>
+                                            <span class="acc-title" data-i18n="projects.accordion.scaf">Service - Common Application Form (S-CAF)</span>
                                         </button>
                                     </h2>
                                     <div id="scafCollapse" class="accordion-collapse collapse" aria-labelledby="scafHeading">
@@ -505,15 +506,15 @@
                                                 <table class="table projects-table mb-0">
                                                     <thead>
                                                         <tr>
-                                                            <th><span class="th-lbl">PIN Number</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Date</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Mobile</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th><span class="th-lbl">Status</span><i class="bi bi-caret-down-fill th-sort"></i></th>
-                                                            <th class="text-end"><span class="th-lbl">Action</span></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.pin">PIN Number</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.date">Date</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.applicant">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.mobile">Mobile</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.project_name">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.sector">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.district">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th><span class="th-lbl" data-i18n="projects.table.status">Status</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                            <th class="text-end"><span class="th-lbl" data-i18n="projects.table.action">Action</span></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -553,7 +554,7 @@
                                                             <td>S-CAF Services</td>
                                                             <td>Other Service Projects</td>
                                                             <td>Bathinda</td>
-                                                            <td><span class="status-pill accepted">Accepted</span></td>
+                                                            <td><span class="status-pill accepted" data-i18n="projects.status.accepted">Accepted</span></td>
                                                             <td class="text-end">
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
@@ -567,7 +568,7 @@
                                                 <div class="proj-card">
                                                     <div class="proj-card-top">
                                                         <div class="proj-head-row">
-                                                            <div class="proj-pin">PIN: <a class="pin-link" href="#">420225101</a></div>
+                                                            <div class="proj-pin"><span data-i18n="projects.card.pin_prefix">PIN:</span> <a class="pin-link" href="#">420225101</a></div>
                                                             <span class="proj-meta-sep">|</span>
                                                             <div class="proj-date">07-May-2025</div>
                                                             <div class="dropdown">
@@ -583,68 +584,68 @@
                                                         </div>
                                                     </div>
                                                     <div class="proj-card-title">S-CAF Demo</div>
-                                                    <div class="proj-card-status"><span class="status-pill pending">Pending For Verification</span></div>
+                                                    <div class="proj-card-status"><span class="status-pill pending" data-i18n="projects.status.pending_verification">Pending For Verification</span></div>
                                                     <div class="proj-kv">
-                                                        <div class="kv-row"><div class="k">Applicant Name</div><div class="c">:</div><div class="v">Mr Karan Singh</div></div>
-                                                        <div class="kv-row"><div class="k">Mobile</div><div class="c">:</div><div class="v">+91 - 9888888888</div></div>
-                                                        <div class="kv-row"><div class="k">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
-                                                        <div class="kv-row"><div class="k">District</div><div class="c">:</div><div class="v">Patiala</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.applicant">Applicant Name</div><div class="c">:</div><div class="v">Mr Karan Singh</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.mobile">Mobile</div><div class="c">:</div><div class="v">+91 - 9888888888</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.sector">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.district">District</div><div class="c">:</div><div class="v">Patiala</div></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="proj-card">
                                                     <div class="proj-card-top">
                                                         <div class="proj-head-row">
-                                                            <div class="proj-pin">PIN: <a class="pin-link" href="#">420225102</a></div>
+                                                            <div class="proj-pin"><span data-i18n="projects.card.pin_prefix">PIN:</span> <a class="pin-link" href="#">420225102</a></div>
                                                             <span class="proj-meta-sep">|</span>
                                                             <div class="proj-date">08-May-2025</div>
                                                             <div class="dropdown">
                                                                 <button class="proj-more dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                 <ul class="dropdown-menu proj-menu dropdown-menu-end">
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>Know your Approvals</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i>Add Clearance</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>Update Applicant</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i>Update Partners</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i>Update Company Pan Details</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i><span data-i18n="projects.card.menu.know_approvals">Know your Approvals</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i><span data-i18n="projects.card.menu.add_clearance">Add Clearance</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i><span data-i18n="projects.card.menu.update_applicant">Update Applicant</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i><span data-i18n="projects.card.menu.update_partners">Update Partners</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i><span data-i18n="projects.card.menu.update_pan">Update Company Pan Details</span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="proj-card-title">S-CAF Manufacturing</div>
-                                                    <div class="proj-card-status"><span class="status-pill progress">Filling In Process</span></div>
+                                                    <div class="proj-card-status"><span class="status-pill progress" data-i18n="projects.status.filling_in_process">Filling In Process</span></div>
                                                     <div class="proj-kv">
-                                                        <div class="kv-row"><div class="k">Applicant Name</div><div class="c">:</div><div class="v">Ms Neha Jain</div></div>
-                                                        <div class="kv-row"><div class="k">Mobile</div><div class="c">:</div><div class="v">+91 - 9777777777</div></div>
-                                                        <div class="kv-row"><div class="k">Sector</div><div class="c">:</div><div class="v">Manufacturing</div></div>
-                                                        <div class="kv-row"><div class="k">District</div><div class="c">:</div><div class="v">Jalandhar</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.applicant">Applicant Name</div><div class="c">:</div><div class="v">Ms Neha Jain</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.mobile">Mobile</div><div class="c">:</div><div class="v">+91 - 9777777777</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.sector">Sector</div><div class="c">:</div><div class="v">Manufacturing</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.district">District</div><div class="c">:</div><div class="v">Jalandhar</div></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="proj-card">
                                                     <div class="proj-card-top">
                                                         <div class="proj-head-row">
-                                                            <div class="proj-pin">PIN: <a class="pin-link" href="#">420225103</a></div>
+                                                            <div class="proj-pin"><span data-i18n="projects.card.pin_prefix">PIN:</span> <a class="pin-link" href="#">420225103</a></div>
                                                             <span class="proj-meta-sep">|</span>
                                                             <div class="proj-date">09-May-2025</div>
                                                             <div class="dropdown">
                                                                 <button class="proj-more dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                 <ul class="dropdown-menu proj-menu dropdown-menu-end">
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i>Know your Approvals</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i>Add Clearance</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>Update Applicant</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i>Update Partners</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i>Update Company Pan Details</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2"></i><span data-i18n="projects.card.menu.know_approvals">Know your Approvals</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i><span data-i18n="projects.card.menu.add_clearance">Add Clearance</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i><span data-i18n="projects.card.menu.update_applicant">Update Applicant</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i><span data-i18n="projects.card.menu.update_partners">Update Partners</span></a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-card-list"></i><span data-i18n="projects.card.menu.update_pan">Update Company Pan Details</span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="proj-card-title">S-CAF Services</div>
-                                                    <div class="proj-card-status"><span class="status-pill verified">Verified</span></div>
+                                                    <div class="proj-card-status"><span class="status-pill verified" data-i18n="projects.status.verified">Verified</span></div>
                                                     <div class="proj-kv">
-                                                        <div class="kv-row"><div class="k">Applicant Name</div><div class="c">:</div><div class="v">Mr Deepak Malhotra</div></div>
-                                                        <div class="kv-row"><div class="k">Mobile</div><div class="c">:</div><div class="v">+91 - 9666666666</div></div>
-                                                        <div class="kv-row"><div class="k">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
-                                                        <div class="kv-row"><div class="k">District</div><div class="c">:</div><div class="v">Bathinda</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.applicant">Applicant Name</div><div class="c">:</div><div class="v">Mr Deepak Malhotra</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.mobile">Mobile</div><div class="c">:</div><div class="v">+91 - 9666666666</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.sector">Sector</div><div class="c">:</div><div class="v">Other Service Projects</div></div>
+                                                        <div class="kv-row"><div class="k" data-i18n="projects.card.kv.district">District</div><div class="c">:</div><div class="v">Bathinda</div></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -662,6 +663,7 @@
     <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/i18next@23.10.0/i18next.min.js"></script>
     <script src="../js/shared-ui.js"></script>
 </body>
 </html>

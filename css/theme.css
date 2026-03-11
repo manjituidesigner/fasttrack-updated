@@ -1,0 +1,213 @@
+:root {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b1220;
+  --surface: #121a2a;
+  --text: #e6eefc;
+  --muted: #9fb0c8;
+  --border: rgba(255, 255, 255, 0.10);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  --brand: #3b82f6;
+  --brand-dark: #2563eb;
+}
+
+html[data-theme="dark"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html[data-theme="dark"] .app-header {
+  background: #0f172a;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .header-logos img {
+  filter: brightness(0) invert(1);
+}
+
+html[data-theme="dark"] .helpline .text-muted {
+  color: rgba(230, 238, 252, 0.75) !important;
+}
+
+html[data-theme="dark"] .icon-btn,
+html[data-theme="dark"] .user-pill,
+html[data-theme="dark"] .a11y-btn,
+html[data-theme="dark"] .search-pill,
+html[data-theme="dark"] .chip,
+html[data-theme="dark"] .pill-btn.pill-outline,
+html[data-theme="dark"] .pill-btn.pill-muted {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.10);
+  color: var(--text);
+}
+
+html[data-theme="dark"] .user-pill .user-caret i,
+html[data-theme="dark"] .user-pill .user-ic i,
+html[data-theme="dark"] .icon-btn i,
+html[data-theme="dark"] .a11y-btn i {
+  color: rgba(230, 238, 252, 0.92) !important;
+}
+
+html[data-theme="dark"] .a11y-label {
+  color: rgba(230, 238, 252, 0.75);
+}
+
+html[data-theme="dark"] .shortcut-menu,
+html[data-theme="dark"] .user-menu {
+  background: #0f172a;
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+html[data-theme="dark"] .dropdown-item {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .dropdown-item:hover {
+  background: rgba(59, 130, 246, 0.14);
+  color: var(--text);
+}
+
+html[data-theme="dark"] .lang-switch-menu {
+  border-top-color: rgba(255, 255, 255, 0.10);
+}
+
+html[data-theme="dark"] .app-sidebar {
+  background: #0b1324;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+
+html[data-theme="dark"] .sidebar-nav .nav-item {
+  color: rgba(230, 238, 252, 0.86);
+}
+
+html[data-theme="dark"] .sidebar-nav .nav-item:hover {
+  background: rgba(255, 255, 255, 0.10);
+  color: #fff;
+}
+
+html[data-theme="dark"] .sidebar-nav .nav-item.active {
+  background: rgba(59, 130, 246, 0.28);
+}
+
+html[data-theme="dark"] .dash-card,
+html[data-theme="dark"] .panel-card,
+html[data-theme="dark"] .projects-card,
+html[data-theme="dark"] .apps-card {
+  background: var(--surface);
+  border-color: rgba(255, 255, 255, 0.10);
+  box-shadow: var(--shadow);
+}
+
+html[data-theme="dark"] .dash-title,
+html[data-theme="dark"] .page-title,
+html[data-theme="dark"] .panel-title {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .dash-sub {
+  color: rgba(230, 238, 252, 0.72);
+}
+
+html[data-theme="dark"] .projects-accordion .accordion-button,
+html[data-theme="dark"] .projects-accordion .accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-top-color: rgba(255, 255, 255, 0.10);
+  border-bottom-color: rgba(255, 255, 255, 0.10);
+}
+
+html[data-theme="dark"] .accordion-item {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+html[data-theme="dark"] .accordion-body {
+  background: var(--surface);
+  color: var(--text);
+}
+
+html[data-theme="dark"] .projects-filter {
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom-color: rgba(255, 255, 255, 0.10);
+}
+
+html[data-theme="dark"] .projects-table thead th {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+html[data-theme="dark"] .projects-table thead th .th-sort,
+html[data-theme="dark"] .projects-table thead th .bi,
+html[data-theme="dark"] .projects-table thead th i {
+  color: rgba(230, 238, 252, 0.82) !important;
+}
+
+html[data-theme="dark"] .table {
+  --bs-table-color: rgba(230, 238, 252, 0.90);
+  --bs-table-bg: transparent;
+  --bs-table-border-color: rgba(255, 255, 255, 0.10);
+  --bs-table-striped-color: rgba(230, 238, 252, 0.90);
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.03);
+  --bs-table-active-color: rgba(230, 238, 252, 0.95);
+  --bs-table-active-bg: rgba(59, 130, 246, 0.14);
+  --bs-table-hover-color: rgba(230, 238, 252, 0.95);
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.05);
+  color: var(--bs-table-color);
+}
+
+html[data-theme="dark"] .table > :not(caption) > * > * {
+  background-color: transparent;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
+}
+
+html[data-theme="dark"] .table-responsive {
+  background: var(--surface);
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+html[data-theme="dark"] .projects-table tbody td {
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgba(230, 238, 252, 0.88) !important;
+}
+
+html[data-theme="dark"] .projects-table tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+html[data-theme="dark"] .projects-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+html[data-theme="dark"] .projects-table tbody tr:nth-child(odd) td,
+html[data-theme="dark"] .projects-table tbody tr:nth-child(even) td {
+  background: transparent !important;
+}
+
+html[data-theme="dark"] .tbl-ic-btn,
+html[data-theme="dark"] .proj-menu-btn,
+html[data-theme="dark"] .menu-ic-btn {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: rgba(230, 238, 252, 0.92) !important;
+}
+
+html[data-theme="dark"] .tbl-ic-btn i,
+html[data-theme="dark"] .proj-menu-btn i,
+html[data-theme="dark"] .menu-ic-btn i {
+  color: rgba(230, 238, 252, 0.92) !important;
+}
+
+html[data-theme="dark"] .pin-link {
+  color: #93c5fd;
+}
+
+html[data-theme="dark"] .breadcrumb-mini,
+html[data-theme="dark"] .breadcrumb-mini a,
+html[data-theme="dark"] .text-muted {
+  color: rgba(230, 238, 252, 0.65) !important;
+}

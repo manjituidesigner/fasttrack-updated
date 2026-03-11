@@ -73,6 +73,7 @@
   width: 92px;
   margin-top: auto;
   align-self: center;
+      width: auto;
 }
 
 .pill-btn:hover {

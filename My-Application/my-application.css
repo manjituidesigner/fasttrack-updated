@@ -1,0 +1,140 @@
+.apps-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 12px;
+}
+
+.apps-head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 6px 6px 12px;
+}
+
+.apps-title {
+  font-weight: 900;
+  font-size: 0.8125rem;
+  color: #1f2c3b;
+}
+
+.apps-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.apps-filter-btn {
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid #cfe1ff;
+  background: #d8e5eb;
+  color: #1f5ed7;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(31, 94, 215, 0.08);
+}
+
+.apps-filter-btn i {
+  font-size: 18px;
+}
+
+.apps-filter-btn.active {
+  background: #1f5ed7;
+  border-color: #1f5ed7;
+  color: #ffffff;
+}
+
+.apps-filter-btn.active i {
+  color: #ffffff;
+}
+
+.apps-count {
+  height: 18px;
+  min-width: 24px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: rgba(31, 94, 215, 0.12);
+  color: #1f5ed7;
+  font-weight: 900;
+  font-size: 0.6875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apps-filter-btn.active .apps-count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.apps-note {
+  background: #ffffff;
+  border: 1px solid #d6e6ff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin: 0 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1f2c3b;
+}
+
+.apps-note-line {
+  line-height: 1.4;
+}
+
+.apps-note-line + .apps-note-line {
+  margin-top: 6px;
+}
+
+.apps-note-link {
+  color: #1f5ed7;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.apps-section {
+  padding: 0 6px 10px;
+}
+
+.apps-section-title {
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: #1f2c3b;
+  margin: 4px 0 10px;
+}
+
+.apps-select-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.apps-select-label {
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: #52627a;
+}
+
+.apps-select {
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #cfe1ff;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.projects-table-wrap {
+  padding: 8px;
+}

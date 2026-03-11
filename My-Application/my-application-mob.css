@@ -1,0 +1,77 @@
+@media (max-width: 575.98px) {
+  .apps-card {
+    padding: 12px 10px;
+    border-radius: 16px;
+  }
+
+  .apps-head {
+    padding: 6px 2px 10px;
+    gap: 10px;
+  }
+
+  .apps-title {
+    font-size: 0.875rem;
+  }
+
+  .apps-filters {
+    gap: 10px;
+  }
+
+  .apps-filter-btn {
+    width: fit-content;
+    max-width: 158px;
+    height: 44px;
+    border-radius: 14px;
+    justify-content: flex-start;
+    padding: 0 14px;
+    font-size: 0.8125rem;
+    box-shadow: none;
+  }
+
+  .apps-filter-btn.active {
+    background: #2f6fe4;
+    border-color: #2f6fe4;
+    color: #ffffff;
+  }
+
+  .apps-filter-btn:not(.active) {
+    background: #ffffff;
+    border-color: #2f6fe4;
+    color: #2f6fe4;
+  }
+
+  .apps-count {
+    margin-left: auto;
+  }
+
+  .apps-note {
+    margin: 0 2px 12px;
+    padding: 10px 10px;
+    font-size: 0.75rem;
+  }
+
+  .apps-section {
+    padding: 0 2px 10px;
+  }
+
+  .apps-select-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .apps-select {
+    height: 42px;
+    border-radius: 12px;
+    font-size: 0.8125rem;
+  }
+
+  .projects-table-wrap {
+    padding: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .projects-table {
+    min-width: 760px;
+  }
+}

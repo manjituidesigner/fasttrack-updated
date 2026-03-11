@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css?v=20260311">
+    <link rel="stylesheet" href="../My-Project/my-project.css">
+    <link rel="stylesheet" href="../My-Project/my-project-mob.css">
+    <link rel="stylesheet" href="my-application.css">
+    <link rel="stylesheet" href="my-application-mob.css">
+    <title>My Applications</title>
+</head>
+
+<body>
+
+    <div class="app-shell">
+        <aside class="app-sidebar" aria-label="Sidebar">
+            <div class="sidebar-expand">
+                <button class="sidebar-expand-btn" type="button" aria-label="Expand sidebar">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+            <div class="sidebar-brand">
+                <img class="sidebar-gov-logo" src="../assets/images/govt-logo-white.png" alt="Government logo">
+                <img class="sidebar-ft-logo" src="../assets/images/fasttrack-logo-white.png" alt="FastTrack logo">
+            </div>
+
+            <nav class="sidebar-nav">
+                <a class="nav-item" href="../index.html">
+                    <span class="nav-ic"><i class="bi bi-grid"></i></span>
+                    <span class="nav-text" data-i18n="nav.home">Home</span>
+                </a>
+                <a class="nav-item" href="../My-Project/my-projects.html">
+                    <span class="nav-ic"><i class="bi bi-briefcase"></i></span>
+                    <span class="nav-text" data-i18n="nav.my_projects">My Projects</span>
+                </a>
+                <a class="nav-item active" href="my-applications.html">
+                    <span class="nav-ic"><i class="bi bi-file-earmark-text"></i></span>
+                    <span class="nav-text" data-i18n="nav.my_applications">My Applications</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-currency-rupee"></i></span>
+                    <span class="nav-text" data-i18n="nav.fiscal_incentives">Fiscal Incentives</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-card-list"></i></span>
+                    <span class="nav-text" data-i18n="nav.fiscal_registrations">Fiscal Registrations</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-patch-check"></i></span>
+                    <span class="nav-text" data-i18n="nav.know_approvals">Know your Approvals</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-person"></i></span>
+                    <span class="nav-text" data-i18n="nav.my_account">My Account</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-box-arrow-right"></i></span>
+                    <span class="nav-text" data-i18n="nav.logout">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <div class="app-main">
+            <header class="app-header" data-active-page="applications">
+                <div class="header-left">
+                    <button class="icon-btn mobile-menu-btn d-lg-none" type="button" aria-label="Menu" id="mobileMenuBtn">
+                        <i class="bi bi-list"></i>
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                    <div class="header-logos">
+                        <img class="header-gov-logo" src="../assets/images/govt-logo-dark.png" alt="Government logo">
+                        <img class="header-ft-logo" src="../assets/images/fasttrack-logo-dark.png" alt="FastTrack logo">
+                    </div>
+                </div>
+
+                <div class="header-center">
+                    <div class="helpline">
+                        <div class="helpline-ic"><i class="fa-solid fa-headset"></i></div>
+                        <div class="helpline-txt">
+                            <div class="small text-muted fw-semibold">HELP LINE : 0172-4866999</div>
+                            <div class="small text-muted">9:00 AM TO 5:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-right"></div>
+            </header>
+
+            <div class="app-body">
+                <main class="content-area">
+                    <div class="container-fluid px-3 px-lg-4">
+                        <div class="d-flex align-items-center justify-content-between py-3 page-head">
+                            <div class="page-title" data-i18n="applications.regulatory_clearances">Regulatory Clearances</div>
+                            <div class="breadcrumb-mini"><a href="../index.html" data-i18n="page.home_title">Home</a> / <span class="fw-semibold" data-i18n="applications.regulatory_clearances">Regulatory Clearances</span></div>
+                        </div>
+
+                        <div class="apps-card">
+                            <div class="apps-head">
+                                <div class="apps-filters" role="tablist" aria-label="Application filters">
+                                    <button class="apps-filter-btn active" type="button" role="tab" aria-selected="true">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span data-i18n="applications.tabs.apply_new">Apply New</span>
+                                    </button>
+                                    <button class="apps-filter-btn" type="button" role="tab" aria-selected="false">
+                                        <i class="bi bi-clipboard-check"></i>
+                                        <span data-i18n="applications.tabs.applied">Applied</span>
+                                        <span class="apps-count">15</span>
+                                    </button>
+                                    <button class="apps-filter-btn" type="button" role="tab" aria-selected="false">
+                                        <i class="bi bi-hourglass-split"></i>
+                                        <span data-i18n="applications.tabs.pending">Pending</span>
+                                        <span class="apps-count">7</span>
+                                    </button>
+                                    <button class="apps-filter-btn" type="button" role="tab" aria-selected="false">
+                                        <i class="bi bi-patch-check"></i>
+                                        <span data-i18n="applications.tabs.issued">Issued</span>
+                                        <span class="apps-count">3</span>
+                                    </button>
+                                    <button class="apps-filter-btn" type="button" role="tab" aria-selected="false">
+                                        <i class="bi bi-x-circle"></i>
+                                        <span data-i18n="applications.tabs.rejected">Rejected</span>
+                                        <span class="apps-count">2</span>
+                                    </button>
+                                    <button class="apps-filter-btn" type="button" role="tab" aria-selected="false">
+                                        <i class="bi bi-arrow-counterclockwise"></i>
+                                        <span data-i18n="applications.tabs.withdrawn">Withdrawn</span>
+                                        <span class="apps-count">4</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="apps-note">
+                                <div class="apps-note-line">
+                                    <span data-i18n="applications.note.line1">To avail Services, filing of Service-Common Application Form (S-CAF) is a must for Existing Projects.</span>
+                                    <a href="#" class="apps-note-link" data-i18n="applications.note.click_here_apply">Click here to Apply</a>
+                                </div>
+                                <div class="apps-note-line">
+                                    <span data-i18n="applications.note.line2">To view list of Services</span>
+                                    <a href="#" class="apps-note-link" data-i18n="common.click_here">Click here</a>
+                                </div>
+                            </div>
+
+                            <div class="apps-section">
+                                <div class="accordion projects-accordion" id="appsAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="appsRtbaHeading">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#appsRtbaCollapse" aria-expanded="true" aria-controls="appsRtbaCollapse">
+                                                <span class="acc-ic"><i class="bi bi-file-earmark-text"></i></span>
+                                                <span class="acc-title" data-i18n="projects.accordion.rtba">Right To Business Act (RTBA -CAF)</span>
+                                            </button>
+                                        </h2>
+                                        <div id="appsRtbaCollapse" class="accordion-collapse collapse show" aria-labelledby="appsRtbaHeading">
+                                            <div class="accordion-body p-0">
+                                                <div class="table-responsive projects-table-wrap">
+                                                    <table class="table projects-table mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.pin_no">Pin No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.applicant_name">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.mobile_no">Mobile No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.project_name">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.district">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.project_sector">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th class="text-end"><span class="th-lbl" data-i18n="applications.table.action">Action</span></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a class="pin-link" href="#">250535098</a></td>
+                                                                <td>Mr Sunny Kumar</td>
+                                                                <td>7894561235</td>
+                                                                <td>K A Demo New Company Pvt. Ltd.</td>
+                                                                <td>Bathinda</td>
+                                                                <td>Manufacturing</td>
+                                                                <td class="text-end"><button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="appsCafHeading">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#appsCafCollapse" aria-expanded="false" aria-controls="appsCafCollapse">
+                                                <span class="acc-ic"><i class="bi bi-file-earmark-text"></i></span>
+                                                <span class="acc-title" data-i18n="projects.accordion.caf">Common Application Form (CAF)</span>
+                                            </button>
+                                        </h2>
+                                        <div id="appsCafCollapse" class="accordion-collapse collapse" aria-labelledby="appsCafHeading">
+                                            <div class="accordion-body p-0">
+                                                <div class="table-responsive projects-table-wrap">
+                                                    <table class="table projects-table mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.pin_no">Pin No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.applicant_name">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.mobile_no">Mobile No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.project_name">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.district">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.project_sector">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th class="text-end"><span class="th-lbl" data-i18n="applications.table.action">Action</span></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a class="pin-link" href="#">250535096</a></td>
+                                                                <td>Mr Ankit Kumar</td>
+                                                                <td>8712773489</td>
+                                                                <td>Bonds &amp; Associates</td>
+                                                                <td>Amritsar</td>
+                                                                <td>Other Service Projects</td>
+                                                                <td class="text-end"><button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="appsScafHeading">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#appsScafCollapse" aria-expanded="false" aria-controls="appsScafCollapse">
+                                                <span class="acc-ic"><i class="bi bi-file-earmark-text"></i></span>
+                                                <span class="acc-title" data-i18n="projects.accordion.scaf">Service - Common Application Form (S-CAF)</span>
+                                            </button>
+                                        </h2>
+                                        <div id="appsScafCollapse" class="accordion-collapse collapse" aria-labelledby="appsScafHeading">
+                                            <div class="accordion-body p-0">
+                                                <div class="table-responsive projects-table-wrap">
+                                                    <table class="table projects-table mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.pin_no">Pin No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.applicant_name">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.mobile_no">Mobile No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.project_name">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.district">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th><span class="th-lbl" data-i18n="applications.table.project_sector">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                <th class="text-end"><span class="th-lbl" data-i18n="applications.table.action">Action</span></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a class="pin-link" href="#">150535024</a></td>
+                                                                <td>Mr Vikas Sharma</td>
+                                                                <td>7894561235</td>
+                                                                <td>New Demo industries Company Pvt. Ltd.</td>
+                                                                <td>S.A.S Nagar</td>
+                                                                <td>Other Service Projects</td>
+                                                                <td class="text-end"><button class="tbl-ic-btn" type="button" aria-label="Add"><i class="bi bi-plus-lg"></i></button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/i18next@23.10.0/i18next.min.js"></script>
+    <script src="../js/shared-ui.js"></script>
+</body>
+</html>

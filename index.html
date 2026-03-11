@@ -8,8 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css?v=20260311">
     <link rel="stylesheet" href="Home/home.css">
     <link rel="stylesheet" href="Home/home-mob.css">
     <title>Document</title>
@@ -32,35 +35,35 @@
             <nav class="sidebar-nav">
                 <a class="nav-item active" href="#">
                     <span class="nav-ic"><i class="bi bi-grid"></i></span>
-                    <span class="nav-text">Home</span>
+                    <span class="nav-text" data-i18n="nav.home">Home</span>
                 </a>
                 <a class="nav-item" href="./My-Project/my-projects.html">
                     <span class="nav-ic"><i class="bi bi-briefcase"></i></span>
-                    <span class="nav-text">My Projects</span>
+                    <span class="nav-text" data-i18n="nav.my_projects">My Projects</span>
                 </a>
-                <a class="nav-item" href="#">
+                <a class="nav-item" href="./My-Application/my-applications.html">
                     <span class="nav-ic"><i class="bi bi-file-earmark-text"></i></span>
-                    <span class="nav-text">My Applications</span>
+                    <span class="nav-text" data-i18n="nav.my_applications">My Applications</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-currency-rupee"></i></span>
-                    <span class="nav-text">Fiscal Incentives</span>
+                    <span class="nav-text" data-i18n="nav.fiscal_incentives">Fiscal Incentives</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-card-list"></i></span>
-                    <span class="nav-text">Fiscal Registrations</span>
+                    <span class="nav-text" data-i18n="nav.fiscal_registrations">Fiscal Registrations</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-patch-check"></i></span>
-                    <span class="nav-text">Know your Approvals</span>
+                    <span class="nav-text" data-i18n="nav.know_approvals">Know your Approvals</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-person"></i></span>
-                    <span class="nav-text">My Account</span>
+                    <span class="nav-text" data-i18n="nav.my_account">My Account</span>
                 </a>
                 <a class="nav-item" href="#">
                     <span class="nav-ic"><i class="bi bi-box-arrow-right"></i></span>
-                    <span class="nav-text">Logout</span>
+                    <span class="nav-text" data-i18n="nav.logout">Logout</span>
                 </a>
             </nav>
         </aside>
@@ -129,8 +132,8 @@
                 <main class="content-area">
                     <div class="container-fluid px-3 px-lg-4">
                         <div class="d-flex align-items-center justify-content-between py-3 page-head">
-                            <div class="page-title">Home</div>
-                            <div class="breadcrumb-mini">Fasttrack Portal / <span class="fw-semibold">Home</span></div>
+                            <div class="page-title" data-i18n="page.home_title">Home</div>
+                            <div class="breadcrumb-mini"><span data-i18n="portal.name">Fasttrack Portal</span> / <span class="fw-semibold" data-i18n="page.home_title">Home</span></div>
                         </div>
 
                         <div class="desktop-layout d-none d-lg-block">
@@ -142,11 +145,11 @@
                                                 <div class="dash-card-top">
                                                     <div class="dash-ic bg-soft-blue"><i class="fa-solid fa-sack-dollar"></i></div>
                                                     <div class="dash-txt">
-                                                        <div class="dash-title">INVESTMENT PROJECT</div>
-                                                        <div class="dash-sub">Apply New Project / Expansion</div>
+                                                        <div class="dash-title" data-i18n="home.cards.invest_title">INVESTMENT PROJECT</div>
+                                                        <div class="dash-sub" data-i18n="home.cards.invest_sub">Apply New Project / Expansion</div>
                                                     </div>
                                                 </div>
-                                                <a class="pill-btn" href="#">Click here</a>
+                                                <a class="pill-btn" href="#" data-i18n="common.click_here">Click here</a>
                                             </div>
                                         </div>
 
@@ -155,11 +158,11 @@
                                                 <div class="dash-card-top">
                                                     <div class="dash-ic bg-soft-pink"><i class="fa-solid fa-clipboard-check"></i></div>
                                                     <div class="dash-txt">
-                                                        <div class="dash-title">MANAGE PROJECT APPLICATIONS</div>
-                                                        <div class="dash-sub">Apply Regulatory Clearances | Incentive / Service</div>
+                                                        <div class="dash-title" data-i18n="home.cards.manage_title">MANAGE PROJECT APPLICATIONS</div>
+                                                        <div class="dash-sub" data-i18n="home.cards.manage_sub">Apply Regulatory Clearances | Incentive / Service</div>
                                                     </div>
                                                 </div>
-                                                <a class="pill-btn" href="My-Project/my-projects.html">Click here</a>
+                                                <a class="pill-btn" href="My-Project/my-projects.html" data-i18n="common.click_here">Click here</a>
                                             </div>
                                         </div>
 
@@ -168,11 +171,11 @@
                                                 <div class="dash-card-top">
                                                     <div class="dash-ic bg-soft-amber"><i class="fa-regular fa-file-lines"></i></div>
                                                     <div class="dash-txt">
-                                                        <div class="dash-title">MY APPLICATIONS</div>
-                                                        <div class="dash-sub">View And Share Project Document</div>
+                                                        <div class="dash-title" data-i18n="home.cards.myapps_title">MY APPLICATIONS</div>
+                                                        <div class="dash-sub" data-i18n="home.cards.myapps_sub">View And Share Project Document</div>
                                                     </div>
                                                 </div>
-                                                <a class="pill-btn" href="#">Click here</a>
+                                                <a class="pill-btn" href="My-Application/my-applications.html" data-i18n="common.click_here">Click here</a>
                                             </div>
                                         </div>
 
@@ -181,11 +184,11 @@
                                                 <div class="dash-card-top">
                                                     <div class="dash-ic bg-soft-green"><i class="fa-regular fa-circle-check"></i></div>
                                                     <div class="dash-txt">
-                                                        <div class="dash-title">KNOW YOUR APPROVALS</div>
-                                                        <div class="dash-sub">View Status and Progress of Application</div>
+                                                        <div class="dash-title" data-i18n="home.cards.approvals_title">KNOW YOUR APPROVALS</div>
+                                                        <div class="dash-sub" data-i18n="home.cards.approvals_sub">View Status and Progress of Application</div>
                                                     </div>
                                                 </div>
-                                                <a class="pill-btn" href="#">Click here</a>
+                                                <a class="pill-btn" href="#" data-i18n="common.click_here">Click here</a>
                                             </div>
                                         </div>
 
@@ -194,11 +197,11 @@
                                                 <div class="dash-card-top">
                                                     <div class="dash-ic bg-soft-gray"><i class="fa-solid fa-vault"></i></div>
                                                     <div class="dash-txt">
-                                                        <div class="dash-title">ENTITY VAULT</div>
-                                                        <div class="dash-sub">View And Share Project Document</div>
+                                                        <div class="dash-title" data-i18n="home.cards.vault_title">ENTITY VAULT</div>
+                                                        <div class="dash-sub" data-i18n="home.cards.vault_sub">View And Share Project Document</div>
                                                     </div>
                                                 </div>
-                                                <a class="pill-btn" href="#">Click here</a>
+                                                <a class="pill-btn" href="#" data-i18n="common.click_here">Click here</a>
                                             </div>
                                         </div>
 
@@ -207,11 +210,11 @@
                                                 <div class="dash-card-top">
                                                     <div class="dash-ic bg-soft-blue"><i class="fa-solid fa-desktop"></i></div>
                                                     <div class="dash-txt">
-                                                        <div class="dash-title">PROJECT DASHBOARD</div>
-                                                        <div class="dash-sub">View Status and Progress of Application</div>
+                                                        <div class="dash-title" data-i18n="home.cards.dashboard_title">PROJECT DASHBOARD</div>
+                                                        <div class="dash-sub" data-i18n="home.cards.dashboard_sub">View Status and Progress of Application</div>
                                                     </div>
                                                 </div>
-                                                <a class="pill-btn" href="#">Click here</a>
+                                                <a class="pill-btn" href="#" data-i18n="common.click_here">Click here</a>
                                             </div>
                                         </div>
                                     </div>
@@ -220,25 +223,25 @@
                                         <div class="col-12 col-xl-6">
                                             <div class="panel-card h-100">
                                                 <div class="panel-head">
-                                                    <div class="panel-title"><i class="fa-regular fa-bell me-2"></i>ACTION ALERTS</div>
+                                                    <div class="panel-title"><i class="fa-regular fa-bell me-2"></i><span data-i18n="home.action_alerts">ACTION ALERTS</span></div>
                                                 </div>
                                                 <div class="panel-body">
                                                     <div class="d-flex flex-wrap gap-2">
-                                                        <a class="chip" href="#">Pending <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                                                        <a class="chip" href="#">Approval issued <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                                        <a class="chip" href="#"><span data-i18n="home.chip_pending">Pending</span> <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                                        <a class="chip" href="#"><span data-i18n="home.chip_approval_issued">Approval issued</span> <i class="fa-solid fa-arrow-right ms-1"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="col-12 col-xl-6">
-                                            <div class="video-card h-100">
+                                            <div class="video-card">
                                                 <div class="video-thumb" role="button" data-bs-toggle="modal" data-bs-target="#walkthroughModal" aria-label="Open walkthrough video">
                                                     <img class="video-img" src="assets/images/thumbnail.png" alt="Investors walkthrough thumbnail">
                                                     <button class="play-btn" type="button" aria-label="Play">
                                                         <i class="fa-brands fa-youtube"></i>
                                                     </button>
-                                                    <div class="video-caption">INVESTORS WALKTHROUGH</div>
+                                                    <div class="video-caption" data-i18n="home.investors_walkthrough">INVESTORS WALKTHROUGH</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -248,12 +251,12 @@
                                 <div class="col-12 col-lg-3">
                                     <aside class="logs-panel" aria-label="Logs">
                                         <div class="logs-head">
-                                            <div class="logs-title">LOGS</div>
-                                            <a class="pill-btn pill-outline" href="#">View All</a>
+                                            <div class="logs-title" data-i18n="home.logs">LOGS</div>
+                                            <a class="pill-btn pill-outline" href="#" data-i18n="common.view_all">View All</a>
                                         </div>
                                         <div class="logs-search">
                                             <i class="fa-solid fa-magnifying-glass"></i>
-                                            <input class="form-control" type="search" placeholder="Search" aria-label="Search logs">
+                                            <input class="form-control" type="search" placeholder="Search" aria-label="Search logs" data-i18n-placeholder="common.search">
                                         </div>
 
                                         <div class="logs-list">
@@ -264,10 +267,10 @@
                                                 <div class="log-mid">
                                                     <div class="log-name">Amit Kumar</div>
                                                     <div class="log-meta">(Assistance Labour Commissioner)</div>
-                                                    <div class="log-line">To : PB Labour(Other) (Industry User)</div>
-                                                    <div class="log-line">Status : <span class="status ok">Clearance Issued</span></div>
-                                                    <div class="log-line">Comments: ok</div>
-                                                    <div class="log-time">25 Aug 2025 | 11:30 AM</div>
+                                                    <div class="log-line"><span data-i18n="common.to">To</span> : PB Labour(Other) (Industry User)</div>
+                                                    <div class="log-line"><span data-i18n="common.status">Status</span> : <span class="status ok" data-i18n="projects.status.cleared">Clearance Issued</span></div>
+                                                    <div class="log-line"><span data-i18n="common.comments">Comments</span>: ok</div>
+                                                    <div class="log-time"><span data-i18n="common.on">On</span>: 25 Aug 2025 | 11:30 AM</div>
                                                 </div>
                                             </div>
 
@@ -278,10 +281,10 @@
                                                 <div class="log-mid">
                                                     <div class="log-name">Vinod Kumar</div>
                                                     <div class="log-meta">(Investor)</div>
-                                                    <div class="log-line">To : PB Labour(Other) (Industry User)</div>
-                                                    <div class="log-line">Status : <span class="status warn">Objection Resolved</span></div>
-                                                    <div class="log-line">Comments: Observation resolve kindly check now</div>
-                                                    <div class="log-time">24 Aug 2025 | 1:40 AM</div>
+                                                    <div class="log-line"><span data-i18n="common.to">To</span> : PB Labour(Other) (Industry User)</div>
+                                                    <div class="log-line"><span data-i18n="common.status">Status</span> : <span class="status warn" data-i18n="projects.status.objection_resolved">Objection Resolved</span></div>
+                                                    <div class="log-line"><span data-i18n="common.comments">Comments</span>: Observation resolve kindly check now</div>
+                                                    <div class="log-time"><span data-i18n="common.on">On</span>: 24 Aug 2025 | 1:40 AM</div>
                                                 </div>
                                             </div>
 
@@ -292,10 +295,10 @@
                                                 <div class="log-mid">
                                                     <div class="log-name">Vinod Kumar</div>
                                                     <div class="log-meta">(Investor)</div>
-                                                    <div class="log-line">To : PB Labour(Other) (Industry User)</div>
-                                                    <div class="log-line">Status : <span class="status bad">Objection Raised</span></div>
-                                                    <div class="log-line">Comments: Please update documents</div>
-                                                    <div class="log-time">21 Aug 2025 | 9:10 AM</div>
+                                                    <div class="log-line"><span data-i18n="common.to">To</span> : PB Labour(Other) (Industry User)</div>
+                                                    <div class="log-line"><span data-i18n="common.status">Status</span> : <span class="status bad" data-i18n="projects.status.objection_raised">Objection Raised</span></div>
+                                                    <div class="log-line"><span data-i18n="common.comments">Comments</span>: Please update documents</div>
+                                                    <div class="log-time"><span data-i18n="common.on">On</span>: 21 Aug 2025 | 9:10 AM</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -308,12 +311,12 @@
                             <ul class="nav nav-tabs mobile-tabs" id="mobileTabs" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#homePane" type="button" role="tab" aria-controls="homePane" aria-selected="true">
-                                        <i class="bi bi-house me-2"></i>HOME
+                                        <i class="bi bi-house me-2"></i><span data-i18n="nav.home">HOME</span>
                                     </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="logs-tab" data-bs-toggle="tab" data-bs-target="#logsPane" type="button" role="tab" aria-controls="logsPane" aria-selected="false">
-                                        <i class="bi bi-list-ul me-2"></i>LOGS
+                                        <i class="bi bi-list-ul me-2"></i><span data-i18n="home.logs">LOGS</span>
                                     </button>
                                 </li>
                             </ul>
@@ -328,11 +331,11 @@
                                                         <div class="dash-card-top">
                                                             <div class="dash-ic bg-soft-blue"><i class="fa-solid fa-sack-dollar"></i></div>
                                                             <div class="dash-txt">
-                                                                <div class="dash-title">INVESTMENT PROJECT</div>
-                                                                <div class="dash-sub">Apply New Project / Expansion</div>
+                                                                <div class="dash-title" data-i18n="home.cards.invest_title">INVESTMENT PROJECT</div>
+                                                                <div class="dash-sub" data-i18n="home.cards.invest_sub">Apply New Project / Expansion</div>
                                                             </div>
                                                         </div>
-                                                        <a class="pill-btn" href="#">Click here</a>
+                                                        <a class="pill-btn" href="#" data-i18n="common.click_here">Click here</a>
                                                     </div>
                                                 </div>
 
@@ -341,11 +344,11 @@
                                                         <div class="dash-card-top">
                                                             <div class="dash-ic bg-soft-pink"><i class="fa-solid fa-clipboard-check"></i></div>
                                                             <div class="dash-txt">
-                                                                <div class="dash-title">MANAGE PROJECT APPLICATIONS</div>
-                                                                <div class="dash-sub">Apply Regulatory Clearances | Incentive / Service</div>
+                                                                <div class="dash-title" data-i18n="home.cards.manage_title">MANAGE PROJECT APPLICATIONS</div>
+                                                                <div class="dash-sub" data-i18n="home.cards.manage_sub">Apply Regulatory Clearances | Incentive / Service</div>
                                                             </div>
                                                         </div>
-                                                        <a class="pill-btn" href="My-Project/my-projects.html">Click here</a>
+                                                        <a class="pill-btn" href="My-Project/my-projects.html" data-i18n="common.click_here">Click here</a>
                                                     </div>
                                                 </div>
 
@@ -354,11 +357,11 @@
                                                         <div class="dash-card-top">
                                                             <div class="dash-ic bg-soft-amber"><i class="fa-regular fa-file-lines"></i></div>
                                                             <div class="dash-txt">
-                                                                <div class="dash-title">MY APPLICATIONS</div>
-                                                                <div class="dash-sub">View And Share Project Document</div>
+                                                                <div class="dash-title" data-i18n="home.cards.myapps_title">MY APPLICATIONS</div>
+                                                                <div class="dash-sub" data-i18n="home.cards.myapps_sub">View And Share Project Document</div>
                                                             </div>
                                                         </div>
-                                                        <a class="pill-btn" href="#">Click here</a>
+                                                        <a class="pill-btn" href="My-Application/my-applications.html" data-i18n="common.click_here">Click here</a>
                                                     </div>
                                                 </div>
 
@@ -367,11 +370,11 @@
                                                         <div class="dash-card-top">
                                                             <div class="dash-ic bg-soft-green"><i class="fa-regular fa-circle-check"></i></div>
                                                             <div class="dash-txt">
-                                                                <div class="dash-title">KNOW YOUR APPROVALS</div>
-                                                                <div class="dash-sub">View Status and Progress of Application</div>
+                                                                <div class="dash-title" data-i18n="home.cards.approvals_title">KNOW YOUR APPROVALS</div>
+                                                                <div class="dash-sub" data-i18n="home.cards.approvals_sub">View Status and Progress of Application</div>
                                                             </div>
                                                         </div>
-                                                        <a class="pill-btn" href="#">Click here</a>
+                                                        <a class="pill-btn" href="#" data-i18n="common.click_here">Click here</a>
                                                     </div>
                                                 </div>
 
@@ -380,11 +383,11 @@
                                                         <div class="dash-card-top">
                                                             <div class="dash-ic bg-soft-gray"><i class="fa-solid fa-vault"></i></div>
                                                             <div class="dash-txt">
-                                                                <div class="dash-title">ENTITY VAULT</div>
-                                                                <div class="dash-sub">View And Share Project Document</div>
+                                                                <div class="dash-title" data-i18n="home.cards.vault_title">ENTITY VAULT</div>
+                                                                <div class="dash-sub" data-i18n="home.cards.vault_sub">View And Share Project Document</div>
                                                             </div>
                                                         </div>
-                                                        <a class="pill-btn" href="#">Click here</a>
+                                                        <a class="pill-btn" href="#" data-i18n="common.click_here">Click here</a>
                                                     </div>
                                                 </div>
 
@@ -393,11 +396,11 @@
                                                         <div class="dash-card-top">
                                                             <div class="dash-ic bg-soft-blue"><i class="fa-solid fa-desktop"></i></div>
                                                             <div class="dash-txt">
-                                                                <div class="dash-title">PROJECT DASHBOARD</div>
-                                                                <div class="dash-sub">View Status and Progress of Application</div>
+                                                                <div class="dash-title" data-i18n="home.cards.dashboard_title">PROJECT DASHBOARD</div>
+                                                                <div class="dash-sub" data-i18n="home.cards.dashboard_sub">View Status and Progress of Application</div>
                                                             </div>
                                                         </div>
-                                                        <a class="pill-btn" href="#">Click here</a>
+                                                        <a class="pill-btn" href="#" data-i18n="common.click_here">Click here</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -406,12 +409,12 @@
                                                 <div class="col-12">
                                                     <div class="panel-card">
                                                         <div class="panel-head">
-                                                            <div class="panel-title"><i class="fa-regular fa-bell me-2"></i>ACTION ALERTS</div>
+                                                            <div class="panel-title"><i class="fa-regular fa-bell me-2"></i><span data-i18n="home.action_alerts">ACTION ALERTS</span></div>
                                                         </div>
                                                         <div class="panel-body">
                                                             <div class="d-flex flex-wrap gap-2">
-                                                                <a class="chip" href="#">Pending <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                                                                <a class="chip" href="#">Approval issued <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                                                <a class="chip" href="#"><span data-i18n="home.chip_pending">Pending</span> <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                                                <a class="chip" href="#"><span data-i18n="home.chip_approval_issued">Approval issued</span> <i class="fa-solid fa-arrow-right ms-1"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -424,7 +427,7 @@
                                                             <button class="play-btn" type="button" aria-label="Play">
                                                                 <i class="fa-brands fa-youtube"></i>
                                                             </button>
-                                                            <div class="video-caption">INVESTORS WALKTHROUGH</div>
+                                                            <div class="video-caption" data-i18n="home.investors_walkthrough">INVESTORS WALKTHROUGH</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -438,12 +441,12 @@
                                         <div class="col-12">
                                             <aside class="logs-panel" aria-label="Logs">
                                                 <div class="logs-head">
-                                                    <div class="logs-title">LOGS</div>
-                                                    <a class="pill-btn pill-outline" href="#">View All</a>
+                                                    <div class="logs-title" data-i18n="home.logs">LOGS</div>
+                                                    <a class="pill-btn pill-outline" href="#" data-i18n="common.view_all">View All</a>
                                                 </div>
                                                 <div class="logs-search">
                                                     <i class="fa-solid fa-magnifying-glass"></i>
-                                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search logs">
+                                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search logs" data-i18n-placeholder="common.search">
                                                 </div>
 
                                                 <div class="logs-list">
@@ -454,10 +457,10 @@
                                                         <div class="log-mid">
                                                             <div class="log-name">Amit Kumar</div>
                                                             <div class="log-meta">(Assistance Labour Commissioner)</div>
-                                                            <div class="log-line">To : PB Labour(Other) (Industry User)</div>
-                                                            <div class="log-line">Status : <span class="status ok">Clearance Issued</span></div>
-                                                            <div class="log-line">Comments: ok</div>
-                                                            <div class="log-time">25 Aug 2025 | 11:30 AM</div>
+                                                            <div class="log-line"><span data-i18n="common.to">To</span> : PB Labour(Other) (Industry User)</div>
+                                                            <div class="log-line"><span data-i18n="common.status">Status</span> : <span class="status ok" data-i18n="projects.status.cleared">Clearance Issued</span></div>
+                                                            <div class="log-line"><span data-i18n="common.comments">Comments</span>: ok</div>
+                                                            <div class="log-time"><span data-i18n="common.on">On</span>: 25 Aug 2025 | 11:30 AM</div>
                                                         </div>
                                                     </div>
 
@@ -468,10 +471,10 @@
                                                         <div class="log-mid">
                                                             <div class="log-name">Vinod Kumar</div>
                                                             <div class="log-meta">(Investor)</div>
-                                                            <div class="log-line">To : PB Labour(Other) (Industry User)</div>
-                                                            <div class="log-line">Status : <span class="status warn">Objection Resolved</span></div>
-                                                            <div class="log-line">Comments: Observation resolve kindly check now</div>
-                                                            <div class="log-time">24 Aug 2025 | 1:40 AM</div>
+                                                            <div class="log-line"><span data-i18n="common.to">To</span> : PB Labour(Other) (Industry User)</div>
+                                                            <div class="log-line"><span data-i18n="common.status">Status</span> : <span class="status warn" data-i18n="projects.status.objection_resolved">Objection Resolved</span></div>
+                                                            <div class="log-line"><span data-i18n="common.comments">Comments</span>: Observation resolve kindly check now</div>
+                                                            <div class="log-time"><span data-i18n="common.on">On</span>: 24 Aug 2025 | 1:40 AM</div>
                                                         </div>
                                                     </div>
 
@@ -482,10 +485,10 @@
                                                         <div class="log-mid">
                                                             <div class="log-name">Vinod Kumar</div>
                                                             <div class="log-meta">(Investor)</div>
-                                                            <div class="log-line">To : PB Labour(Other) (Industry User)</div>
-                                                            <div class="log-line">Status : <span class="status bad">Objection Raised</span></div>
-                                                            <div class="log-line">Comments: Please update documents</div>
-                                                            <div class="log-time">21 Aug 2025 | 9:10 AM</div>
+                                                            <div class="log-line"><span data-i18n="common.to">To</span> : PB Labour(Other) (Industry User)</div>
+                                                            <div class="log-line"><span data-i18n="common.status">Status</span> : <span class="status bad" data-i18n="projects.status.objection_raised">Objection Raised</span></div>
+                                                            <div class="log-line"><span data-i18n="common.comments">Comments</span>: Please update documents</div>
+                                                            <div class="log-time"><span data-i18n="common.on">On</span>: 21 Aug 2025 | 9:10 AM</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -512,28 +515,28 @@
             <div class="chatbot-title" id="chatbotOffcanvasLabel">
                 <img class="chatbot-head-ic" src="assets/images/chatbot-icon.png" alt="Chatbot">
                 <div>
-                    <div class="chatbot-name">Ease Punjab AI</div>
+                    <div class="chatbot-name" data-i18n="chatbot.title">Ease Punjab AI</div>
                 </div>
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body chatbot-body">
-            <div class="chatbot-label">Please provide Application ID or PIN</div>
-            <input class="form-control chatbot-input" type="text" placeholder="Enter application ID">
+            <div class="chatbot-label" data-i18n="chatbot.label_app_id">Please provide Application ID or PIN</div>
+            <input class="form-control chatbot-input" type="text" placeholder="Enter application ID" data-i18n-placeholder="chatbot.placeholder_app_id">
 
-            <div class="chatbot-label mt-3">How can I assist you today?</div>
+            <div class="chatbot-label mt-3" data-i18n="chatbot.label_help">How can I assist you today?</div>
             <div class="chatbot-msgs">
-                <div class="chatbot-pill">What is the status of my application?</div>
+                <div class="chatbot-pill" data-i18n="chatbot.pill_status">What is the status of my application?</div>
                 <div class="chatbot-card">
                     <div class="chatbot-card-h">ID: 25087917</div>
-                    <div class="chatbot-card-b">Vishav Monga <span class="text-muted">To</span> Vinod Kumar</div>
-                    <div class="chatbot-card-b">On: 05-Aug-2025</div>
-                    <div class="chatbot-card-b">Status : <span class="chatbot-status">Verified</span></div>
+                    <div class="chatbot-card-b">Vishav Monga <span class="text-muted" data-i18n="common.to">To</span> Vinod Kumar</div>
+                    <div class="chatbot-card-b"><span data-i18n="common.on">On</span>: 05-Aug-2025</div>
+                    <div class="chatbot-card-b"><span data-i18n="common.status">Status</span> : <span class="chatbot-status" data-i18n="projects.status.verified">Verified</span></div>
                 </div>
             </div>
         </div>
         <div class="chatbot-footer">
-            <input class="form-control chatbot-input" type="text" placeholder="Write your message here...">
+            <input class="form-control chatbot-input" type="text" placeholder="Write your message here..." data-i18n-placeholder="chatbot.placeholder_message">
             <button class="chatbot-send" type="button" aria-label="Send">
                 <i class="bi bi-send"></i>
             </button>
@@ -544,7 +547,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content video-modal">
                 <div class="modal-header video-modal-head">
-                    <div class="video-modal-title">Investors Walkthrough</div>
+                    <div class="video-modal-title" data-i18n="home.investors_walkthrough">Investors Walkthrough</div>
                     <div class="video-modal-actions">
                         <button class="video-modal-btn" type="button" id="walkthroughFullscreen" aria-label="Fullscreen">
                             <i class="bi bi-arrows-fullscreen"></i>
@@ -562,6 +565,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/i18next@23.10.0/i18next.min.js"></script>
     <script src="js/shared-ui.js"></script>
     <script>
         (function () {
