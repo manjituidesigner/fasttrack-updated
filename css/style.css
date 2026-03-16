@@ -13,6 +13,58 @@
   --header-h: 64px;
 }
 
+@media (min-width: 320px) and (max-width: 720px) {
+  .app-header {
+    height: 56px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+
+
+  .header-right {
+    top: 10px;
+  }
+
+  .header-left {
+    height: 56px;
+  }
+}
+
+@media (max-width: 360px) {
+  .app-header {
+    padding-left: 6px;
+    padding-right: 6px;
+    gap: 8px;
+  }
+
+  .header-left {
+    gap: 8px;
+  }
+
+  .header-right {
+    right: 6px;
+    gap: 6px;
+  }
+
+  .header-ft-logo { height: 24px; }
+
+  .shortcut-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+  }
+
+  .user-pill {
+    padding: 3px 6px;
+  }
+
+  .user-pill .user-ic {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 body {
   font-family: Roboto, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   background: var(--bg);
@@ -428,7 +480,7 @@ body.sidebar-open .sidebar-backdrop {
 .user-name {
   font-size: 13px;
   font-weight: 600;
-  color: #263648;
+  /* color: #263648; */
 }
 
 .app-body {
@@ -502,7 +554,7 @@ body.sidebar-open .sidebar-backdrop {
   justify-content: space-between;
   gap: 12px;
   font-weight: 700;
-  color: #111827;
+  /* color: #111827; */
 }
 
 .lang-switch-right {
@@ -540,11 +592,11 @@ body.sidebar-open .sidebar-backdrop {
   justify-content: space-between;
   font-size: 13px;
   font-weight: 700;
-  color: #111827;
+  /* color: #111827; */
 }
 
 .lang-switch-item:hover {
-  background: #eaf1ff;
+  background: #2e3157;;
 }
 
 .lang-check {
@@ -556,7 +608,7 @@ body.sidebar-open .sidebar-backdrop {
 @media (max-width: 992px) {
   body { overflow: auto; }
   .app-shell { grid-template-columns: 1fr; height: auto; min-height: 100vh; }
-  .app-body { overflow: visible; }
+  .app-body { overflow: auto; }
   .app-header {
     height: auto;
     padding: 6px 8px;

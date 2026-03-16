@@ -1001,15 +1001,55 @@
     function setupMobileSidebar() {
         var menuBtn = document.getElementById('mobileMenuBtn');
         var backdrop = document.getElementById('sidebarBackdrop');
+        var sidebar = document.querySelector('.app-sidebar');
+
+        if (!backdrop) {
+            backdrop = document.createElement('div');
+            backdrop.className = 'sidebar-backdrop';
+            backdrop.id = 'sidebarBackdrop';
+            document.body.appendChild(backdrop);
+        }
 
         function closeSidebar() { document.body.classList.remove('sidebar-open'); }
+        function isOpen() { return document.body.classList.contains('sidebar-open'); }
         function toggleSidebar() { document.body.classList.toggle('sidebar-open'); }
 
         if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
         if (backdrop) backdrop.addEventListener('click', closeSidebar);
+
+        document.addEventListener('click', function (e) {
+            if (!isOpen()) return;
+
+            var target = e.target;
+            if (!target) return;
+
+            if (menuBtn && (target === menuBtn || menuBtn.contains(target))) return;
+            if (sidebar && sidebar.contains(target)) return;
+            if (backdrop && (target === backdrop || backdrop.contains(target))) return;
+
+            closeSidebar();
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (!isOpen()) return;
+            if (e.key === 'Escape') closeSidebar();
+        });
+
         window.addEventListener('resize', function () {
             if (window.innerWidth >= 992) closeSidebar();
         });
+    }
+
+    function setupMobileBack() {
+        var btn = document.getElementById('mobileBackBtn');
+        if (!btn) return;
+        if (btn.getAttribute('data-bound') === '1') return;
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (window.history && window.history.length > 1) window.history.back();
+            else window.location.href = getAssetPrefix() + 'index.html';
+        });
+        btn.setAttribute('data-bound', '1');
     }
 
     if (document.readyState === 'loading') {
@@ -1023,6 +1063,7 @@
             setupThemeToggle();
             setupMobileCardNavigation();
             setupMobileSidebar();
+            setupMobileBack();
         });
     } else {
         applyTheme(getStoredTheme());
@@ -1034,5 +1075,6 @@
         setupThemeToggle();
         setupMobileCardNavigation();
         setupMobileSidebar();
+        setupMobileBack();
     }
 })();
