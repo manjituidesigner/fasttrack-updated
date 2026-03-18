@@ -183,6 +183,11 @@ html[data-theme="dark"] .projects-accordion .accordion-button:not(.collapsed) {
   border-bottom-color: rgba(255, 255, 255, 0.10);
 }
 
+html[data-theme="dark"] .projects-accordion .accordion-button::after {
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
 html[data-theme="dark"] .accordion-item {
   background: transparent;
   border-color: rgba(255, 255, 255, 0.10);

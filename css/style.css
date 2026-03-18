@@ -82,7 +82,15 @@ body {
 
 .app-shell {
   height: 100vh;
+  min-height: 0;
   position: relative;
+}
+
+@media (min-width: 992px) {
+  .app-body {
+    overflow: auto;
+    min-height: 0;
+  }
 }
 
 .app-sidebar {
@@ -466,6 +474,20 @@ body.sidebar-open .sidebar-backdrop {
   border-color: #d5def3;
 }
 
+.tbl-ic-btn[aria-label="Add"] i {
+  display: none;
+}
+
+.tbl-ic-btn[aria-label="Add"]::before {
+  content: "\f067";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .user-pill {
   border: 1px solid var(--border);
   background: #ffffff;
@@ -477,6 +499,19 @@ body.sidebar-open .sidebar-backdrop {
   color: var(--text);
 }
 
+.proj-menu .dropdown-item i {
+  margin-right: 10px;
+}
+
+.proj-menu .dropdown-item {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.proj-menu .dropdown-item span {
+  font-weight: 500;
+}
+
 .user-name {
   font-size: 13px;
   font-weight: 600;
@@ -485,6 +520,7 @@ body.sidebar-open .sidebar-backdrop {
 
 .app-body {
   overflow: auto;
+  /* max-height: 90vh; */
 }
 
 .content-area {
@@ -597,6 +633,12 @@ body.sidebar-open .sidebar-backdrop {
 
 .lang-switch-item:hover {
   background: #2e3157;;
+}
+
+html:not([data-theme="dark"]) .shortcut-menu .dropdown-item:hover,
+html:not([data-theme="dark"]) .user-menu .dropdown-item:hover,
+html:not([data-theme="dark"]) .lang-switch-item:hover {
+  background: #e3e4ed;
 }
 
 .lang-check {

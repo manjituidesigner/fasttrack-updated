@@ -101,18 +101,25 @@
   }
 
   .apps-mob-card-top {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    column-gap: 8px;
+    row-gap: 6px;
     align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
     font-size: 12px;
     font-weight: 900;
     color: #52627a;
     margin-bottom: 8px;
+    padding-right: 28px;
   }
 
   .apps-mob-sector {
-    margin-left: auto;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: start;
+    margin-left: 0;
+    display: inline-flex;
+    align-items: center;
     background: #dff0ff;
     color: #1f5ed7;
     padding: 4px 10px;
@@ -123,15 +130,18 @@
   }
 
   .apps-mob-pin {
+    grid-row: 1;
     color: #2f6fe4;
   }
 
   .apps-mob-sep {
+    grid-row: 1;
     color: #a7b0c0;
     font-weight: 900;
   }
 
   .apps-mob-date {
+    grid-row: 1;
     color: #7b879a;
     font-weight: 800;
   }
@@ -182,9 +192,20 @@
 
   .apps-mob-bottom {
     display: grid;
-    grid-template-columns: 1fr 1fr 34px;
+    grid-template-columns: 1fr auto;
     align-items: center;
     gap: 10px;
+  }
+
+  .apps-mob-card .dropdown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .apps-mob-card .proj-menu .dropdown-item {
+    font-size: 12px;
+    line-height: 14px;
   }
 
   .apps-mob-person {
@@ -213,6 +234,10 @@
     color: #2f6fe4;
     display: inline-grid;
     place-items: center;
+  }
+
+  .apps-mob-act.dropdown-toggle::after {
+    display: none;
   }
 
   .apps-select-row {

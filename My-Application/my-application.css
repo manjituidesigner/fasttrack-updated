@@ -3,8 +3,9 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow);
-  overflow: hidden;
+  overflow: auto;
   padding: 12px;
+  max-height: 72vh;
 }
 
 .apps-head {

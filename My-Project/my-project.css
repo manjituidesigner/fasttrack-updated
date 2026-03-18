@@ -43,8 +43,9 @@ span.acc-ic {
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow);
-  overflow: hidden;
+  overflow: auto;
   padding: 10px;
+  max-height: 72vh;
 }
 
 .projects-accordion {
@@ -80,7 +81,7 @@ span.acc-ic {
 .projects-accordion .accordion-button {
   padding: 10px 12px;
   font-weight: 800;
-  font-size: 0.75rem;
+  font-size: 14px;
   color: #1f2c3b;
   background: #f5f7fb;
   border-top: 1px solid var(--border);
@@ -198,8 +199,4 @@ span.acc-ic {
   display: inline-grid;
   place-items: center;
   margin-left: 6px;
-}
-
-.tbl-ic-btn i.bi-plus-lg {
-  color: #1f5ed7 !important;
 }
