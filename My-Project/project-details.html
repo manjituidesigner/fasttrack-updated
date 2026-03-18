@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css?v=20260317">
+    <link rel="stylesheet" href="../css/theme.css?v=20260311">
+    <link rel="stylesheet" href="project-details.css?v=20260318">
+    <title>Project Details</title>
+</head>
+<body class="details-shell">
+
+    <div class="app-shell">
+        <aside class="app-sidebar" aria-label="Sidebar">
+            <div class="sidebar-expand">
+                <button class="sidebar-expand-btn" type="button" aria-label="Expand sidebar">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+            <div class="sidebar-brand">
+                <img class="sidebar-gov-logo" src="../assets/images/govt-logo-white.png" alt="Government logo">
+                <img class="sidebar-ft-logo" src="../assets/images/fasttrack-logo-white.png" alt="FastTrack logo">
+            </div>
+
+            <nav class="sidebar-nav">
+                <a class="nav-item" href="../index.html">
+                    <span class="nav-ic"><i class="bi bi-grid"></i></span>
+                    <span class="nav-text" data-i18n="nav.home">Home</span>
+                </a>
+                <a class="nav-item active" href="my-projects.html">
+                    <span class="nav-ic"><i class="bi bi-briefcase"></i></span>
+                    <span class="nav-text" data-i18n="nav.my_projects">My Projects</span>
+                </a>
+                <a class="nav-item" href="../My-Application/my-applications.html">
+                    <span class="nav-ic"><i class="bi bi-file-earmark-text"></i></span>
+                    <span class="nav-text" data-i18n="nav.my_applications">My Applications</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-currency-rupee"></i></span>
+                    <span class="nav-text" data-i18n="nav.fiscal_incentives">Fiscal Incentives</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-card-list"></i></span>
+                    <span class="nav-text" data-i18n="nav.fiscal_registrations">Fiscal Registrations</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-patch-check"></i></span>
+                    <span class="nav-text" data-i18n="nav.know_approvals">Know your Approvals</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-person"></i></span>
+                    <span class="nav-text" data-i18n="nav.my_account">My Account</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-box-arrow-right"></i></span>
+                    <span class="nav-text" data-i18n="nav.logout">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <div class="app-main">
+            <header class="app-header" data-active-page="projects">
+                <div class="header-left">
+                    <button class="icon-btn mobile-menu-btn d-lg-none" type="button" aria-label="Menu" id="mobileMenuBtn">
+                        <i class="bi bi-list"></i>
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                    <div class="header-logos">
+                        <img class="header-gov-logo" src="../assets/images/govt-logo-dark.png" alt="Government logo">
+                        <img class="header-ft-logo" src="../assets/images/fasttrack-logo-dark.png" alt="FastTrack logo">
+                    </div>
+                </div>
+
+                <div class="header-center"></div>
+
+                <div class="header-right">
+                    <button class="icon-btn d-none d-lg-grid" type="button" aria-label="Theme" id="themeToggleBtn">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button class="user-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="user-ic"><i class="fa-solid fa-user"></i></span>
+                            <span class="user-name">Welcome Ankit Kumar</span>
+                            <span class="user-caret"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end user-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-translate"></i>Change Language</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>My Account</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-key"></i>Change Password</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="app-body">
+                <main class="content-area">
+                    <div class="container-fluid px-3 px-lg-4">
+                        <div class="d-flex align-items-center justify-content-between py-3 page-head">
+                            <div>
+                                <div class="page-title">Common Application Form (CAF)</div>
+                            </div>
+                            <div class="breadcrumb-mini"><a href="my-projects.html">Home</a> / <a href="my-projects.html">Projects</a> / <span class="fw-semibold">Common Application Form (CAF)</span></div>
+                        </div>
+
+                        <div class="details-card">
+                            <div class="step-tabs" role="tablist" aria-label="Project detail steps">
+                                <div class="step-tab active" role="button" tabindex="0" data-step="1"><span class="step-num">1</span><span>Application Details</span></div>
+                                <div class="step-tab" role="button" tabindex="0" data-step="2"><i class="bi bi-pencil-square"></i><span>Business Entity &amp; Project Details</span></div>
+                                <div class="step-tab" role="button" tabindex="0" data-step="3"><i class="bi bi-pencil-square"></i><span>Investment Details</span></div>
+                                <div class="step-tab" role="button" tabindex="0" data-step="4"><i class="bi bi-pencil-square"></i><span>Employment Details</span></div>
+                                <div class="step-tab" role="button" tabindex="0" data-step="5"><i class="bi bi-pencil-square"></i><span>Others</span></div>
+                            </div>
+
+                            <div class="details-topbar">
+                                <div class="details-meta">
+                                    <div><span class="text-muted">PIN :</span> <span id="detailPin">-</span></div>
+                                    <div><span class="text-muted">Application Date :</span> <span id="detailDate">-</span></div>
+                                </div>
+
+                                <div class="details-actions">
+                                    <button class="details-pill" type="button">Edit</button>
+                                    <button class="details-pill" type="button" id="detailsBack">Back</button>
+                                    <button class="details-pill primary" type="button" id="detailsNext">Next</button>
+                                    <button class="details-pill" type="button">Generated PDF</button>
+                                </div>
+                            </div>
+
+                            <div class="details-body">
+                                <div class="details-panel active" data-step-panel="1">
+                                    <div class="sec-title">1. Applicant Information :</div>
+                                    <div class="kv-table" role="table" aria-label="Applicant Information">
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">1.1, 1.2, 1.3, 1.4 - Name :</div>
+                                            <div class="kv-cell kv-v" role="cell">Mr. PDC PDC PDC</div>
+                                            <div class="kv-cell kv-k" role="cell">1.5 - Designation :</div>
+                                            <div class="kv-cell kv-v" role="cell">Proprietor</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">1.8 - Aadhaar Card No :</div>
+                                            <div class="kv-cell kv-v" role="cell">********2222</div>
+                                            <div class="kv-cell kv-k" role="cell">1.9 - Aadhaar Attachment :</div>
+                                            <div class="kv-cell kv-v" role="cell"><span class="kv-ic"><span class="pdf"><i class="bi bi-file-earmark-pdf"></i></span></span></div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">1.10 - Pan Card No :</div>
+                                            <div class="kv-cell kv-v" role="cell">EWRWD1234D</div>
+                                            <div class="kv-cell kv-k" role="cell">1.11 - Pan Card Attachment :</div>
+                                            <div class="kv-cell kv-v" role="cell"><span class="kv-ic"><span class="pdf"><i class="bi bi-file-earmark-pdf"></i></span></span></div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">1.12 - Applicant Phone Number :</div>
+                                            <div class="kv-cell kv-v" role="cell">8894938294</div>
+                                            <div class="kv-cell kv-k" role="cell">1.13 - Applicant Fax No :</div>
+                                            <div class="kv-cell kv-v" role="cell">N/A</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">1.14 - Applicant Email ID :</div>
+                                            <div class="kv-cell kv-v" role="cell">pdc23@gmail.com</div>
+                                            <div class="kv-cell kv-k" role="cell">1.15 - Applicant Mobile No :</div>
+                                            <div class="kv-cell kv-v" role="cell">8984849493</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">1.16 - Applicant Country :</div>
+                                            <div class="kv-cell kv-v" role="cell">India</div>
+                                            <div class="kv-cell kv-k" role="cell">1.17 - Applicant State :</div>
+                                            <div class="kv-cell kv-v" role="cell">Punjab</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">1.18 - Applicant District :</div>
+                                            <div class="kv-cell kv-v" role="cell">Sri Muktsar Sahib</div>
+                                            <div class="kv-cell kv-k" role="cell">1.19 - Applicant Tehsil :</div>
+                                            <div class="kv-cell kv-v" role="cell">Muktsar</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">1.20 - Name of Village/Town :</div>
+                                            <div class="kv-cell kv-v" role="cell">muktsar</div>
+                                            <div class="kv-cell kv-k" role="cell">1.21 - Applicant Address :</div>
+                                            <div class="kv-cell kv-v" role="cell">pdc123, pdc123, Muktsar, Sri Muktsar Sahib</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">1.22 - Applicant Pin Code :</div>
+                                            <div class="kv-cell kv-v" role="cell">198004</div>
+                                            <div class="kv-cell kv-k" role="cell">1.23 - Authorization Letter File :</div>
+                                            <div class="kv-cell kv-v" role="cell"><span class="kv-ic"><span class="pdf"><i class="bi bi-file-earmark-pdf"></i></span></span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sec-title">2. Business Entity Information :</div>
+                                    <div class="kv-table" role="table" aria-label="Business Entity Information">
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">2.1 - Business Entity Name :</div>
+                                            <div class="kv-cell kv-v" role="cell">pdc enterprises</div>
+                                            <div class="kv-cell kv-k" role="cell">2.2 - Business Entity Type :</div>
+                                            <div class="kv-cell kv-v" role="cell">Sole Proprietor</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">2.3 - Business Entity Country :</div>
+                                            <div class="kv-cell kv-v" role="cell">India</div>
+                                            <div class="kv-cell kv-k" role="cell">2.4 - Business Entity State :</div>
+                                            <div class="kv-cell kv-v" role="cell">Punjab</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">2.5 - Business Entity District :</div>
+                                            <div class="kv-cell kv-v" role="cell">Sri Muktsar Sahib</div>
+                                            <div class="kv-cell kv-k" role="cell">2.6 - Business Entity Tehsil :</div>
+                                            <div class="kv-cell kv-v" role="cell">Muktsar</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">2.7 - Name of Village/Town :</div>
+                                            <div class="kv-cell kv-v" role="cell">muktsar</div>
+                                            <div class="kv-cell kv-k" role="cell">2.8 - Business Entity Address :</div>
+                                            <div class="kv-cell kv-v" role="cell">pdc123, pdc123</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">2.9 - Business Entity Pin Code :</div>
+                                            <div class="kv-cell kv-v" role="cell">173002</div>
+                                            <div class="kv-cell kv-k" role="cell">2.10 - Business Entity have multiple Units with same Company PAN :</div>
+                                            <div class="kv-cell kv-v" role="cell">Yes</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">2.11 - Company Pan :</div>
+                                            <div class="kv-cell kv-v" role="cell">ABCDE1234F</div>
+                                            <div class="kv-cell kv-k" role="cell">2.12 - Company Pan Attachment :</div>
+                                            <div class="kv-cell kv-v" role="cell"><span class="kv-ic"><span class="pdf"><i class="bi bi-file-earmark-pdf"></i></span></span></div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">2.13 - Udyam Registration :</div>
+                                            <div class="kv-cell kv-v" role="cell">N/A</div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sec-title">3. Project Details :</div>
+                                    <div class="kv-table" role="table" aria-label="Project Details">
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">3.1 - Project Name :</div>
+                                            <div class="kv-cell kv-v" role="cell">pdc enterprises</div>
+                                            <div class="kv-cell kv-k" role="cell">3.2 - Project Purpose :</div>
+                                            <div class="kv-cell kv-v" role="cell">building</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">3.3 - Project Type :</div>
+                                            <div class="kv-cell kv-v" role="cell">New Project</div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">3.4 - Project Country :</div>
+                                            <div class="kv-cell kv-v" role="cell">India</div>
+                                            <div class="kv-cell kv-k" role="cell">3.5 - Project State :</div>
+                                            <div class="kv-cell kv-v" role="cell">Punjab</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">3.6 - Project District :</div>
+                                            <div class="kv-cell kv-v" role="cell">Sri Muktsar Sahib</div>
+                                            <div class="kv-cell kv-k" role="cell">3.7 - Project Tehsil :</div>
+                                            <div class="kv-cell kv-v" role="cell">Muktsar</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">3.8 - Project City/Town/Village :</div>
+                                            <div class="kv-cell kv-v" role="cell">muktsar</div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">3.9, 3.10 - Project Address :</div>
+                                            <div class="kv-cell kv-v" role="cell">pdc123, pdc123</div>
+                                            <div class="kv-cell kv-k" role="cell">3.11 - Project Pincode :</div>
+                                            <div class="kv-cell kv-v" role="cell">173002</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">3.12 - Whether GST Number applicable :</div>
+                                            <div class="kv-cell kv-v" role="cell">No</div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="details-panel" data-step-panel="2">
+                                    <div class="sec-title">4. Business Entity Details</div>
+
+                                    <div class="sec-title" style="color:#1f2c3b; margin-top: 0;">4.1 - Proprietor / Partners / Directors Details</div>
+                                    <div class="table-responsive kv-grid-wrap" aria-label="Proprietor Partners Directors Details">
+                                        <table class="table kv-grid-table mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr.No.</th>
+                                                    <th>Name</th>
+                                                    <th>Designation</th>
+                                                    <th>Address</th>
+                                                    <th>Mobile No.</th>
+                                                    <th>Fax</th>
+                                                    <th>Email</th>
+                                                    <th>Gender</th>
+                                                    <th>Category</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>rr</td>
+                                                    <td>Director</td>
+                                                    <td>rrrrrr</td>
+                                                    <td>0987654321</td>
+                                                    <td>0987654321</td>
+                                                    <td>gfds@gmail.com</td>
+                                                    <td>Transgender</td>
+                                                    <td>SC</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="kv-table" role="table" aria-label="Business Entity Attachments" style="margin-top: 12px;">
+                                        <div class="kv-row" role="row" style="grid-template-columns: 1fr 240px;">
+                                            <div class="kv-cell kv-k" role="cell">4.4 - Certificate Incorporation Registration Attachment :</div>
+                                            <div class="kv-cell kv-v" role="cell">N/A</div>
+                                        </div>
+                                        <div class="kv-row" role="row" style="grid-template-columns: 1fr 240px;">
+                                            <div class="kv-cell kv-k" role="cell">4.5 - MoA/Partnership Deed Attachment :</div>
+                                            <div class="kv-cell kv-v" role="cell">N/A</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sec-title">5. Project Details</div>
+                                    <div class="kv-table" role="table" aria-label="Project Details - Lease">
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">5.1 - Land Area (in Acres) :</div>
+                                            <div class="kv-cell kv-v" role="cell">44</div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">5.2 - Type of Lease Deed :</div>
+                                            <div class="kv-cell kv-v" role="cell">Lease Agreement</div>
+                                            <div class="kv-cell kv-k" role="cell">5.3 - Upload Copy of Registry / Allotment Letter :</div>
+                                            <div class="kv-cell kv-v" role="cell"><span class="kv-ic"><span class="pdf"><i class="bi bi-file-earmark-pdf"></i></span></span></div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">5.4 - Multiple City/Town/Village Involved :</div>
+                                            <div class="kv-cell kv-v" role="cell">No</div>
+                                            <div class="kv-cell kv-k" role="cell">5.5 - Does this site lies under MC Limit :</div>
+                                            <div class="kv-cell kv-v" role="cell">Yes</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">5.6 - Sectors :</div>
+                                            <div class="kv-cell kv-v" role="cell">Other Service Projects</div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">5.7 - Detailed Project Report (DPR) :</div>
+                                            <div class="kv-cell kv-v" role="cell"><span class="kv-ic"><span class="pdf"><i class="bi bi-file-earmark-pdf"></i></span></span></div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="details-panel" data-step-panel="3">
+                                    <div class="sec-title">6. Investment Details</div>
+                                    <div class="kv-table" role="table" aria-label="Investment Details">
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">6.1 - Land Cost :</div>
+                                            <div class="kv-cell kv-v" role="cell">50 Lakhs</div>
+                                            <div class="kv-cell kv-k" role="cell">6.2 - Building Cost :</div>
+                                            <div class="kv-cell kv-v" role="cell">50 Lakhs</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">6.3 - Plant and Machinery Cost :</div>
+                                            <div class="kv-cell kv-v" role="cell">55 Lakhs</div>
+                                            <div class="kv-cell kv-k" role="cell">6.4 - FCI :</div>
+                                            <div class="kv-cell kv-v" role="cell">155 Lakhs</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">6.5 - Other Cost :</div>
+                                            <div class="kv-cell kv-v" role="cell">0 Lakhs</div>
+                                            <div class="kv-cell kv-k" role="cell">6.6 - Total Project Cost :</div>
+                                            <div class="kv-cell kv-v" role="cell">155.00 Lakhs</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">6.7 - Proposed Date of Commercial Production after completion of Expansion / Modernization / Diversification :</div>
+                                            <div class="kv-cell kv-v" role="cell">10-Mar-2026</div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sec-title">6.8 – Type of Industry</div>
+                                    <div class="kv-table" role="table" aria-label="Type of Industry">
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">6.8.1 - Type of Industry :</div>
+                                            <div class="kv-cell kv-v" role="cell">Micro - &lt; = Rs.2.5 Crore</div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sec-title">7. Phase wise Investment as per Detailed Project Report <span class="kv-ic"><span class="pdf" style="width: 26px; height: 26px;"><i class="bi bi-file-earmark-pdf"></i></span></span></div>
+                                    <div class="table-responsive kv-grid-wrap" aria-label="Phase wise Investment">
+                                        <table class="table kv-grid-table mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>SNo.</th>
+                                                    <th>Name of Phase</th>
+                                                    <th>FCI (in Lakhs)</th>
+                                                    <th>Proposed Date of Investment</th>
+                                                    <th>Proposed Date of Production</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>ttt</td>
+                                                    <td>44</td>
+                                                    <td>09-Mar-2026</td>
+                                                    <td>10-Mar-2026</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="kv-table" role="table" aria-label="FDI Involved" style="margin-top: 12px;">
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">Is FDI Involved :</div>
+                                            <div class="kv-cell kv-v" role="cell">No</div>
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="details-panel" data-step-panel="4">
+                                    <div class="sec-title">8. Employment Details</div>
+                                    <div class="kv-table" role="table" aria-label="Employment Summary">
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">8.1 - Direct Male Employees :</div>
+                                            <div class="kv-cell kv-v" role="cell">55</div>
+                                            <div class="kv-cell kv-k" role="cell">8.2 - Direct Female Employees :</div>
+                                            <div class="kv-cell kv-v" role="cell">55</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">8.3 - Indirect Male Employees :</div>
+                                            <div class="kv-cell kv-v" role="cell">0</div>
+                                            <div class="kv-cell kv-k" role="cell">8.4 - Indirect Female Employees :</div>
+                                            <div class="kv-cell kv-v" role="cell">0</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell">8.5 - Total Male Employees :</div>
+                                            <div class="kv-cell kv-v" role="cell">55</div>
+                                            <div class="kv-cell kv-k" role="cell">8.6 - Total Female Employees :</div>
+                                            <div class="kv-cell kv-v" role="cell">55</div>
+                                        </div>
+                                        <div class="kv-row" role="row">
+                                            <div class="kv-cell kv-k" role="cell"></div>
+                                            <div class="kv-cell kv-v" role="cell"></div>
+                                            <div class="kv-cell kv-k" role="cell">Total Employees :</div>
+                                            <div class="kv-cell kv-v" role="cell">110</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sec-subtitle">Employment Details</div>
+                                    <div class="table-responsive kv-grid-wrap" aria-label="Employment Details Table">
+                                        <table class="table kv-grid-table mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>S.No</th>
+                                                    <th>Financial Year</th>
+                                                    <th>Employment Details Skilled/UnSkilled</th>
+                                                    <th>Direct Male</th>
+                                                    <th>Direct Female</th>
+                                                    <th>InDirect Male</th>
+                                                    <th>InDirect Female</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1.</td>
+                                                    <td>2026-2027</td>
+                                                    <td>Marketing Manager</td>
+                                                    <td>55</td>
+                                                    <td>55</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="details-panel" data-step-panel="5">
+                                    <div class="sec-title">9. Already Obtained Clearances/Approvals</div>
+                                    <div class="kv-table" role="table" aria-label="Already Obtained Clearances/Approvals">
+                                        <div class="kv-row" role="row" style="grid-template-columns: 420px 1fr;">
+                                            <div class="kv-cell kv-k" role="cell">9.1 - Already have any Regulatory Clearance :</div>
+                                            <div class="kv-cell kv-v" role="cell">No</div>
+                                        </div>
+                                        <div class="kv-row" role="row" style="grid-template-columns: 420px 1fr;">
+                                            <div class="kv-cell kv-k" role="cell">9.2 - Already have any Fiscal Incentive :</div>
+                                            <div class="kv-cell kv-v" role="cell">No</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/i18next@23.10.0/i18next.min.js"></script>
+    <script src="../js/shared-ui.js"></script>
+    <script>
+        (function () {
+            try {
+                var params = new URLSearchParams(window.location.search || '');
+                var pin = params.get('pin') || '';
+                var date = params.get('date') || '';
+                var pinEl = document.getElementById('detailPin');
+                var dateEl = document.getElementById('detailDate');
+                if (pinEl) pinEl.textContent = pin || '—';
+                if (dateEl) dateEl.textContent = date || '—';
+
+                var activeStep = 1;
+
+                function setStep(step) {
+                    if (!step || isNaN(step)) return;
+                    if (step < 1) step = 1;
+                    if (step > 5) step = 5;
+                    activeStep = step;
+
+                    var tabs = document.querySelectorAll('.step-tab[data-step]');
+                    tabs.forEach(function (t) {
+                        var s = parseInt(t.getAttribute('data-step') || '', 10);
+                        if (s === step) t.classList.add('active');
+                        else t.classList.remove('active');
+                    });
+
+                    var panels = document.querySelectorAll('.details-panel[data-step-panel]');
+                    panels.forEach(function (p) {
+                        var ps = parseInt(p.getAttribute('data-step-panel') || '', 10);
+                        if (ps === step) p.classList.add('active');
+                        else p.classList.remove('active');
+                    });
+
+                    var body = document.querySelector('.details-body');
+                    if (body) body.scrollTo({ top: 0, behavior: 'auto' });
+                }
+
+                document.addEventListener('click', function (e) {
+                    try {
+                        var tab = e.target && e.target.closest ? e.target.closest('.step-tab[data-step]') : null;
+                        if (tab) {
+                            var s = parseInt(tab.getAttribute('data-step') || '', 10);
+                            if (s) setStep(s);
+                            return;
+                        }
+
+                        var nextBtn = e.target && e.target.closest ? e.target.closest('#detailsNext') : null;
+                        if (nextBtn) {
+                            setStep(activeStep + 1);
+                            return;
+                        }
+
+                        var backBtn = e.target && e.target.closest ? e.target.closest('#detailsBack') : null;
+                        if (backBtn) {
+                            if (activeStep <= 1) {
+                                history.back();
+                                return;
+                            }
+                            setStep(activeStep - 1);
+                            return;
+                        }
+                    } catch (err) {
+                    }
+                });
+
+                setStep(1);
+            } catch (e) {
+            }
+        })();
+    </script>
+</body>
+</html>

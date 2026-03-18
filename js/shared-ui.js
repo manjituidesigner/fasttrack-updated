@@ -112,50 +112,31 @@
         });
     }
 
+    function setupTooltips() {
+        try {
+            if (!window.bootstrap || !window.bootstrap.Tooltip) return;
+            var nodes = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            if (!nodes.length) return;
+            nodes.forEach(function (el) {
+                try {
+                    if (el.getAttribute('data-tooltip-bound') === '1') return;
+                    el.setAttribute('data-tooltip-bound', '1');
+                    new window.bootstrap.Tooltip(el, { container: 'body' });
+                } catch (e) {
+                }
+            });
+        } catch (e) {
+        }
+    }
+
     function setupAppsAccordionBehavior() {
         var acc = document.getElementById('appsAccordion');
         if (!acc) return;
         if (acc.getAttribute('data-bound') === '1') return;
         acc.setAttribute('data-bound', '1');
 
-        function updateStickyVars() {
-            try {
-                var card = document.querySelector('.apps-card');
-                if (!card) return;
-
-                // Set index for stacked sticky headers
-                var items = acc.querySelectorAll('.accordion-item');
-                items.forEach(function (item, idx) {
-                    if (!item) return;
-                    item.style.setProperty('--acc-i', String(idx));
-                    var header = item.querySelector('.accordion-header');
-                    if (header) header.style.zIndex = String(30 - idx);
-                });
-
-                var head = card.querySelector('.apps-head');
-                var note = card.querySelector('.apps-note');
-                var anyHeaderBtn = acc.querySelector('button.accordion-button');
-
-                var headH = head ? (head.getBoundingClientRect().height || 0) : 0;
-                var noteH = note ? (note.getBoundingClientRect().height || 0) : 0;
-                var accH = anyHeaderBtn ? (anyHeaderBtn.getBoundingClientRect().height || 0) : 0;
-
-                if (headH) card.style.setProperty('--apps-head-h', headH + 'px');
-
-                // Base = head + note + spacing between note and accordions
-                var base = headH + noteH + 12;
-                if (base) card.style.setProperty('--apps-sticky-base', base + 'px');
-                if (accH) card.style.setProperty('--apps-acc-h', accH + 'px');
-            } catch (e) {
-            }
-        }
-
-        updateStickyVars();
-        window.addEventListener('resize', updateStickyVars);
-
         acc.addEventListener('show.bs.collapse', function (evt) {
             try {
-                updateStickyVars();
                 var collapseEl = evt && evt.target ? evt.target : null;
                 if (!collapseEl || !collapseEl.id) return;
                 var headerBtn = acc.querySelector('button.accordion-button[data-bs-target="#' + collapseEl.id + '"]');
@@ -171,15 +152,12 @@
                     var cardScrollable = (overflowY === 'auto' || overflowY === 'scroll') && (card.scrollHeight > card.clientHeight + 1);
                     if (!cardScrollable) return;
 
-                    var baseVar = styles.getPropertyValue('--apps-sticky-base');
-                    var base = parseFloat(baseVar) || 0;
-
                     var cardRect = card.getBoundingClientRect();
                     var btnRect = headerBtn.getBoundingClientRect();
                     var currentTopInCard = (btnRect.top - cardRect.top) + card.scrollTop;
 
-                    // Ensure opened header is visible just below the stacked sticky area.
-                    var target = currentTopInCard - base - 8;
+                    // Ensure opened header is visible near the top of the scrollable card.
+                    var target = currentTopInCard - 8;
                     if (target < 0) target = 0;
                     card.scrollTo({ top: target, behavior: 'smooth' });
                 });
@@ -1168,6 +1146,7 @@
             setupMobileCardNavigation();
             setupMobileSidebar();
             setupAppsAccordionBehavior();
+            setupTooltips();
             setupMobileBack();
         });
     } else {
@@ -1181,6 +1160,7 @@
         setupMobileCardNavigation();
         setupMobileSidebar();
         setupAppsAccordionBehavior();
+        setupTooltips();
         setupMobileBack();
     }
 })();

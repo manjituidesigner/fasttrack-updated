@@ -176,7 +176,7 @@
                                                             <td>S.A.S Nagar</td>
                                                             <td><span class="status-pill pending" data-i18n="projects.status.pending_verification">Pending For Verification</span></td>
                                                             <td class="text-end">
-                                                                <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
+                                                                <button class="tbl-ic-btn" type="button" aria-label="View Logs" data-bs-toggle="tooltip" data-bs-placement="left" title="View Logs"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <div class="dropdown d-inline-block">
                                                                     <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                     <ul class="dropdown-menu proj-menu dropdown-menu-end">
@@ -199,7 +199,7 @@
                                                             <td>Ludhiana</td>
                                                             <td><span class="status-pill progress" data-i18n="projects.status.filling_in_process">Filling In Process</span></td>
                                                             <td class="text-end">
-                                                                <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
+                                                                <button class="tbl-ic-btn" type="button" aria-label="View Logs" data-bs-toggle="tooltip" data-bs-placement="left" title="View Logs"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <div class="dropdown d-inline-block">
                                                                     <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                     <ul class="dropdown-menu proj-menu dropdown-menu-end">
@@ -222,7 +222,7 @@
                                                             <td>Amritsar</td>
                                                             <td><span class="status-pill accepted" data-i18n="projects.status.accepted">Accepted</span></td>
                                                             <td class="text-end">
-                                                                <button class="tbl-ic-btn" type="button" aria-label="Chat"><i class="bi bi-chat-left-dots-fill"></i></button>
+                                                                <button class="tbl-ic-btn" type="button" aria-label="View Logs" data-bs-toggle="tooltip" data-bs-placement="left" title="View Logs"><i class="bi bi-chat-left-dots-fill"></i></button>
                                                                 <div class="dropdown d-inline-block">
                                                                     <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
                                                                     <ul class="dropdown-menu proj-menu dropdown-menu-end">
@@ -764,5 +764,118 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/i18next@23.10.0/i18next.min.js"></script>
     <script src="../js/shared-ui.js"></script>
+    <script>
+        (function () {
+            try {
+                if (!window.bootstrap || !window.bootstrap.Tooltip) return;
+                var nodes = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+                if (!nodes.length) return;
+                nodes.forEach(function (el) {
+                    try {
+                        new window.bootstrap.Tooltip(el, { container: 'body' });
+                    } catch (e) {}
+                });
+            } catch (e) {}
+        })();
+    </script>
+    <script>
+        (function () {
+            try {
+                var menus = document.querySelectorAll('.proj-menu');
+                if (!menus.length) return;
+
+                menus.forEach(function (menu) {
+                    try {
+                        if (!menu) return;
+                        if (menu.getAttribute('data-edit-added') === '1') return;
+
+                        var items = menu.querySelectorAll('li');
+                        if (!items || !items.length) return;
+
+                        // Avoid duplicates
+                        var hasEdit = false;
+                        var hasAppLogs = false;
+                        var hasUpdateGst = false;
+                        items.forEach(function (li) {
+                            var a = li ? li.querySelector('a.dropdown-item') : null;
+                            var txt = a ? (a.textContent || '').trim().toLowerCase() : '';
+                            if (txt === 'edit') hasEdit = true;
+                            if (txt === 'application logs') hasAppLogs = true;
+                            if (txt === 'update gst') hasUpdateGst = true;
+                        });
+                        if (hasEdit && hasAppLogs && hasUpdateGst) {
+                            menu.setAttribute('data-edit-added', '1');
+                            return;
+                        }
+
+                        // Insert after 'Add Clearance'
+                        var anchorLi = null;
+                        items.forEach(function (li) {
+                            if (anchorLi) return;
+                            var span = li ? li.querySelector('[data-i18n="projects.card.menu.add_clearance"]') : null;
+                            if (span) anchorLi = li;
+                        });
+                        if (!anchorLi) return;
+
+                        var insertAfter = anchorLi;
+
+                        if (!hasEdit) {
+                            var newLi = document.createElement('li');
+                            newLi.innerHTML = '<a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i><span>Edit</span></a>';
+                            insertAfter.insertAdjacentElement('afterend', newLi);
+                            insertAfter = newLi;
+                        }
+
+                        if (!hasAppLogs) {
+                            var logsLi = document.createElement('li');
+                            logsLi.innerHTML = '<a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Application Logs</span></a>';
+                            insertAfter.insertAdjacentElement('afterend', logsLi);
+                            insertAfter = logsLi;
+                        }
+
+                        if (!hasUpdateGst) {
+                            var gstLi = document.createElement('li');
+                            gstLi.innerHTML = '<a class="dropdown-item" href="#"><i class="bi bi-receipt"></i><span>Update GST</span></a>';
+                            insertAfter.insertAdjacentElement('afterend', gstLi);
+                            insertAfter = gstLi;
+                        }
+                        menu.setAttribute('data-edit-added', '1');
+                    } catch (e) {}
+                });
+            } catch (e) {}
+        })();
+    </script>
+    <script>
+        (function () {
+            try {
+                document.addEventListener('click', function (e) {
+                    var a = e && e.target ? e.target.closest('a.pin-link') : null;
+                    if (!a) return;
+                    if (!document.body || !document.body.contains(a)) return;
+                    e.preventDefault();
+
+                    var pin = (a.textContent || '').trim();
+                    if (!pin) return;
+
+                    var date = '';
+                    var tr = a.closest('tr');
+                    if (tr) {
+                        var tds = tr.querySelectorAll('td');
+                        if (tds && tds.length >= 2) date = (tds[1].textContent || '').trim();
+                    } else {
+                        var card = a.closest('.proj-card');
+                        if (card) {
+                            var dateEl = card.querySelector('.proj-date');
+                            if (dateEl) date = (dateEl.textContent || '').trim();
+                        }
+                    }
+
+                    var url = 'project-details.html?pin=' + encodeURIComponent(pin);
+                    if (date) url += '&date=' + encodeURIComponent(date);
+                    window.location.href = url;
+                });
+            } catch (e) {}
+        })();
+    </script>
 </body>
 </html>

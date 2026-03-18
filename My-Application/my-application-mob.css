@@ -14,6 +14,10 @@
   .apps-head {
     padding: 6px 0 10px;
     gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--surface);
   }
 
   .apps-filters {
