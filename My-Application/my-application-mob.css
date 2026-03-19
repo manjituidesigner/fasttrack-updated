@@ -11,13 +11,34 @@
     width: 100%;
   }
 
+  .apps-card {
+    max-height: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: calc(100dvh - 120px);
+  }
+
+  .apps-body-scroll {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
   .apps-head {
-    padding: 6px 0 10px;
+    padding: 0;
     gap: 10px;
     position: sticky;
     top: 0;
     z-index: 5;
     background: var(--surface);
+    margin-bottom: 5px;
+  }
+
+  .apps-filters {
+    padding: 6px 0 10px;
   }
 
   .apps-filters {

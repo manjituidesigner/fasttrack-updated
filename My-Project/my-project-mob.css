@@ -48,7 +48,7 @@
   .projects-table thead th,
   .projects-table tbody td {
     padding: 8px 8px;
-    font-size: 0.6875rem;
+    font-size: 0.8125rem;
   }
 
   .projects-table tbody tr:nth-child(odd) > * {
@@ -277,7 +277,7 @@
   }
 
   .proj-menu .dropdown-item i {
-    font-size: 22px;
+    font-size: 15px;
     color: #5b677a;
     width: 15px;
     text-align: center;

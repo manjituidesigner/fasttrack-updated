@@ -1,0 +1,222 @@
+/* Investment Project page */
+
+.inv-page {
+  height: calc(100dvh - 170px);
+  min-height: 0;
+  font-size: 14px;
+}
+
+.inv-scroll {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 18px;
+}
+
+.inv-shell {
+  display: grid;
+  gap: 14px;
+}
+
+.inv-welcome-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.inv-welcome-head {
+  background: #1f45ad;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.inv-welcome-body {
+  padding: 16px;
+  color: var(--text);
+}
+
+.inv-hello {
+  font-weight: 900;
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.inv-brand {
+  color: var(--brand);
+}
+
+.inv-para {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.inv-links {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.inv-link {
+  color: var(--brand);
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.inv-sign {
+  margin-top: 14px;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.inv-info {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.inv-accordion .accordion-item {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+
+.inv-accordion .accordion-button {
+  font-weight: 900;
+  font-size: 14px;
+  padding: 12px 14px;
+}
+
+.inv-accordion .accordion-button:not(.collapsed) {
+  background: #f3f6fd;
+  color: var(--text);
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .inv-accordion .accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.inv-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.inv-table {
+  min-width: 980px;
+}
+
+.inv-table th,
+.inv-table td {
+  border: 1px solid #d9d9d9;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+html[data-theme="dark"] .inv-table th,
+html[data-theme="dark"] .inv-table td {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.inv-table thead th {
+  background: #f3f6fd;
+  font-weight: 900;
+}
+
+html[data-theme="dark"] .inv-table thead th {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.inv-table tbody tr:nth-child(odd) > * {
+  background-color: #eeeffd !important;
+}
+
+.inv-table tbody tr:nth-child(even) > * {
+  background-color: #ffffff !important;
+}
+
+html[data-theme="dark"] .inv-table tbody tr:nth-child(odd) > * {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+html[data-theme="dark"] .inv-table tbody tr:nth-child(even) > * {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.inv-actions-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.inv-question-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.inv-q-head {
+  padding: 12px 14px;
+  background: #f3f6fd;
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--text);
+}
+
+html[data-theme="dark"] .inv-q-head {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.inv-q-body {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.inv-q-body .form-check-label {
+  font-weight: 800;
+}
+
+@media (max-width: 991.98px) {
+  .inv-actions-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .inv-welcome-body,
+  .inv-info {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .inv-page {
+    height: calc(100dvh - 150px);
+  }
+
+  .inv-welcome-head {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+
+  .inv-table {
+    min-width: 860px;
+  }
+}

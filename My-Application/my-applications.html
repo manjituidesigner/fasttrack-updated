@@ -127,19 +127,20 @@
                                 </div>
                             </div>
 
-                            <div class="apps-note">
-                                <div class="apps-note-line">
-                                    <span data-i18n="applications.note.line1">To avail Services, filing of Service-Common Application Form (S-CAF) is a must for Existing Projects.</span>
-                                    <a href="#" class="apps-note-link" data-i18n="applications.note.click_here_apply">Click here to Apply</a>
+                            <div class="apps-body-scroll">
+                                <div class="apps-note">
+                                    <div class="apps-note-line">
+                                        <span data-i18n="applications.note.line1">To avail Services, filing of Service-Common Application Form (S-CAF) is a must for Existing Projects.</span>
+                                        <a href="#" class="apps-note-link" data-i18n="applications.note.click_here_apply">Click here to Apply</a>
+                                    </div>
+                                    <div class="apps-note-line">
+                                        <span data-i18n="applications.note.line2">To view list of Services</span>
+                                        <a href="#" class="apps-note-link" data-i18n="common.click_here">Click here</a>
+                                    </div>
                                 </div>
-                                <div class="apps-note-line">
-                                    <span data-i18n="applications.note.line2">To view list of Services</span>
-                                    <a href="#" class="apps-note-link" data-i18n="common.click_here">Click here</a>
-                                </div>
-                            </div>
 
-                            <div class="apps-section">
-                                <div class="accordion projects-accordion" id="appsAccordion">
+                                <div class="apps-section">
+                                    <div class="accordion projects-accordion" id="appsAccordion">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="appsRtbaHeading">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#appsRtbaCollapse" aria-expanded="true" aria-controls="appsRtbaCollapse">
@@ -1378,6 +1379,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1390,5 +1392,82 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/i18next@23.10.0/i18next.min.js"></script>
     <script src="../js/shared-ui.js"></script>
+    <script>
+        (function () {
+            try {
+                var toggles = document.querySelectorAll('.projects-table .dropdown > button.tbl-ic-btn');
+                if (!toggles.length) return;
+
+                toggles.forEach(function (btn) {
+                    try {
+                        if (!btn || !btn.parentNode) return;
+                        if (btn.previousElementSibling && btn.previousElementSibling.classList && btn.previousElementSibling.classList.contains('tbl-apps-logs-btn')) return;
+
+                        var logsBtn = document.createElement('button');
+                        logsBtn.className = 'tbl-ic-btn tbl-apps-logs-btn';
+                        logsBtn.type = 'button';
+                        logsBtn.setAttribute('aria-label', 'View Logs');
+                        logsBtn.setAttribute('data-bs-toggle', 'tooltip');
+                        logsBtn.setAttribute('data-bs-placement', 'left');
+                        logsBtn.setAttribute('title', 'View Logs');
+                        logsBtn.innerHTML = '<i class="bi bi-chat-left-dots-fill"></i>';
+
+                        var viewBtn = document.createElement('button');
+                        viewBtn.className = 'tbl-ic-btn tbl-view-btn';
+                        viewBtn.type = 'button';
+                        viewBtn.setAttribute('aria-label', 'View');
+                        viewBtn.setAttribute('data-bs-toggle', 'tooltip');
+                        viewBtn.setAttribute('data-bs-placement', 'left');
+                        viewBtn.setAttribute('title', 'View');
+                        viewBtn.innerHTML = '<i class="fa-solid fa-eye"></i>';
+
+                        btn.insertAdjacentElement('beforebegin', logsBtn);
+                        logsBtn.insertAdjacentElement('beforebegin', viewBtn);
+
+                        if (window.bootstrap && window.bootstrap.Tooltip) {
+                            try {
+                                new window.bootstrap.Tooltip(viewBtn, { container: 'body' });
+                                new window.bootstrap.Tooltip(logsBtn, { container: 'body' });
+                            } catch (e) {}
+                        }
+                    } catch (e) {}
+                });
+            } catch (e) {}
+        })();
+    </script>
+    <script>
+        (function () {
+            try {
+                document.addEventListener('click', function (e) {
+                    var btn = e && e.target ? e.target.closest('button.tbl-view-btn') : null;
+                    if (!btn) return;
+                    if (!document.body || !document.body.contains(btn)) return;
+                    e.preventDefault();
+
+                    var pin = '';
+                    var date = '';
+
+                    var tr = btn.closest('tr');
+                    if (tr) {
+                        var pinA = tr.querySelector('a.pin-link');
+                        if (pinA) pin = (pinA.textContent || '').trim();
+                    } else {
+                        var card = btn.closest('.apps-mob-card');
+                        if (card) {
+                            var pinLink = card.querySelector('a.pin-link');
+                            if (pinLink) pin = (pinLink.textContent || '').trim();
+                            var dateEl = card.querySelector('.apps-mob-date');
+                            if (dateEl) date = (dateEl.textContent || '').trim();
+                        }
+                    }
+
+                    if (!pin) return;
+                    var url = '../My-Project/project-details.html?pin=' + encodeURIComponent(pin);
+                    if (date) url += '&date=' + encodeURIComponent(date);
+                    window.location.href = url;
+                });
+            } catch (e) {}
+        })();
+    </script>
 </body>
 </html>

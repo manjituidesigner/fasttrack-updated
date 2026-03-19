@@ -105,7 +105,7 @@ span.acc-ic {
 .projects-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
 }
 
 .projects-table thead th {
@@ -134,6 +134,8 @@ span.acc-ic {
   border: 1px solid #dfe7fb;
   vertical-align: middle;
   white-space: nowrap;
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
 .projects-table tbody tr:nth-child(odd) > * {

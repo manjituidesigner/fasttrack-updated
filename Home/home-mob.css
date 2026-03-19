@@ -1,4 +1,17 @@
 @media (max-width: 992px) {
+  .app-shell {
+    height: 100dvh;
+  }
+
+  .app-main {
+    height: 100dvh;
+  }
+
+  .app-body {
+    overflow: auto;
+    min-height: 0;
+  }
+
   .mobile-tabs {
     border-bottom: 0;
     margin-bottom: 16px;
@@ -62,6 +75,7 @@
 
   .mobile-tab-content {
     padding-top: 8px;
+    padding-bottom: 110px;
   }
 
   .mobile-layout .dash-card,
@@ -134,7 +148,8 @@
   }
 
   .logs-list {
-    max-height: 58vh;
+    max-height: none;
+    overflow: visible;
   }
 
   .mobile-layout .dash-card .pill-btn {

@@ -125,6 +125,19 @@
                                     <div><span class="text-muted">Application Date :</span> <span id="detailDate">-</span></div>
                                 </div>
 
+                                <div class="mob-step-title" id="mobStepTitle">Application Details</div>
+
+                                <div class="mob-actions">
+                                    <div class="mob-actions-left">
+                                        <button class="details-pill" type="button" id="mobDetailsBack">Back</button>
+                                        <button class="details-pill primary" type="button" id="mobDetailsNext">Next</button>
+                                    </div>
+                                    <div class="mob-actions-right">
+                                        <button class="mob-ic-btn" type="button" aria-label="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="mob-ic-btn pdf" type="button" aria-label="Generated PDF"><i class="fa-solid fa-file-pdf"></i></button>
+                                    </div>
+                                </div>
+
                                 <div class="details-actions">
                                     <button class="details-pill" type="button">Edit</button>
                                     <button class="details-pill" type="button" id="detailsBack">Back</button>
@@ -538,6 +551,27 @@
 
                 var activeStep = 1;
 
+                function getStepHeading(step) {
+                    try {
+                        var tab = document.querySelector('.step-tab[data-step="' + step + '"]');
+                        if (!tab) return '';
+                        var txt = (tab.textContent || '').replace(/\s+/g, ' ').trim();
+                        return txt;
+                    } catch (e) {
+                        return '';
+                    }
+                }
+
+                function updateMobileHeading(step) {
+                    try {
+                        var head = document.getElementById('mobStepTitle');
+                        if (!head) return;
+                        var txt = getStepHeading(step);
+                        if (!txt) return;
+                        head.textContent = txt;
+                    } catch (e) {}
+                }
+
                 function setStep(step) {
                     if (!step || isNaN(step)) return;
                     if (step < 1) step = 1;
@@ -558,6 +592,9 @@
                         else p.classList.remove('active');
                     });
 
+                    activeStep = step;
+                    updateMobileHeading(step);
+
                     var body = document.querySelector('.details-body');
                     if (body) body.scrollTo({ top: 0, behavior: 'auto' });
                 }
@@ -577,8 +614,24 @@
                             return;
                         }
 
+                        var mobNextBtn = e.target && e.target.closest ? e.target.closest('#mobDetailsNext') : null;
+                        if (mobNextBtn) {
+                            setStep(activeStep + 1);
+                            return;
+                        }
+
                         var backBtn = e.target && e.target.closest ? e.target.closest('#detailsBack') : null;
                         if (backBtn) {
+                            if (activeStep <= 1) {
+                                history.back();
+                                return;
+                            }
+                            setStep(activeStep - 1);
+                            return;
+                        }
+
+                        var mobBackBtn = e.target && e.target.closest ? e.target.closest('#mobDetailsBack') : null;
+                        if (mobBackBtn) {
                             if (activeStep <= 1) {
                                 history.back();
                                 return;
@@ -590,7 +643,8 @@
                     }
                 });
 
-                setStep(1);
+                // Initial state
+                setStep(activeStep);
             } catch (e) {
             }
         })();

@@ -72,6 +72,11 @@ body {
   overflow: hidden;
 }
 
+table,
+.table {
+  font-size: 0.8125rem;
+}
+
 .text-brand {
   color: var(--brand) !important;
 }
