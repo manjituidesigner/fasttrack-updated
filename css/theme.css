@@ -347,11 +347,95 @@ html[data-theme="dark"] .pin-link {
   color: rgba(230, 238, 252, 0.96);
  }
 
- html[data-theme="dark"] .status-pill.verified {
+html[data-theme="dark"] .status-pill.verified {
   background: rgba(16, 185, 129, 0.24);
   border-color: rgba(110, 231, 183, 0.22);
   color: rgba(230, 238, 252, 0.96);
- }
+}
+
+html[data-theme="dark"] .desktop-layout .logs-title {
+  color: rgba(230, 238, 252, 0.92);
+}
+
+html[data-theme="dark"] .desktop-layout .logs-search i {
+  color: rgba(230, 238, 252, 0.55);
+}
+
+html[data-theme="dark"] .desktop-layout .logs-search .form-control {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.10);
+  color: rgba(230, 238, 252, 0.92);
+}
+
+html[data-theme="dark"] .desktop-layout .log-item:not(:last-child) .log-left::after {
+  background: rgba(147, 197, 253, 0.22);
+}
+
+html[data-theme="dark"] .desktop-layout .log-item {
+  border-color: rgba(255, 255, 255, 0.10);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme="dark"] .desktop-layout .log-name {
+  color: rgba(230, 238, 252, 0.94);
+}
+
+html[data-theme="dark"] .desktop-layout .log-line {
+  color: rgba(230, 238, 252, 0.90);
+}
+
+html[data-theme="dark"] .desktop-layout .log-line > span {
+  color: rgba(230, 238, 252, 0.62);
+}
+
+html[data-theme="dark"] .desktop-layout .log-mid .log-line:last-of-type {
+  background: rgba(59, 130, 246, 0.10);
+  border-color: rgba(255, 255, 255, 0.10);
+  color: rgba(230, 238, 252, 0.90);
+}
+
+html[data-theme="dark"] .logs-panel .status {
+  color: rgba(230, 238, 252, 0.96) !important;
+}
+
+html[data-theme="dark"] .logs-panel .status.ok {
+  background: rgba(34, 197, 94, 0.24);
+  border-color: rgba(134, 239, 172, 0.22);
+}
+
+html[data-theme="dark"] .logs-panel .status.warn {
+  background: rgba(59, 130, 246, 0.26);
+  border-color: rgba(147, 197, 253, 0.22);
+}
+
+html[data-theme="dark"] .logs-panel .status.bad {
+  background: rgba(239, 68, 68, 0.22);
+  border-color: rgba(252, 165, 165, 0.18);
+}
+
+html[data-theme="dark"] .logs-suggest {
+  background: rgba(18, 26, 42, 0.98);
+  border-color: rgba(255, 255, 255, 0.10);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.40);
+}
+
+html[data-theme="dark"] .logs-suggest-item {
+  color: rgba(230, 238, 252, 0.92);
+}
+
+html[data-theme="dark"] .logs-suggest-item + .logs-suggest-item {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .logs-suggest-item:hover,
+html[data-theme="dark"] .logs-suggest-item:focus {
+  background: rgba(59, 130, 246, 0.18);
+}
+
+html[data-theme="dark"] .desktop-layout .log-meta,
+html[data-theme="dark"] .desktop-layout .log-time {
+  color: rgba(230, 238, 252, 0.65);
+}
 
 html[data-theme="dark"] .breadcrumb-mini,
 html[data-theme="dark"] .breadcrumb-mini a,

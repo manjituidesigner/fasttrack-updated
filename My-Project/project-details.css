@@ -308,9 +308,9 @@ html[data-theme="dark"] .kv-table .kv-row:nth-child(even) .kv-k {
 }
 
 html[data-theme="dark"] .kv-ic .pdf {
-  background: #e53935;
-  border-color: #d32f2f;
-  color: #ffffff;
+background: #e5393500;
+    border-color: #d32f2f;
+    color: #ff6060;
 }
 
 html[data-theme="dark"] .kv-grid-wrap {

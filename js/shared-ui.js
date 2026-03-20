@@ -1134,6 +1134,162 @@
         btn.setAttribute('data-bound', '1');
     }
 
+    function setupLogsRecentSearchDropdown() {
+        var STORAGE_KEY = 'ft_logs_recent_searches';
+        var MAX_ITEMS = 6;
+
+        function safeParse(json) {
+            try {
+                var v = JSON.parse(json);
+                return Array.isArray(v) ? v : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function getRecents() {
+            try {
+                return safeParse(localStorage.getItem(STORAGE_KEY) || '[]');
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function setRecents(items) {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(items || []));
+            } catch (e) {
+            }
+        }
+
+        function addRecent(term) {
+            var t = String(term || '').trim();
+            if (!t) return;
+            var items = getRecents();
+            items = items.filter(function (x) { return String(x || '').toLowerCase() !== t.toLowerCase(); });
+            items.unshift(t);
+            if (items.length > MAX_ITEMS) items = items.slice(0, MAX_ITEMS);
+            setRecents(items);
+        }
+
+        function ensureDropdown(container) {
+            if (!container) return null;
+            var existing = container.querySelector('.logs-suggest');
+            if (existing) return existing;
+
+            var dd = document.createElement('div');
+            dd.className = 'logs-suggest';
+            dd.setAttribute('role', 'listbox');
+            dd.style.display = 'none';
+
+            var list = document.createElement('div');
+            list.className = 'logs-suggest-list';
+            dd.appendChild(list);
+            container.appendChild(dd);
+            return dd;
+        }
+
+        function render(dd, inputEl) {
+            if (!dd || !inputEl) return;
+            var list = dd.querySelector('.logs-suggest-list');
+            if (!list) return;
+
+            var q = String(inputEl.value || '').trim().toLowerCase();
+            var items = getRecents();
+            if (q) items = items.filter(function (x) { return String(x || '').toLowerCase().indexOf(q) !== -1; });
+
+            list.innerHTML = '';
+
+            if (!items.length) {
+                dd.style.display = 'none';
+                return;
+            }
+
+            items.forEach(function (txt) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'logs-suggest-item';
+                btn.textContent = txt;
+                btn.addEventListener('click', function () {
+                    inputEl.value = txt;
+                    try {
+                        inputEl.dispatchEvent(new Event('input', { bubbles: true }));
+                        inputEl.dispatchEvent(new Event('change', { bubbles: true }));
+                    } catch (e) {
+                    }
+                    dd.style.display = 'none';
+                    try { inputEl.focus(); } catch (e) {}
+                });
+                list.appendChild(btn);
+            });
+
+            dd.style.display = 'block';
+        }
+
+        function closeAll(except) {
+            var dds = document.querySelectorAll('.logs-suggest');
+            dds.forEach(function (el) {
+                if (except && el === except) return;
+                el.style.display = 'none';
+            });
+        }
+
+        var inputs = document.querySelectorAll('.logs-search input[type="search"], .logs-search input[type="text"]');
+        if (!inputs.length) return;
+
+        inputs.forEach(function (inputEl) {
+            if (!inputEl) return;
+            if (inputEl.getAttribute('data-logs-suggest-bound') === '1') return;
+            inputEl.setAttribute('data-logs-suggest-bound', '1');
+
+            var container = inputEl.closest('.logs-search');
+            var dd = ensureDropdown(container);
+            if (!dd) return;
+
+            inputEl.addEventListener('focus', function () {
+                closeAll(dd);
+                render(dd, inputEl);
+            });
+
+            inputEl.addEventListener('input', function () {
+                closeAll(dd);
+                render(dd, inputEl);
+            });
+
+            inputEl.addEventListener('keydown', function (e) {
+                if (!e) return;
+                if (e.key === 'Escape') {
+                    dd.style.display = 'none';
+                    return;
+                }
+                if (e.key === 'Enter') {
+                    addRecent(inputEl.value);
+                    dd.style.display = 'none';
+                }
+            });
+
+            inputEl.addEventListener('blur', function () {
+                addRecent(inputEl.value);
+                window.setTimeout(function () {
+                    dd.style.display = 'none';
+                }, 150);
+            });
+        });
+
+        if (document.documentElement.getAttribute('data-logs-suggest-doc-bound') !== '1') {
+            document.addEventListener('click', function (e) {
+                var target = e && e.target ? e.target : null;
+                if (!target) return;
+                var within = target.closest && target.closest('.logs-search');
+                if (!within) closeAll(null);
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e && e.key === 'Escape') closeAll(null);
+            });
+            document.documentElement.setAttribute('data-logs-suggest-doc-bound', '1');
+        }
+    }
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function () {
             applyTheme(getStoredTheme());
@@ -1148,6 +1304,7 @@
             setupAppsAccordionBehavior();
             setupTooltips();
             setupMobileBack();
+            setupLogsRecentSearchDropdown();
         });
     } else {
         applyTheme(getStoredTheme());
@@ -1162,5 +1319,6 @@
         setupAppsAccordionBehavior();
         setupTooltips();
         setupMobileBack();
+        setupLogsRecentSearchDropdown();
     }
 })();

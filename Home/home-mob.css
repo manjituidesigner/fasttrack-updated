@@ -152,6 +152,30 @@
     overflow: visible;
   }
 
+  .mobile-layout .logs-title {
+    font-size: 16px;
+  }
+
+  .mobile-layout .log-meta {
+    color: rgb(28 37 53);
+  }
+
+  .mobile-layout .log-line > span {
+    color: #2552a9;
+    font-weight: 600;
+  }
+
+  .mobile-layout .log-comments {
+    margin-top: 8px;
+    padding: 10px 12px;
+   background: rgb(243 243 243);
+    border: 1px solid rgba(219, 228, 247, 0.95);
+    border-radius: 14px;
+    color: rgb(10 15 18);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
   .mobile-layout .dash-card .pill-btn {
     display: none;
   }

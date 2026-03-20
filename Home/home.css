@@ -427,6 +427,44 @@
   font-size: 0.75rem;
 }
 
+ .logs-suggest {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  top: calc(100% - 4px);
+  background: #ffffff;
+  border: 1px solid #dbe4f7;
+  border-radius: 10px;
+  box-shadow: 0 16px 30px rgba(18, 38, 63, 0.14);
+  z-index: 40;
+  overflow: hidden;
+ }
+
+ .logs-suggest-list {
+  max-height: 220px;
+  overflow: auto;
+ }
+
+ .logs-suggest-item {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 10px 12px;
+  font-size: 0.8125rem;
+  color: #1f2c3b;
+ }
+
+ .logs-suggest-item + .logs-suggest-item {
+  border-top: 1px solid rgba(219, 228, 247, 0.9);
+ }
+
+ .logs-suggest-item:hover,
+ .logs-suggest-item:focus {
+  background: rgba(31, 94, 215, 0.10);
+  outline: none;
+ }
+
 .logs-list {
      padding: 0 12px 12px;
     overflow: auto;
@@ -434,6 +472,43 @@
     gap: 12px;
     max-height: 64vh;
 }
+
+ .desktop-layout .logs-head {
+  padding: 12px 14px;
+ }
+
+ .desktop-layout .logs-title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #1f2c3b;
+ }
+
+ .desktop-layout .logs-search {
+  padding: 12px 14px;
+ }
+
+ .desktop-layout .logs-search i {
+  left: auto;
+  right: 26px;
+ }
+
+ .desktop-layout .logs-search .form-control {
+  font-size: 0.8125rem;
+  padding-left: 14px;
+  padding-right: 40px;
+  height: 40px;
+ }
+
+ .desktop-layout .logs-list {
+  position: relative;
+  padding: 0 14px 14px;
+  gap: 14px;
+ }
+
+ .desktop-layout .logs-list::before {
+  display: none;
+ }
 
 @media (min-width: 992px) {
   .panel-card {
@@ -458,6 +533,41 @@
   gap: 10px;
 }
 
+ .desktop-layout .log-item {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 6px 0;
+  gap: 14px;
+  grid-template-columns: 56px 1fr;
+ }
+
+ .desktop-layout .log-item + .log-item {
+  border-top: 1px solid rgba(219, 228, 247, 0.80);
+  padding-top: 14px;
+  margin-top: 0;
+ }
+
+ .desktop-layout .log-left {
+  position: relative;
+  display: grid;
+  justify-items: center;
+ }
+
+ .desktop-layout .log-item:not(:last-child) .log-left::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 44px;
+  bottom: -14px;
+  width: 2px;
+  background: rgba(47, 111, 228, 0.20);
+  border-radius: 2px;
+  pointer-events: none;
+ }
+
 .avatar {
   width: 36px;
   height: 36px;
@@ -471,10 +581,47 @@
   font-size: 12px;
 }
 
+ .desktop-layout .avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 0;
+  font-weight: 800;
+  color: #1f2c3b;
+ }
+
+ .desktop-layout .log-item:nth-child(4n + 1) .avatar {
+  background: rgba(59, 130, 246, 0.14);
+ }
+
+ .desktop-layout .log-item:nth-child(4n + 2) .avatar {
+  background: rgba(34, 197, 94, 0.14);
+ }
+
+ .desktop-layout .log-item:nth-child(4n + 3) .avatar {
+  background: rgba(245, 158, 11, 0.18);
+ }
+
+ .desktop-layout .log-item:nth-child(4n) .avatar {
+  background: rgba(168, 85, 247, 0.14);
+ }
+
 .log-name {
   font-weight: 800;
   font-size: 0.75rem;
 }
+
+ .desktop-layout .log-mid {
+  display: grid;
+  gap: 6px;
+ }
+
+ .desktop-layout .log-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1f2c3b;
+  line-height: 1.25;
+ }
 
 .log-meta,
 .log-line,
@@ -482,14 +629,83 @@
   font-size: 0.6875rem;
   color: var(--muted);
 }
+.log-line {
+      margin-bottom: 3px;
+}
+
+ .desktop-layout .log-meta {
+  font-size: 0.8rem;
+  color: rgb(28 37 53);
+ }
+
+ .desktop-layout .log-line {
+  font-size: 0.85rem;
+  color: #1f2c3b;
+  line-height: 1.35;
+ }
+
+ .desktop-layout .log-line > span {
+  color: #2552a9;
+  font-weight: 600;
+ }
+
+ .desktop-layout .log-comments {
+    margin-top: 6px;
+    padding: 10px 12px;
+    background: rgba(31, 94, 215, 0.06);
+    border: 1px solid rgba(219, 228, 247, 0.95);
+    border-radius: 14px;
+    color: rgb(10 15 18);
+    font-weight: 500;
+ }
+
+ .desktop-layout .log-time {
+  margin-top: 2px;
+  font-size: 0.78rem;
+  color: rgba(80, 97, 126, 0.90);
+ }
 
 .status {
   font-weight: 800;
 }
 
+ .desktop-layout .status {
+  font-weight: 700;
+ }
+
 .status.ok { color: #1a7f37; }
 .status.warn { color: #0b5ed7; }
 .status.bad { color: #b42318; }
+
+ .logs-panel .status {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1;
+ }
+
+ .logs-panel .status.ok {
+  background: rgba(34, 197, 94, 0.14);
+  border-color: rgba(34, 197, 94, 0.22);
+  color: #15803d;
+ }
+
+ .logs-panel .status.warn {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(59, 130, 246, 0.22);
+  color: #1d4ed8;
+ }
+
+ .logs-panel .status.bad {
+  background: rgba(239, 68, 68, 0.14);
+  border-color: rgba(239, 68, 68, 0.22);
+  color: #b42318;
+ }
 
 
 .custom_div {

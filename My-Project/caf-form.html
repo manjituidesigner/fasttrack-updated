@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css?v=20260317">
+    <link rel="stylesheet" href="../css/theme.css?v=20260311">
+    <link rel="stylesheet" href="project-details.css?v=20260318">
+    <link rel="stylesheet" href="caf-form.css?v=20260320">
+    <title>Common Application Form (CAF)</title>
+</head>
+<body class="details-shell caf-shell">
+
+<div class="app-shell">
+    <aside class="app-sidebar" aria-label="Sidebar">
+        <div class="sidebar-expand">
+            <button class="sidebar-expand-btn" type="button" aria-label="Expand sidebar"><i class="bi bi-chevron-right"></i></button>
+        </div>
+        <div class="sidebar-brand">
+            <img class="sidebar-gov-logo" src="../assets/images/govt-logo-white.png" alt="Government logo">
+            <img class="sidebar-ft-logo" src="../assets/images/fasttrack-logo-white.png" alt="FastTrack logo">
+        </div>
+        <nav class="sidebar-nav">
+            <a class="nav-item" href="../index.html"><span class="nav-ic"><i class="bi bi-grid"></i></span><span class="nav-text" data-i18n="nav.home">Home</span></a>
+            <a class="nav-item active" href="my-projects.html"><span class="nav-ic"><i class="bi bi-briefcase"></i></span><span class="nav-text" data-i18n="nav.my_projects">My Projects</span></a>
+            <a class="nav-item" href="../My-Application/my-applications.html"><span class="nav-ic"><i class="bi bi-file-earmark-text"></i></span><span class="nav-text" data-i18n="nav.my_applications">My Applications</span></a>
+            <a class="nav-item" href="#"><span class="nav-ic"><i class="bi bi-currency-rupee"></i></span><span class="nav-text" data-i18n="nav.fiscal_incentives">Fiscal Incentives</span></a>
+            <a class="nav-item" href="#"><span class="nav-ic"><i class="bi bi-card-list"></i></span><span class="nav-text" data-i18n="nav.fiscal_registrations">Fiscal Registrations</span></a>
+            <a class="nav-item" href="#"><span class="nav-ic"><i class="bi bi-patch-check"></i></span><span class="nav-text" data-i18n="nav.know_approvals">Know your Approvals</span></a>
+            <a class="nav-item" href="#"><span class="nav-ic"><i class="bi bi-person"></i></span><span class="nav-text" data-i18n="nav.my_account">My Account</span></a>
+            <a class="nav-item" href="#"><span class="nav-ic"><i class="bi bi-box-arrow-right"></i></span><span class="nav-text" data-i18n="nav.logout">Logout</span></a>
+        </nav>
+    </aside>
+
+    <div class="app-main">
+        <header class="app-header" data-active-page="projects">
+            <div class="header-left">
+                <button class="icon-btn mobile-menu-btn d-lg-none" type="button" aria-label="Menu" id="mobileMenuBtn"><i class="bi bi-list"></i><i class="bi bi-x-lg"></i></button>
+                <div class="header-logos">
+                    <img class="header-gov-logo" src="../assets/images/govt-logo-dark.png" alt="Government logo">
+                    <img class="header-ft-logo" src="../assets/images/fasttrack-logo-dark.png" alt="FastTrack logo">
+                </div>
+            </div>
+            <div class="header-center"></div>
+            <div class="header-right">
+                <button class="icon-btn d-none d-lg-grid" type="button" aria-label="Theme" id="themeToggleBtn"><i class="fa-regular fa-moon"></i></button>
+                <div class="dropdown">
+                    <button class="user-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="user-ic"><i class="fa-solid fa-user"></i></span>
+                        <span class="user-name">Welcome Ankit Kumar</span>
+                        <span class="user-caret"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end user-menu">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-translate"></i>Change Language</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>My Account</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-key"></i>Change Password</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-body">
+            <main class="content-area">
+                <div class="container-fluid px-3 px-lg-4">
+                    <div class="d-flex align-items-center justify-content-between py-3 page-head">
+                        <div><div class="page-title">Common Application Form (CAF)</div></div>
+                        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="my-projects.html">Projects</a> / <span class="fw-semibold">Common Application Form (CAF)</span></div>
+                    </div>
+
+                    <div class="details-card caf-card">
+                        <div class="step-tabs" role="tablist" aria-label="CAF steps">
+                            <div class="step-tab active" role="button" tabindex="0" data-step="1"><span class="step-num">1</span><span>Application Details</span></div>
+                            <div class="step-tab" role="button" tabindex="0" data-step="2"><span class="step-num">2</span><span>Business Entity &amp; Project Details</span></div>
+                            <div class="step-tab" role="button" tabindex="0" data-step="3"><span class="step-num">3</span><span>Investment Details</span></div>
+                            <div class="step-tab" role="button" tabindex="0" data-step="4"><span class="step-num">4</span><span>Employment Details</span></div>
+                            <div class="step-tab" role="button" tabindex="0" data-step="5"><span class="step-num">5</span><span>Others</span></div>
+                        </div>
+
+                        <div class="details-topbar">
+                            <div class="details-meta">
+                                <div><span class="text-muted">PIN :</span> <span id="cafPin">-</span></div>
+                                <div><span class="text-muted">Application Date :</span> <span id="cafDate">-</span></div>
+                            </div>
+
+                            <div class="details-actions">
+                                <button class="details-pill" type="button" id="cafBack">Back</button>
+                                <button class="details-pill primary" type="button" id="cafNext">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="details-body caf-body">
+                            <form class="caf-form" id="cafForm" autocomplete="off" novalidate>
+                                <div class="caf-panel active" data-step-panel="1">
+                                    <div class="caf-section">
+                                        <div class="caf-section-head">1. Applicant Details</div>
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.1 - Title <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>Mr</option>
+                                                    <option>Ms</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.2 - First Name <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="50">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.3 - Middle Name</label>
+                                                <input class="form-control" type="text" maxlength="50">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.4 - Last Name <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="50">
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.5 - Designation <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>Proprietor</option>
+                                                    <option>Director</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.6 - Date of Birth <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="date">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.7 - Applicant Photo <span class="text-danger">*</span></label>
+                                                <button class="caf-attach" type="button"><span>+ Attachment</span></button>
+                                                <div class="caf-help">in 'jpeg/png' format less than 100 KB</div>
+                                                <div class="caf-err">Please upload as it is required.</div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.8 - Applicant Signature <span class="text-danger">*</span></label>
+                                                <button class="caf-attach" type="button"><span>+ Attachment</span></button>
+                                                <div class="caf-help">in 'jpeg/png' format less than 100 KB</div>
+                                                <div class="caf-err">Please upload as it is required.</div>
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.9 - Aadhaar Document No. <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="12">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.10 - Upload Aadhaar Document <span class="text-danger">*</span></label>
+                                                <button class="caf-attach" type="button"><span>+ Attachment</span></button>
+                                                <div class="caf-help">in 'pdf' format less than 1 MB</div>
+                                                <div class="caf-err">Please upload as it is required.</div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.11 - Pan Card No <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="10">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.12 - Upload Pan Card <span class="text-danger">*</span></label>
+                                                <button class="caf-attach" type="button"><span>+ Attachment</span></button>
+                                                <div class="caf-help">in 'pdf' format less than 1 MB</div>
+                                                <div class="caf-err">Please upload as it is required.</div>
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.13 - Applicant Phone Number</label>
+                                                <input class="form-control" type="text" maxlength="15">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.14 - Applicant Fax No.</label>
+                                                <input class="form-control" type="text" maxlength="15">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.15 - Applicant Mobile No. <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="10">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.16 - Applicant EmailID <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="email">
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.17 - Select Country <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>India</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.18 - Select State/UT <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>Punjab</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.19 - Select District <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.20 - Select Tehsil <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.21 - City/Town/Village <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="50">
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <label class="form-label">1.22 - Address Line 1 <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="100">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.23 - Address Line 2</label>
+                                                <input class="form-control" type="text" maxlength="100">
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.24 - Pin Code <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="6">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">1.25 - Upload Authorization Letter <span class="text-danger">*</span></label>
+                                                <button class="caf-attach" type="button"><span>Attachment</span></button>
+                                                <div class="caf-help">in 'pdf' format less than 5 MB</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="caf-section">
+                                        <div class="caf-section-head">2. Business Entity Information</div>
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.1 - Business Entity Name <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="100">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.2 - Business Entity Type <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>Sole Proprietor</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.3 - Select Country <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>India</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.4 - Select State/UT <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>Punjab</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.5 - Select District <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.6 - Select Tehsil <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.7 - Name of Village/Town <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="50">
+                                            </div>
+
+                                            <div class="col-12 col-md-6">
+                                                <label class="form-label">2.8 - Address Line 1 <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="200">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.9 - Address Line 2</label>
+                                                <input class="form-control" type="text" maxlength="200">
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.10 - Pin Code <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="6">
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">2.11 - Business Entity have multiple Units with same Company PAN ?</label>
+                                                <div class="caf-radio-row">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="beMultiUnits" id="beMultiUnitsYes">
+                                                        <label class="form-check-label" for="beMultiUnitsYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="beMultiUnits" id="beMultiUnitsNo">
+                                                        <label class="form-check-label" for="beMultiUnitsNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.12 - Company PAN <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="10">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.13 - Upload Company PAN Attachment <span class="text-danger">*</span></label>
+                                                <button class="caf-attach" type="button"><span>+ Attachment</span></button>
+                                                <div class="caf-help">in 'pdf' format less than 1 MB</div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">2.14 - Udyam Registration No.</label>
+                                                <input class="form-control" type="text" maxlength="20">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="caf-section">
+                                        <div class="caf-section-head">3. Project Details</div>
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.1 - Project Name <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="120">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.2 - Project Purpose <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.3 - Project Type <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>New Project</option>
+                                                    <option>Expansion</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.4 - Whether covered under RB Act 2019 <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.5 - Project Category <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.6 - Project Sector <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.7 - Project Sub Sector <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.8 - Name of the Product/Service <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="120">
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.9 - Proposed/Installation Capacity <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="40">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.10 - Unit for Capacity <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.11 - Proposed date of commencement of Commercial Production <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="date">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.12 - Proposed date of submission of application <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="date">
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.13 - Select District <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.14 - Select Tehsil <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.15 - Village/Town/City <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="50">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">3.16 - Pin Code <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="6">
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label">3.17 - Proposed Location/Project Address <span class="text-danger">*</span></label>
+                                                <textarea class="form-control" rows="2" maxlength="300"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caf-panel" data-step-panel="2">
+                                    <div class="caf-section">
+                                        <div class="caf-section-head">4. Proprietor / Partners / Directors Details</div>
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">4.116 - Certificate Incorporation Registration Attachment <span class="text-danger">*</span></label>
+                                                <button class="caf-attach pill" type="button"><span>+ Attachment</span></button>
+                                                <div class="caf-help">in 'pdf' format less than 5 MB</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="caf-section">
+                                        <div class="caf-section-head">5. Project Details</div>
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">5.1 - Land Area (in Acres) <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" maxlength="20">
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">5.2 Select Type of Land Registration <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">5.3 - Upload land related document <span class="text-danger">*</span></label>
+                                                <button class="caf-attach pill" type="button"><span>Attachment</span></button>
+                                                <div class="caf-help">in 'pdf' format less than 5 MB</div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label">5.4 - Multiple City/Town/Village Involved ?</label>
+                                                <div class="caf-radio-row">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="multiCity" id="multiCityYes">
+                                                        <label class="form-check-label" for="multiCityYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="multiCity" id="multiCityNo">
+                                                        <label class="form-check-label" for="multiCityNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label">5.5 - Does this site lies under MC limit? (If No, please mention distance from MC limit (in KMs))</label>
+                                                <div class="row g-2 align-items-center">
+                                                    <div class="col-12 col-md-4">
+                                                        <div class="caf-radio-row">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="mcLimit" id="mcLimitYes">
+                                                                <label class="form-check-label" for="mcLimitYes">Yes</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="mcLimit" id="mcLimitNo">
+                                                                <label class="form-check-label" for="mcLimitNo">No</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4">
+                                                        <input class="form-control" type="text" placeholder="Distance (in KMs)" maxlength="10">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">5.6 - Sector <span class="text-danger">*</span></label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">5.7 - Upload Detailed Project Report (DPR) <span class="text-danger">*</span></label>
+                                                <button class="caf-attach pill" type="button"><span>+ Attachment</span></button>
+                                                <div class="caf-help">in 'pdf' format less than 15 MB</div>
+                                                <div class="caf-err">Please upload as it is required.</div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">5.8 - Migration of Unit from FIP (R) 2013 to IBDP 2017 <span class="text-danger">*</span></label>
+                                                <div class="caf-radio-row">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="migration" id="migrationYes">
+                                                        <label class="form-check-label" for="migrationYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="migration" id="migrationNo">
+                                                        <label class="form-check-label" for="migrationNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">5.9 Policy Chapter</label>
+                                                <select class="form-select">
+                                                    <option selected>Policy Chapter 2026</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">5.10 Is proposed construction site falling within the limit of any centrally protected monument?</label>
+                                                <div class="caf-radio-row">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="protectedMon" id="protectedMonYes">
+                                                        <label class="form-check-label" for="protectedMonYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="protectedMon" id="protectedMonNo">
+                                                        <label class="form-check-label" for="protectedMonNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">5.11 Whether NMA NOC is available with you for the proposed construction site?</label>
+                                                <div class="caf-radio-row">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="nmaNoc" id="nmaNocYes">
+                                                        <label class="form-check-label" for="nmaNocYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="nmaNoc" id="nmaNocNo">
+                                                        <label class="form-check-label" for="nmaNocNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caf-panel" data-step-panel="3">
+                                    <div class="caf-section">
+                                        <div class="caf-section-head">6. Investment Details</div>
+                                        <div class="caf-note">
+                                            <div>* FCI (as per Policy 2013) Building Cost and Plant &amp; Machinery Cost,</div>
+                                            <div>* FCI (as per Policy 2017) Land Cost, Building Cost and Plant &amp; Machinery Cost.</div>
+                                        </div>
+
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">6.1 - Land Cost (in Lakhs) <span class="text-danger">*</span></label>
+                                                <div class="input-group caf-ig">
+                                                    <input class="form-control" type="number" value="0" min="0" step="0.01" data-caf-required="1">
+                                                    <span class="input-group-text">Lakh</span>
+                                                    <div class="caf-err">This field is required.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">6.2 - Building Cost (in Lakhs) <span class="text-danger">*</span></label>
+                                                <div class="input-group caf-ig">
+                                                    <input class="form-control" type="number" value="0" min="0" step="0.01" data-caf-required="1">
+                                                    <span class="input-group-text">Lakh</span>
+                                                    <div class="caf-err">This field is required.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">6.3 - Plant and Machinery Cost (in Lakhs) <span class="text-danger">*</span></label>
+                                                <div class="input-group caf-ig">
+                                                    <input class="form-control" type="number" value="0" min="0" step="0.01" data-caf-required="1">
+                                                    <span class="input-group-text">Lakh</span>
+                                                    <div class="caf-err">This field is required.</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">6.4 - FCI (in Lakhs) <span class="text-danger">*</span></label>
+                                                <div class="input-group caf-ig">
+                                                    <input class="form-control" type="number" value="0" min="0" step="0.01" data-caf-required="1">
+                                                    <span class="input-group-text">Lakh</span>
+                                                    <div class="caf-err">This field is required.</div>
+                                                </div>
+                                                <div class="caf-inline-help">FCI (in Words):</div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">6.5 - Other Cost (in Lakhs) <span class="text-danger">*</span></label>
+                                                <div class="input-group caf-ig">
+                                                    <input class="form-control" type="number" value="0" min="0" step="0.01" data-caf-required="1">
+                                                    <span class="input-group-text">Lakh</span>
+                                                    <div class="caf-err">This field is required.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">6.6 - Total Project Cost (in Lakhs) <span class="text-danger">*</span></label>
+                                                <div class="input-group caf-ig">
+                                                    <input class="form-control" type="number" value="0" min="0" step="0.01" data-caf-required="1">
+                                                    <span class="input-group-text">Lakh</span>
+                                                    <div class="caf-err">This field is required.</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">6.7 - Is Unit in Commercial Production</label>
+                                                <div class="caf-radio-row">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="commercialProd" id="commercialProdYes">
+                                                        <label class="form-check-label" for="commercialProdYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="commercialProd" id="commercialProdNo" checked>
+                                                        <label class="form-check-label" for="commercialProdNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">Proposed date of Commercial Production <span class="text-danger">*</span></label>
+                                                <div class="input-group caf-ig">
+                                                    <input class="form-control" type="date" data-caf-required="1">
+                                                    <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                                    <div class="caf-err">Proposed date of Commercial Production is required</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="form-label">6.8 - Type of Industry <span class="text-danger">*</span></label>
+                                                <select class="form-select" data-caf-required="1">
+                                                    <option selected>Select</option>
+                                                </select>
+                                                <div class="caf-err">This field is required.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="caf-section">
+                                        <div class="caf-section-head">7. Phase wise Investment as per Detailed Project Report (If Applicable)</div>
+                                        <div class="row g-3 align-items-end">
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">7.1 - Name of the Phase</label>
+                                                <input class="form-control" type="text" maxlength="80">
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <label class="form-label">7.2 - FCI (in Lakhs)</label>
+                                                <input class="form-control" type="number" value="0" min="0" step="0.01">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">7.3 Proposed date of Investment</label>
+                                                <div class="input-group caf-ig">
+                                                    <input class="form-control" type="date">
+                                                    <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">7.4 Proposed date of Production</label>
+                                                <div class="input-group caf-ig">
+                                                    <input class="form-control" type="date">
+                                                    <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-1">
+                                                <button class="details-pill" type="button" id="phaseAddBtn">+ Add</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="caf-table-wrap">
+                                            <table class="table caf-table mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>SNo.</th>
+                                                        <th>Name of Phase</th>
+                                                        <th>FCI (in Lacs)</th>
+                                                        <th>Proposed Date of Investment</th>
+                                                        <th>Proposed Date of Production</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="6" class="text-center">No Data Found</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="row g-3 mt-1">
+                                            <div class="col-12">
+                                                <label class="form-label">7.5 - Is FDI Involved</label>
+                                                <div class="caf-radio-row">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="fdi" id="fdiYes">
+                                                        <label class="form-check-label" for="fdiYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="fdi" id="fdiNo" checked>
+                                                        <label class="form-check-label" for="fdiNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caf-panel" data-step-panel="4">
+                                    <div class="caf-section">
+                                        <div class="caf-section-head">8. Proposed Employment Details</div>
+
+                                        <div class="row g-3 align-items-end">
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">Financial Year</label>
+                                                <select class="form-select">
+                                                    <option selected>2026-2027</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">Select Skill</label>
+                                                <select class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option>Skilled</option>
+                                                    <option>UnSkilled</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">Direct Male Employees</label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">Direct Female Employees</label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1">
+                                            </div>
+
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">InDirect Male Employees</label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1">
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">InDirect Female Employees</label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1">
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <button class="details-pill" type="button" id="empAddBtn">+ Add</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="caf-table-wrap">
+                                            <table class="table caf-table mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>S.No</th>
+                                                        <th>Financial Year</th>
+                                                        <th>Employment Details Skilled/UnSkilled</th>
+                                                        <th>Direct Male</th>
+                                                        <th>Direct Female</th>
+                                                        <th>InDirect Male</th>
+                                                        <th>InDirect Female</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="8" class="text-center">No Data Found</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="caf-section">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">8.1 - Direct Male Employees <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1" data-caf-required="1">
+                                                <div class="caf-err">This field is required.</div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">8.2 - Direct Female Employees <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1" data-caf-required="1">
+                                                <div class="caf-err">This field is required.</div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">8.3 - Indirect Male Employees <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1" data-caf-required="1">
+                                                <div class="caf-err">This field is required.</div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <label class="form-label">8.4 - Indirect Female Employees <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1" data-caf-required="1">
+                                                <div class="caf-err">This field is required.</div>
+                                            </div>
+
+                                            <div class="col-12 col-md-6">
+                                                <label class="form-label">8.5 - Total Male Employees <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1" data-caf-required="1">
+                                                <div class="caf-err">This field is required.</div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <label class="form-label">8.6 - Total Female Employees <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="number" value="0" min="0" step="1" data-caf-required="1">
+                                                <div class="caf-err">This field is required.</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="caf-total-row">
+                                            <div class="caf-total-pill"><span>Total Employees:</span> <strong>0</strong></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caf-panel" data-step-panel="5">
+                                    <div class="caf-section">
+                                        <div class="caf-section-head">9. Already Obtained Clearances/Approvals</div>
+                                        <div class="row g-3">
+                                            <div class="col-12">
+                                                <label class="form-label">9.1 - Already have any Regulatory Clearance ?</label>
+                                                <div class="caf-radio-row">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="regClear" id="regClearYes">
+                                                        <label class="form-check-label" for="regClearYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="regClear" id="regClearNo" checked>
+                                                        <label class="form-check-label" for="regClearNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label">9.2 - Already have any Fiscal Incentive ?</label>
+                                                <div class="caf-radio-row">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="fiscalInc" id="fiscalIncYes">
+                                                        <label class="form-check-label" for="fiscalIncYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="fiscalInc" id="fiscalIncNo" checked>
+                                                        <label class="form-check-label" for="fiscalIncNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label">9.3 - Do you have CRO Report ? <span class="text-danger">*</span></label>
+                                                <div class="caf-radio-row caf-radio-required" data-caf-required-radio="croReport">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="croReport" id="croReportYes">
+                                                        <label class="form-check-label" for="croReportYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="croReport" id="croReportNo">
+                                                        <label class="form-check-label" for="croReportNo">No</label>
+                                                    </div>
+                                                    <div class="caf-err">This field is required.</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label">9.4 - Consent for AI-Based Scrutiny of the Form ? <span class="text-danger">*</span> <span class="caf-info" title="Information">i</span></label>
+                                                <div class="caf-radio-row caf-radio-required" data-caf-required-radio="aiConsent">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="aiConsent" id="aiConsentYes">
+                                                        <label class="form-check-label" for="aiConsentYes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="aiConsent" id="aiConsentNo">
+                                                        <label class="form-check-label" for="aiConsentNo">No</label>
+                                                    </div>
+                                                    <div class="caf-err">This field is required.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="caf-submit-row">
+                                    <button class="details-pill primary" type="submit" id="cafSubmit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/i18next@23.10.0/i18next.min.js"></script>
+<script src="../js/shared-ui.js"></script>
+<script>
+    (function () {
+        var activeStep = 1;
+        var formEl = document.getElementById('cafForm');
+        var stepTabs = document.querySelectorAll('.step-tab[data-step]');
+
+        stepTabs.forEach(function (t) {
+            var num = t.querySelector('.step-num');
+            if (num && !num.getAttribute('data-orig')) {
+                num.setAttribute('data-orig', (num.textContent || '').trim());
+            }
+        });
+
+        function setStep(step) {
+            if (!step || isNaN(step)) return;
+            if (step < 1) step = 1;
+            if (step > 5) step = 5;
+            activeStep = step;
+
+            var tabs = document.querySelectorAll('.step-tab[data-step]');
+            tabs.forEach(function (t) {
+                var s = parseInt(t.getAttribute('data-step') || '', 10);
+                if (s < step) {
+                    t.classList.remove('active');
+                    t.classList.add('completed');
+                } else if (s === step) {
+                    t.classList.add('active');
+                    t.classList.remove('completed');
+                } else {
+                    t.classList.remove('active');
+                    t.classList.remove('completed');
+                }
+
+                var num = t.querySelector ? t.querySelector('.step-num') : null;
+                if (num) {
+                    var orig = num.getAttribute('data-orig') || (num.textContent || '').trim();
+                    if (s < step) num.textContent = '✓';
+                    else num.textContent = orig;
+                }
+            });
+
+            var panels = document.querySelectorAll('.caf-panel[data-step-panel]');
+            panels.forEach(function (p) {
+                var ps = parseInt(p.getAttribute('data-step-panel') || '', 10);
+                if (ps === step) p.classList.add('active');
+                else p.classList.remove('active');
+            });
+
+            var body = document.querySelector('.caf-body');
+            if (body) body.scrollTo({ top: 0, behavior: 'auto' });
+        }
+
+        document.addEventListener('click', function (e) {
+            var target = e && e.target ? e.target : null;
+            if (!target) return;
+
+            var tab = target.closest ? target.closest('.step-tab[data-step]') : null;
+            if (tab) {
+                var s = parseInt(tab.getAttribute('data-step') || '', 10);
+                setStep(s);
+            }
+
+            if (target && target.id === 'cafBack') {
+                setStep(activeStep - 1);
+            }
+
+            if (target && target.id === 'cafNext') {
+                setStep(activeStep + 1);
+            }
+        });
+
+        function isEmptyValue(el) {
+            if (!el) return true;
+            var tag = (el.tagName || '').toLowerCase();
+            if (tag === 'select') {
+                var v = String(el.value || '').trim().toLowerCase();
+                return !v || v === 'select';
+            }
+            var val = (typeof el.value !== 'undefined') ? String(el.value || '').trim() : '';
+            return !val;
+        }
+
+        function validateRequired() {
+            if (!formEl) return true;
+            var ok = true;
+            var req = formEl.querySelectorAll('[data-caf-required="1"]');
+            req.forEach(function (el) {
+                var invalid = isEmptyValue(el);
+                if (invalid) ok = false;
+                try {
+                    var ig = el.closest ? el.closest('.caf-ig') : null;
+                    if (ig) {
+                        if (invalid) ig.classList.add('is-invalid');
+                        else ig.classList.remove('is-invalid');
+                    } else {
+                        if (invalid) el.classList.add('is-invalid');
+                        else el.classList.remove('is-invalid');
+                    }
+                } catch (e) {}
+            });
+
+            var radios = formEl.querySelectorAll('[data-caf-required-radio]');
+            radios.forEach(function (wrap) {
+                if (!wrap) return;
+                var name = wrap.getAttribute('data-caf-required-radio');
+                if (!name) return;
+                var checked = formEl.querySelector('input[type="radio"][name="' + name + '"]:checked');
+                var invalid = !checked;
+                if (invalid) ok = false;
+                try {
+                    if (invalid) wrap.classList.add('is-invalid');
+                    else wrap.classList.remove('is-invalid');
+                } catch (e) {}
+            });
+            return ok;
+        }
+
+        if (formEl) {
+            formEl.addEventListener('submit', function (e) {
+                if (e && e.preventDefault) e.preventDefault();
+                formEl.classList.add('caf-submitted');
+                var ok = validateRequired();
+                if (!ok) {
+                    try {
+                        var first = formEl.querySelector('.is-invalid');
+                        if (first && first.scrollIntoView) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } catch (err) {}
+                }
+            });
+
+            formEl.addEventListener('input', function (e) {
+                if (!formEl.classList.contains('caf-submitted')) return;
+                var t = e && e.target ? e.target : null;
+                if (!t || t.getAttribute('data-caf-required') !== '1') return;
+                try {
+                    var ig = t.closest ? t.closest('.caf-ig') : null;
+                    if (ig) {
+                        if (isEmptyValue(t)) ig.classList.add('is-invalid');
+                        else ig.classList.remove('is-invalid');
+                    } else {
+                        if (isEmptyValue(t)) t.classList.add('is-invalid');
+                        else t.classList.remove('is-invalid');
+                    }
+                } catch (err) {}
+            });
+
+            formEl.addEventListener('change', function (e) {
+                if (!formEl.classList.contains('caf-submitted')) return;
+                var t = e && e.target ? e.target : null;
+                if (!t || (t.type || '').toLowerCase() !== 'radio') return;
+
+                try {
+                    var wrap = t.closest ? t.closest('[data-caf-required-radio]') : null;
+                    if (!wrap) return;
+                    var name = wrap.getAttribute('data-caf-required-radio');
+                    if (!name) return;
+                    var checked = formEl.querySelector('input[type="radio"][name="' + name + '"]:checked');
+                    if (checked) wrap.classList.remove('is-invalid');
+                } catch (err) {}
+            });
+        }
+
+        try {
+            var params = new URLSearchParams(window.location.search || '');
+            var pin = params.get('pin');
+            var date = params.get('date');
+            if (pin) document.getElementById('cafPin').textContent = pin;
+            if (date) document.getElementById('cafDate').textContent = date;
+        } catch (e) {}
+    })();
+</script>
+</body>
+</html>

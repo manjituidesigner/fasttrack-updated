@@ -1,0 +1,305 @@
+.caf-card {
+  background: #fff;
+  border: 1px solid #e6e9f3;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(20, 38, 70, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: calc(108vh - 190px);
+}
+
+.caf-body {
+  padding: 14px;
+  overflow: auto;
+  flex: 1 1 auto;
+}
+
+.caf-panel {
+  display: none;
+}
+
+.caf-panel.active {
+  display: block;
+}
+
+.caf-panel-note {
+  color: #6b7a90;
+  font-weight: 600;
+  padding: 16px;
+  border: 1px dashed rgba(31, 94, 215, 0.25);
+  border-radius: 10px;
+  background: rgba(31, 94, 215, 0.04);
+}
+
+.caf-form .form-label {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: #1f2c3b;
+  margin-bottom: 6px;
+}
+
+.caf-form .form-control,
+.caf-form .form-select {
+  border-radius: 50px;
+  border-color: #adbed1;
+}
+
+.caf-form .form-control:focus,
+.caf-form .form-select:focus {
+  border-color: #2f6fe4;
+}
+
+.caf-form textarea.form-control {
+  border-radius: 18px;
+}
+
+.caf-form .input-group.caf-ig {
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid #adbed1;
+  background: #ffffff;
+}
+
+.caf-form .caf-ig > .form-control,
+.caf-form .caf-ig > .form-select,
+.caf-form .caf-ig > .input-group-text {
+  border-radius: 0;
+  border: 0;
+}
+
+.caf-form .input-group-text {
+  border-radius: 50px;
+  font-weight: 800;
+  color: #52627a;
+  background: #ffffff;
+  border-color: #adbed1;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.caf-form .caf-ig > .input-group-text {
+  border-left: 0;
+}
+
+.caf-form .caf-ig:focus-within {
+  border-color: #2f6fe4;
+  box-shadow: 0 0 0 0.2rem rgba(47, 111, 228, 0.12);
+}
+
+.caf-form .caf-ig .form-control:focus,
+.caf-form .caf-ig .form-select:focus {
+  box-shadow: none;
+}
+
+.caf-form .form-control.is-invalid,
+.caf-form .form-select.is-invalid {
+  border-color: #c62828;
+}
+
+.caf-form .caf-ig .form-control.is-invalid,
+.caf-form .caf-ig .form-select.is-invalid {
+  border-color: transparent;
+}
+
+.caf-form .caf-ig.is-invalid {
+  border-color: #c62828;
+}
+
+.caf-form .caf-ig.is-invalid:focus-within {
+  border-color: #c62828;
+  box-shadow: 0 0 0 0.2rem rgba(198, 40, 40, 0.10);
+}
+
+.caf-form .form-control.is-invalid:focus,
+.caf-form .form-select.is-invalid:focus {
+  border-color: #c62828;
+}
+
+.step-tab.completed {
+  border-color: #2e7d32;
+  background: #368d3b;
+  color: #ffffff;
+}
+
+.step-tab.completed .step-num {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.details-topbar {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.step-tabs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.caf-section {
+  background: #ffffff;
+  border: 1px solid #c3c7d1;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.caf-section-head {
+  font-weight: 900;
+  font-size: 14px;
+  color: #1f2c3b;
+  margin-bottom: 10px;
+}
+
+.caf-attach {
+  width: 100%;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #cfe1ff;
+  background: #f6f9ff;
+  color: #1f5ed7;
+  font-weight: 800;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.caf-attach.pill {
+  width: auto;
+  padding: 0 14px;
+  border-radius: 999px;
+  justify-content: flex-start;
+}
+
+.caf-help {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(80, 97, 126, 0.95);
+}
+
+.caf-err {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #c62828;
+  display: none;
+}
+
+.caf-submitted .caf-form .is-invalid ~ .caf-err {
+  display: block;
+}
+
+.caf-submitted .caf-form .caf-ig .is-invalid ~ .caf-err {
+  display: block;
+}
+
+.caf-submitted .caf-form .caf-radio-required.is-invalid .caf-err {
+  display: block;
+}
+
+.caf-submitted .caf-form .caf-radio-required.is-invalid {
+  border: 1px solid rgba(198, 40, 40, 0.35);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(198, 40, 40, 0.03);
+}
+
+.caf-radio-row {
+  padding: 6px 0 0;
+}
+
+.caf-shell .step-tab {
+  cursor: pointer;
+}
+
+.caf-note {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: rgba(80, 97, 126, 0.95);
+  margin: 0 0 10px;
+}
+
+.caf-inline-help {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #c62828;
+}
+
+.caf-submit-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 0 2px;
+}
+
+.caf-total-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+.caf-total-pill {
+  border-radius: 999px;
+  border-left: 6px solid #2e7d32;
+  background: #ffffff;
+  border-top: 1px solid #e6e9f3;
+  border-right: 1px solid #e6e9f3;
+  border-bottom: 1px solid #e6e9f3;
+  padding: 10px 16px;
+  font-weight: 900;
+  color: #1f2c3b;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.caf-total-pill span {
+  font-weight: 800;
+  color: rgba(80, 97, 126, 0.95);
+}
+
+.caf-info {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #1f5ed7;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  margin-left: 6px;
+}
+
+.caf-table-wrap {
+  border: 1px solid #e6e9f3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  margin-top: 12px;
+}
+
+.caf-table thead th {
+  font-weight: 900;
+  font-size: 0.8125rem;
+  color: #1f2c3b;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e9f3;
+  white-space: nowrap;
+}
+
+.caf-table tbody td {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: #1f2c3b;
+}
+
+@media (max-width: 991.98px) {
+  .caf-card {
+    height: auto;
+  }
+}
