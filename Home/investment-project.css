@@ -219,4 +219,92 @@ html[data-theme="dark"] .inv-q-head {
   .inv-table {
     min-width: 860px;
   }
+
+  .inv-shell {
+    gap: 12px;
+  }
+
+  .inv-welcome-card {
+    border-radius: 16px;
+  }
+
+  .inv-welcome-body {
+    max-height: 56vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .inv-table-wrap {
+    overflow: visible;
+  }
+
+  .inv-table {
+    min-width: 0;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  .inv-table thead {
+    display: none;
+  }
+
+  .inv-table tbody,
+  .inv-table tr,
+  .inv-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .inv-table tbody tr {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .inv-table tbody td {
+    border: 0;
+    padding: 10px 12px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    column-gap: 10px;
+    row-gap: 6px;
+    align-items: start;
+    font-size: 13px;
+  }
+
+  .inv-table tbody td::before {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .inv-table tbody td > * {
+    grid-column: 2;
+    min-width: 0;
+  }
+
+  .inv-table tbody td > * + * {
+    margin-top: 6px;
+  }
+
+  .inv-table tbody td + td {
+    border-top: 1px solid rgba(173, 190, 209, 0.55);
+  }
+
+  .inv-table tbody td::before {
+    font-weight: 900;
+    color: #52627a;
+    content: "";
+  }
+
+  .inv-table tbody td:nth-child(1)::before { content: "S. No."; }
+  .inv-table tbody td:nth-child(2)::before { content: "Department"; }
+  .inv-table tbody td:nth-child(3)::before { content: "Act / Rules / Department"; }
+  .inv-table tbody td:nth-child(4)::before { content: "Services"; }
+
+  .inv-table tbody td:nth-child(4) {
+    line-height: 1.45;
+  }
 }

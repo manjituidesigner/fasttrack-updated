@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css?v=20260317">
+    <link rel="stylesheet" href="../css/theme.css?v=20260311">
+    <link rel="stylesheet" href="../My-Project/my-project.css?v=20260317">
+    <link rel="stylesheet" href="../My-Project/my-project-mob.css?v=20260317">
+    <link rel="stylesheet" href="../My-Application/my-application.css">
+    <link rel="stylesheet" href="../My-Application/my-application-mob.css">
+    <link rel="stylesheet" href="fiscal-incentives.css?v=20260324">
+    <title>Fiscal Incentives</title>
+</head>
+
+<body>
+
+    <div class="app-shell">
+        <aside class="app-sidebar" aria-label="Sidebar">
+            <div class="sidebar-expand">
+                <button class="sidebar-expand-btn" type="button" aria-label="Expand sidebar">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+            <div class="sidebar-brand">
+                <img class="sidebar-gov-logo" src="../assets/images/govt-logo-white.png" alt="Government logo">
+                <img class="sidebar-ft-logo" src="../assets/images/fasttrack-logo-white.png" alt="FastTrack logo">
+            </div>
+
+            <nav class="sidebar-nav">
+                <a class="nav-item" href="../index.html">
+                    <span class="nav-ic"><i class="bi bi-grid"></i></span>
+                    <span class="nav-text" data-i18n="nav.home">Home</span>
+                </a>
+                <a class="nav-item" href="../My-Project/my-projects.html">
+                    <span class="nav-ic"><i class="bi bi-briefcase"></i></span>
+                    <span class="nav-text" data-i18n="nav.my_projects">My Projects</span>
+                </a>
+                <a class="nav-item" href="../My-Application/my-applications.html">
+                    <span class="nav-ic"><i class="bi bi-file-earmark-text"></i></span>
+                    <span class="nav-text" data-i18n="nav.my_applications">My Applications</span>
+                </a>
+                <a class="nav-item active" href="../Fiscal-Incentives/fiscal-incentives.html">
+                    <span class="nav-ic"><i class="bi bi-currency-rupee"></i></span>
+                    <span class="nav-text" data-i18n="nav.fiscal_incentives">Fiscal Incentives</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-card-list"></i></span>
+                    <span class="nav-text" data-i18n="nav.fiscal_registrations">Fiscal Registrations</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-patch-check"></i></span>
+                    <span class="nav-text" data-i18n="nav.know_approvals">Know your Approvals</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-person"></i></span>
+                    <span class="nav-text" data-i18n="nav.my_account">My Account</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-ic"><i class="bi bi-box-arrow-right"></i></span>
+                    <span class="nav-text" data-i18n="nav.logout">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <div class="app-main">
+            <header class="app-header" data-active-page="fiscal">
+                <div class="header-left">
+                    <button class="icon-btn mobile-menu-btn d-lg-none" type="button" aria-label="Menu" id="mobileMenuBtn">
+                        <i class="bi bi-list"></i>
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                    <div class="header-logos">
+                        <img class="header-gov-logo" src="../assets/images/govt-logo-dark.png" alt="Government logo">
+                        <img class="header-ft-logo" src="../assets/images/fasttrack-logo-dark.png" alt="FastTrack logo">
+                    </div>
+                </div>
+
+                <div class="header-center">
+                    <div class="helpline">
+                        <div class="helpline-ic"><i class="fa-solid fa-headset"></i></div>
+                        <div class="helpline-txt">
+                            <div class="small text-muted fw-semibold">HELP LINE : 0172-4866999</div>
+                            <div class="small text-muted">9:00 AM TO 5:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-right"></div>
+            </header>
+
+            <div class="app-body">
+                <main class="content-area">
+                    <div class="container-fluid px-3 px-lg-4">
+                        <div class="d-flex align-items-center justify-content-between py-3 page-head">
+                            <div class="page-title">Fiscal Incentives</div>
+                            <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <span class="fw-semibold">Fiscal Incentives</span></div>
+                        </div>
+
+                        <div class="fi-page">
+                            <div class="fi-scroll">
+                                <div class="apps-card">
+                                    <div class="apps-head">
+                                        <div class="apps-filters" role="tablist" aria-label="Fiscal incentives status">
+                                            <button class="apps-filter-btn active" type="button" role="tab" aria-selected="true" data-fi-tab>
+                                                <i class="bi bi-plus-circle"></i>
+                                                <span>Apply New</span>
+                                                <span class="apps-count">0</span>
+                                            </button>
+                                            <button class="apps-filter-btn" type="button" role="tab" aria-selected="false" data-fi-tab>
+                                                <i class="bi bi-clipboard-check"></i>
+                                                <span>Applied</span>
+                                                <span class="apps-count">2</span>
+                                            </button>
+                                            <button class="apps-filter-btn" type="button" role="tab" aria-selected="false" data-fi-tab>
+                                                <i class="bi bi-hourglass-split"></i>
+                                                <span>Pending</span>
+                                                <span class="apps-count">1</span>
+                                            </button>
+                                            <button class="apps-filter-btn" type="button" role="tab" aria-selected="false" data-fi-tab>
+                                                <i class="bi bi-patch-check"></i>
+                                                <span>Approved</span>
+                                                <span class="apps-count">2</span>
+                                            </button>
+                                            <button class="apps-filter-btn" type="button" role="tab" aria-selected="false" data-fi-tab>
+                                                <i class="bi bi-x-circle"></i>
+                                                <span>Rejected</span>
+                                                <span class="apps-count">0</span>
+                                            </button>
+                                            <button class="apps-filter-btn" type="button" role="tab" aria-selected="false" data-fi-tab>
+                                                <i class="bi bi-arrow-counterclockwise"></i>
+                                                <span>Withdrawn</span>
+                                                <span class="apps-count">0</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="apps-body-scroll">
+                                        <div class="apps-note">
+                                            <div class="apps-note-line"><b>To avail Services, filing of Service-Common Application Form (S-CAF) is a must for Existing Projects.</b> <a href="#" class="apps-note-link">Click here to Apply</a></div>
+                                            <div class="apps-note-line">To view list of Services <a href="#" class="apps-note-link">Click here</a></div>
+                                        </div>
+
+                                        <div class="apps-section">
+                                            <div class="accordion projects-accordion" id="fiAccordion">
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="fiRtbaHead">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fiRtba" aria-expanded="true" aria-controls="fiRtba">
+                                                            <span class="acc-ic"><i class="bi bi-file-earmark-text"></i></span>
+                                                            <span class="acc-title">Right To Business Act (RTBA -CAF)</span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="fiRtba" class="accordion-collapse collapse show" aria-labelledby="fiRtbaHead" data-bs-parent="#fiAccordion">
+                                                        <div class="accordion-body p-0">
+                                                            <div class="table-responsive projects-table-wrap d-none d-lg-block">
+                                                                <table class="table projects-table mb-0">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th style="width:140px"><span class="th-lbl">Pin No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:140px"><span class="th-lbl">Date</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:220px"><span class="th-lbl">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:160px"><span class="th-lbl">Mobile No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th><span class="th-lbl">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:140px"><span class="th-lbl">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:200px"><span class="th-lbl">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th class="text-end" style="width:110px"><span class="th-lbl">Action</span></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><a class="pin-link" href="#">250535201</a></td>
+                                                                            <td>26-Jul-2025</td>
+                                                                            <td>Mr Ankit Kumar</td>
+                                                                            <td>8712773489</td>
+                                                                            <td>Bonds &amp; Associates</td>
+                                                                            <td>Amritsar</td>
+                                                                            <td>Other Service Projects</td>
+                                                                            <td class="text-end">
+                                                                                <div class="dropdown d-inline-block">
+                                                                                    <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                                    <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><a class="pin-link" href="#">250535202</a></td>
+                                                                            <td>25-Jul-2025</td>
+                                                                            <td>Mr Sandeep Mehta</td>
+                                                                            <td>7894500012</td>
+                                                                            <td>CAF Demo Manufacturing Unit</td>
+                                                                            <td>Bathinda</td>
+                                                                            <td>Manufacturing</td>
+                                                                            <td class="text-end">
+                                                                                <div class="dropdown d-inline-block">
+                                                                                    <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                                    <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><a class="pin-link" href="#">250535203</a></td>
+                                                                            <td>24-Jul-2025</td>
+                                                                            <td>Ms Priya Sharma</td>
+                                                                            <td>9876501234</td>
+                                                                            <td>Sunrise Food Processing</td>
+                                                                            <td>Ludhiana</td>
+                                                                            <td>Food Processing</td>
+                                                                            <td class="text-end">
+                                                                                <div class="dropdown d-inline-block">
+                                                                                    <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                                    <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><a class="pin-link" href="#">250535204</a></td>
+                                                                            <td>23-Jul-2025</td>
+                                                                            <td>Mr Harpreet Singh</td>
+                                                                            <td>9814405566</td>
+                                                                            <td>Green Energy Solutions</td>
+                                                                            <td>Mohali</td>
+                                                                            <td>Renewable Energy</td>
+                                                                            <td class="text-end">
+                                                                                <div class="dropdown d-inline-block">
+                                                                                    <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                                    <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><a class="pin-link" href="#">250535205</a></td>
+                                                                            <td>22-Jul-2025</td>
+                                                                            <td>Mr Rakesh Verma</td>
+                                                                            <td>9056708899</td>
+                                                                            <td>City Logistics Hub</td>
+                                                                            <td>Jalandhar</td>
+                                                                            <td>Logistics</td>
+                                                                            <td class="text-end">
+                                                                                <div class="dropdown d-inline-block">
+                                                                                    <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                                    <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><a class="pin-link" href="#">250535206</a></td>
+                                                                            <td>21-Jul-2025</td>
+                                                                            <td>Ms Neha Gupta</td>
+                                                                            <td>9988001122</td>
+                                                                            <td>Tech Valley Services</td>
+                                                                            <td>Patiala</td>
+                                                                            <td>IT / ITES</td>
+                                                                            <td class="text-end">
+                                                                                <div class="dropdown d-inline-block">
+                                                                                    <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                                    <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <div class="apps-mob-cards d-lg-none">
+                                                                <div class="apps-mob-card">
+                                                                    <div class="dropdown">
+                                                                        <button class="apps-mob-act" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                        <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="apps-mob-card-top">
+                                                                        <div class="apps-mob-pin">PIN: <a class="pin-link" href="#">250535201</a></div>
+                                                                        <span class="apps-mob-sep">|</span>
+                                                                        <div class="apps-mob-date">26-Jul-2025</div>
+                                                                        <span class="apps-mob-sector">Other Service Projects</span>
+                                                                    </div>
+                                                                    <div class="apps-mob-title">Bonds &amp; Associates</div>
+                                                                    <div class="apps-mob-mid">
+                                                                        <div class="apps-mob-person">Mr Ankit Kumar</div>
+                                                                        <div class="apps-mob-mobile">8712773489</div>
+                                                                    </div>
+                                                                    <div class="apps-mob-loc">Amritsar</div>
+                                                                </div>
+
+                                                                <div class="apps-mob-card">
+                                                                    <div class="dropdown">
+                                                                        <button class="apps-mob-act" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                        <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="apps-mob-card-top">
+                                                                        <div class="apps-mob-pin">PIN: <a class="pin-link" href="#">250535202</a></div>
+                                                                        <span class="apps-mob-sep">|</span>
+                                                                        <div class="apps-mob-date">25-Jul-2025</div>
+                                                                        <span class="apps-mob-sector">Manufacturing</span>
+                                                                    </div>
+                                                                    <div class="apps-mob-title">CAF Demo Manufacturing Unit</div>
+                                                                    <div class="apps-mob-mid">
+                                                                        <div class="apps-mob-person">Mr Sandeep Mehta</div>
+                                                                        <div class="apps-mob-mobile">7894500012</div>
+                                                                    </div>
+                                                                    <div class="apps-mob-loc">Bathinda</div>
+                                                                </div>
+
+                                                                <div class="apps-mob-card">
+                                                                    <div class="dropdown">
+                                                                        <button class="apps-mob-act" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                        <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="apps-mob-card-top">
+                                                                        <div class="apps-mob-pin">PIN: <a class="pin-link" href="#">250535203</a></div>
+                                                                        <span class="apps-mob-sep">|</span>
+                                                                        <div class="apps-mob-date">24-Jul-2025</div>
+                                                                        <span class="apps-mob-sector">Food Processing</span>
+                                                                    </div>
+                                                                    <div class="apps-mob-title">Sunrise Food Processing</div>
+                                                                    <div class="apps-mob-mid">
+                                                                        <div class="apps-mob-person">Ms Priya Sharma</div>
+                                                                        <div class="apps-mob-mobile">9876501234</div>
+                                                                    </div>
+                                                                    <div class="apps-mob-loc">Ludhiana</div>
+                                                                </div>
+
+                                                                <div class="apps-mob-card">
+                                                                    <div class="dropdown">
+                                                                        <button class="apps-mob-act" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                        <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="apps-mob-card-top">
+                                                                        <div class="apps-mob-pin">PIN: <a class="pin-link" href="#">250535204</a></div>
+                                                                        <span class="apps-mob-sep">|</span>
+                                                                        <div class="apps-mob-date">23-Jul-2025</div>
+                                                                        <span class="apps-mob-sector">Renewable Energy</span>
+                                                                    </div>
+                                                                    <div class="apps-mob-title">Green Energy Solutions</div>
+                                                                    <div class="apps-mob-mid">
+                                                                        <div class="apps-mob-person">Mr Harpreet Singh</div>
+                                                                        <div class="apps-mob-mobile">9814405566</div>
+                                                                    </div>
+                                                                    <div class="apps-mob-loc">Mohali</div>
+                                                                </div>
+
+                                                                <div class="apps-mob-card">
+                                                                    <div class="dropdown">
+                                                                        <button class="apps-mob-act" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                        <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="apps-mob-card-top">
+                                                                        <div class="apps-mob-pin">PIN: <a class="pin-link" href="#">250535205</a></div>
+                                                                        <span class="apps-mob-sep">|</span>
+                                                                        <div class="apps-mob-date">22-Jul-2025</div>
+                                                                        <span class="apps-mob-sector">Logistics</span>
+                                                                    </div>
+                                                                    <div class="apps-mob-title">City Logistics Hub</div>
+                                                                    <div class="apps-mob-mid">
+                                                                        <div class="apps-mob-person">Mr Rakesh Verma</div>
+                                                                        <div class="apps-mob-mobile">9056708899</div>
+                                                                    </div>
+                                                                    <div class="apps-mob-loc">Jalandhar</div>
+                                                                </div>
+
+                                                                <div class="apps-mob-card">
+                                                                    <div class="dropdown">
+                                                                        <button class="apps-mob-act" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                        <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="apps-mob-card-top">
+                                                                        <div class="apps-mob-pin">PIN: <a class="pin-link" href="#">250535206</a></div>
+                                                                        <span class="apps-mob-sep">|</span>
+                                                                        <div class="apps-mob-date">21-Jul-2025</div>
+                                                                        <span class="apps-mob-sector">IT / ITES</span>
+                                                                    </div>
+                                                                    <div class="apps-mob-title">Tech Valley Services</div>
+                                                                    <div class="apps-mob-mid">
+                                                                        <div class="apps-mob-person">Ms Neha Gupta</div>
+                                                                        <div class="apps-mob-mobile">9988001122</div>
+                                                                    </div>
+                                                                    <div class="apps-mob-loc">Patiala</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="fiCafHead">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fiCaf" aria-expanded="false" aria-controls="fiCaf">
+                                                            <span class="acc-ic"><i class="bi bi-file-earmark-text"></i></span>
+                                                            <span class="acc-title">Common Application Form (CAF)</span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="fiCaf" class="accordion-collapse collapse" aria-labelledby="fiCafHead" data-bs-parent="#fiAccordion">
+                                                        <div class="accordion-body p-0">
+                                                            <div class="table-responsive projects-table-wrap d-none d-lg-block">
+                                                                <table class="table projects-table mb-0">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th style="width:140px"><span class="th-lbl">Pin No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:140px"><span class="th-lbl">Date</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:220px"><span class="th-lbl">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:160px"><span class="th-lbl">Mobile No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th><span class="th-lbl">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:140px"><span class="th-lbl">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:200px"><span class="th-lbl">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th class="text-end" style="width:110px"><span class="th-lbl">Action</span></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><a class="pin-link" href="#">250535096</a></td>
+                                                                            <td>26-Jul-2025</td>
+                                                                            <td>Mr Ankit Kumar</td>
+                                                                            <td>8712773489</td>
+                                                                            <td>Bonds &amp; Associates</td>
+                                                                            <td>Amritsar</td>
+                                                                            <td>Other Service Projects</td>
+                                                                            <td class="text-end">
+                                                                                <div class="dropdown d-inline-block">
+                                                                                    <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                                    <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><a class="pin-link" href="#">250535097</a></td>
+                                                                            <td>25-Jul-2025</td>
+                                                                            <td>Mr Sandeep Mehta</td>
+                                                                            <td>7894500012</td>
+                                                                            <td>CAF Demo Manufacturing Unit</td>
+                                                                            <td>Bathinda</td>
+                                                                            <td>Manufacturing</td>
+                                                                            <td class="text-end">
+                                                                                <div class="dropdown d-inline-block">
+                                                                                    <button class="tbl-ic-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                                    <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <div class="apps-mob-cards d-lg-none">
+                                                                <div class="apps-mob-card">
+                                                                    <div class="dropdown">
+                                                                        <button class="apps-mob-act" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                        <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="apps-mob-card-top">
+                                                                        <div class="apps-mob-pin">PIN: <a class="pin-link" href="#">250535096</a></div>
+                                                                        <span class="apps-mob-sep">|</span>
+                                                                        <div class="apps-mob-date">26-Jul-2025</div>
+                                                                        <span class="apps-mob-sector">Other Service Projects</span>
+                                                                    </div>
+                                                                    <div class="apps-mob-title">Bonds &amp; Associates</div>
+                                                                    <div class="apps-mob-mid">
+                                                                        <div class="apps-mob-person">Mr Ankit Kumar</div>
+                                                                        <div class="apps-mob-mobile">8712773489</div>
+                                                                    </div>
+                                                                    <div class="apps-mob-loc">Amritsar</div>
+                                                                </div>
+
+                                                                <div class="apps-mob-card">
+                                                                    <div class="dropdown">
+                                                                        <button class="apps-mob-act" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                        <ul class="dropdown-menu proj-menu dropdown-menu-end">
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i><span>View</span></a></li>
+                                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i><span>Logs</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="apps-mob-card-top">
+                                                                        <div class="apps-mob-pin">PIN: <a class="pin-link" href="#">250535097</a></div>
+                                                                        <span class="apps-mob-sep">|</span>
+                                                                        <div class="apps-mob-date">25-Jul-2025</div>
+                                                                        <span class="apps-mob-sector">Manufacturing</span>
+                                                                    </div>
+                                                                    <div class="apps-mob-title">CAF Demo Manufacturing Unit</div>
+                                                                    <div class="apps-mob-mid">
+                                                                        <div class="apps-mob-person">Mr Sandeep Mehta</div>
+                                                                        <div class="apps-mob-mobile">7894500012</div>
+                                                                    </div>
+                                                                    <div class="apps-mob-loc">Bathinda</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="fiScafHead">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fiScaf" aria-expanded="false" aria-controls="fiScaf">
+                                                            <span class="acc-ic"><i class="bi bi-file-earmark-text"></i></span>
+                                                            <span class="acc-title">Service - Common Application Form (S-CAF)</span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="fiScaf" class="accordion-collapse collapse" aria-labelledby="fiScafHead" data-bs-parent="#fiAccordion">
+                                                        <div class="accordion-body p-0">
+                                                            <div class="table-responsive projects-table-wrap d-none d-lg-block">
+                                                                <table class="table projects-table mb-0">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th style="width:140px"><span class="th-lbl">Pin No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:140px"><span class="th-lbl">Date</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:220px"><span class="th-lbl">Applicant Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:160px"><span class="th-lbl">Mobile No.</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th><span class="th-lbl">Project Name</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:140px"><span class="th-lbl">District</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th style="width:200px"><span class="th-lbl">Project Sector</span><i class="bi bi-caret-down-fill th-sort"></i></th>
+                                                                            <th class="text-end" style="width:110px"><span class="th-lbl">Action</span></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="text-muted">-</td>
+                                                                            <td class="text-muted">-</td>
+                                                                            <td class="text-muted">-</td>
+                                                                            <td class="text-muted">-</td>
+                                                                            <td class="text-muted">-</td>
+                                                                            <td class="text-muted">-</td>
+                                                                            <td class="text-muted">-</td>
+                                                                            <td class="text-muted text-end">-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <div class="apps-mob-cards d-lg-none">
+                                                                <div class="apps-mob-card">
+                                                                    <div class="apps-mob-card-top">
+                                                                        <div class="apps-mob-pin">PIN: <span class="text-muted">-</span></div>
+                                                                        <span class="apps-mob-sep">|</span>
+                                                                        <div class="apps-mob-date text-muted">-</div>
+                                                                        <span class="apps-mob-sector">-</span>
+                                                                    </div>
+                                                                    <div class="apps-mob-title text-muted">-</div>
+                                                                    <div class="apps-mob-mid">
+                                                                        <div class="apps-mob-person text-muted">-</div>
+                                                                        <div class="apps-mob-mobile text-muted">-</div>
+                                                                    </div>
+                                                                    <div class="apps-mob-loc text-muted">-</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/shared-ui.js?v=20260317"></script>
+    <script>
+        (function () {
+            var wrap = document.querySelector('.apps-filters[aria-label="Fiscal incentives status"]');
+            if (!wrap) return;
+            var tabs = wrap.querySelectorAll('[data-fi-tab]');
+            if (!tabs || !tabs.length) return;
+
+            function setActive(btn) {
+                tabs.forEach(function (b) {
+                    var on = b === btn;
+                    if (on) b.classList.add('active');
+                    else b.classList.remove('active');
+                    b.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+            }
+
+            tabs.forEach(function (b) {
+                b.addEventListener('click', function () {
+                    setActive(b);
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

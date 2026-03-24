@@ -1,0 +1,32 @@
+.fi-page {
+  height: calc(100dvh - 170px);
+  min-height: 0;
+  font-size: 14px;
+}
+
+.fi-scroll {
+  height: 100%;
+  overflow: visible;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 18px;
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filter-btn {
+  background: #f3f6fd;
+  border-color: rgba(47, 111, 228, 0.14);
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filter-btn.active {
+  background: #f3f6fd;
+}
+
+@media (max-width: 575.98px) {
+  header.app-header[data-active-page="fiscal"] ~ .app-body .container-fluid {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .fi-page {
+    height: calc(100dvh - 150px);
+  }
+}

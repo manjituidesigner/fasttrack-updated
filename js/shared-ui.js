@@ -13,6 +13,7 @@
         if (path.indexOf('/Home/') !== -1) return '../';
         if (path.indexOf('/My-Project/') !== -1) return '../';
         if (path.indexOf('/My-Application/') !== -1) return '../';
+        if (path.indexOf('/Fiscal-Incentives/') !== -1) return '../';
         return '';
     }
 

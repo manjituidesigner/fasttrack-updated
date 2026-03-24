@@ -5,6 +5,9 @@
     margin-top: 11px;
     
   }
+  .projects-card {
+    max-height: 80vh;
+}
 
   .proj-action-btn {
     width: 100%;
