@@ -15,6 +15,98 @@
   flex: 1 1 auto;
 }
 
+.caf-mob-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  background: #ffffff;
+  margin: 0 0 12px;
+  padding: 10px 0 12px;
+  border-bottom: 1px solid #e6e9f3;
+  box-shadow: 0 6px 18px rgba(20, 38, 70, 0.06);
+}
+
+.caf-mob-page-title {
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: #1f2c3b;
+  margin-bottom: 8px;
+}
+
+.caf-mob-progress {
+  padding: 0;
+  border-top: 0;
+  border-bottom: 0;
+  background: transparent;
+}
+
+.caf-mob-progress-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: #4b5c77;
+}
+
+.caf-mob-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: #e6e9f3;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.caf-mob-bar-fill {
+  height: 100%;
+  background: #2f6fe4;
+  width: 20%;
+}
+
+.caf-mob-title {
+  margin-top: 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1f2c3b;
+}
+
+.caf-mob-actions {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  gap: 10px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #e6e9f3;
+}
+
+.caf-mob-actions .details-pill {
+  flex: 1 1 0;
+  justify-content: center;
+}
+
+@media (max-width: 991.98px) {
+  .step-tabs {
+    display: none;
+  }
+
+  .details-topbar {
+    display: none;
+  }
+
+  .caf-mob-sticky {
+    display: block !important;
+  }
+
+  .caf-body {
+    padding-bottom: 84px;
+  }
+}
+
 .caf-panel {
   display: none;
 }

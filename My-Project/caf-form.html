@@ -92,11 +92,24 @@
 
                             <div class="details-actions">
                                 <button class="details-pill" type="button" id="cafBack">Back</button>
-                                <button class="details-pill primary" type="button" id="cafNext">Next</button>
+                                <button class="details-pill primary" type="button" id="cafNext">Save &amp; Next</button>
                             </div>
                         </div>
 
                         <div class="details-body caf-body">
+                            <div class="caf-mob-sticky d-lg-none" aria-label="CAF header">
+                                <div class="caf-mob-page-title">Common Application Form (CAF)</div>
+                                <div class="caf-mob-progress" aria-label="Step progress">
+                                    <div class="caf-mob-progress-top">
+                                        <div class="caf-mob-step" id="cafMobStep">Step 1 of 5</div>
+                                        <div class="caf-mob-percent" id="cafMobPercent">20%</div>
+                                    </div>
+                                    <div class="caf-mob-bar" aria-hidden="true">
+                                        <div class="caf-mob-bar-fill" id="cafMobBar" style="width:20%"></div>
+                                    </div>
+                                    <div class="caf-mob-title" id="cafMobTitle">Application Details</div>
+                                </div>
+                            </div>
                             <form class="caf-form" id="cafForm" autocomplete="off" novalidate>
                                 <div class="caf-panel active" data-step-panel="1">
                                     <div class="caf-section">
@@ -880,10 +893,15 @@
                                     </div>
                                 </div>
 
-                                <div class="caf-submit-row">
+                                <div class="caf-submit-row d-none">
                                     <button class="details-pill primary" type="submit" id="cafSubmit">Submit</button>
                                 </div>
                             </form>
+                        </div>
+
+                        <div class="caf-mob-actions d-lg-none" role="group" aria-label="Form actions">
+                            <button class="details-pill" type="button" id="cafMobBack">Back</button>
+                            <button class="details-pill primary" type="button" id="cafMobNext">Save &amp; Next</button>
                         </div>
                     </div>
 
@@ -901,6 +919,50 @@
         var activeStep = 1;
         var formEl = document.getElementById('cafForm');
         var stepTabs = document.querySelectorAll('.step-tab[data-step]');
+
+        function getStepHeading(step) {
+            try {
+                var tab = document.querySelector('.step-tab[data-step="' + step + '"]');
+                if (!tab) return '';
+                var spans = tab.querySelectorAll('span');
+                if (spans && spans.length) {
+                    var last = spans[spans.length - 1];
+                    var t = (last.textContent || '').replace(/\s+/g, ' ').trim();
+                    return t;
+                }
+                return (tab.textContent || '').replace(/\s+/g, ' ').trim();
+            } catch (e) {
+                return '';
+            }
+        }
+
+        function updateMobileProgress(step) {
+            try {
+                var stepEl = document.getElementById('cafMobStep');
+                var pctEl = document.getElementById('cafMobPercent');
+                var barEl = document.getElementById('cafMobBar');
+                var titleEl = document.getElementById('cafMobTitle');
+                var total = 5;
+                var pct = Math.round((step / total) * 100);
+                if (stepEl) stepEl.textContent = 'Step ' + step + ' of ' + total;
+                if (pctEl) pctEl.textContent = pct + '%';
+                if (barEl) barEl.style.width = pct + '%';
+                if (titleEl) {
+                    var heading = getStepHeading(step);
+                    titleEl.textContent = heading || titleEl.textContent;
+                }
+            } catch (e) {}
+        }
+
+        function updateActionButtons(step) {
+            try {
+                var next = document.getElementById('cafNext');
+                var mobNext = document.getElementById('cafMobNext');
+                var label = (step >= 5) ? 'Submit' : 'Save & Next';
+                if (next) next.textContent = label;
+                if (mobNext) mobNext.textContent = label;
+            } catch (e) {}
+        }
 
         stepTabs.forEach(function (t) {
             var num = t.querySelector('.step-num');
@@ -946,6 +1008,9 @@
 
             var body = document.querySelector('.caf-body');
             if (body) body.scrollTo({ top: 0, behavior: 'auto' });
+
+            updateMobileProgress(step);
+            updateActionButtons(step);
         }
 
         document.addEventListener('click', function (e) {
@@ -958,11 +1023,37 @@
                 setStep(s);
             }
 
-            if (target && target.id === 'cafBack') {
+            var backBtn = target.closest ? target.closest('#cafBack') : null;
+            if (backBtn) {
                 setStep(activeStep - 1);
             }
 
-            if (target && target.id === 'cafNext') {
+            var nextBtn = target.closest ? target.closest('#cafNext') : null;
+            if (nextBtn) {
+                if (activeStep >= 5) {
+                    try {
+                        if (formEl && formEl.requestSubmit) formEl.requestSubmit();
+                        else if (formEl) formEl.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+                    } catch (e) {}
+                    return;
+                }
+                setStep(activeStep + 1);
+            }
+
+            var mobBackBtn = target.closest ? target.closest('#cafMobBack') : null;
+            if (mobBackBtn) {
+                setStep(activeStep - 1);
+            }
+
+            var mobNextBtn = target.closest ? target.closest('#cafMobNext') : null;
+            if (mobNextBtn) {
+                if (activeStep >= 5) {
+                    try {
+                        if (formEl && formEl.requestSubmit) formEl.requestSubmit();
+                        else if (formEl) formEl.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+                    } catch (e) {}
+                    return;
+                }
                 setStep(activeStep + 1);
             }
         });
@@ -1065,6 +1156,8 @@
             if (pin) document.getElementById('cafPin').textContent = pin;
             if (date) document.getElementById('cafDate').textContent = date;
         } catch (e) {}
+
+        setStep(activeStep);
     })();
 </script>
 </body>

@@ -11,19 +11,146 @@
   padding-bottom: 18px;
 }
 
-header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filter-btn {
-  background: #f3f6fd;
-  border-color: rgba(47, 111, 228, 0.14);
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters {
+  --fi-tab-1: #b7f5d8;
+  --fi-tab-2: #ffebef;
+  --fi-tab-3: #fff2d4;
+  --fi-tab-4: #ffbfc6;
+  --fi-tab-5: #c3d0ff;
+  --fi-tab-6: #c3d0ff;
 }
 
-header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filter-btn.active {
-  background: #f3f6fd;
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn {
+  border-color: rgba(0, 0, 0, 0.06);
+  color: #1f2c3b;
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn i,
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn .apps-count {
+  color: inherit;
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn:nth-child(1) {
+  background: var(--fi-tab-1);
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn:nth-child(6) {
+  background: #d5f5ff;
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn:nth-child(2) {
+  background: var(--fi-tab-2);
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn:nth-child(3) {
+  background: var(--fi-tab-3);
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn:nth-child(4) {
+  background: var(--fi-tab-4);
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn:nth-child(5) {
+  background: var(--fi-tab-5);
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn.active {
+  box-shadow: 0 8px 18px rgba(20, 38, 70, 0.14);
+  border-color: rgba(0, 0, 0, 0.10);
+}
+
+header.app-header[data-active-page="fiscal"] ~ .app-body .apps-filters .apps-filter-btn:hover {
+  filter: brightness(0.96);
 }
 
 @media (max-width: 575.98px) {
   header.app-header[data-active-page="fiscal"] ~ .app-body .container-fluid {
     padding-left: 10px !important;
     padding-right: 10px !important;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .apps-mob-act {
+    background: #ffffff;
+    border-color: #e6e9f3;
+    color: #000000;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .apps-mob-act i {
+    color: inherit;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #52627a;
+    margin-bottom: 8px;
+    padding-right: 28px;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-pin {
+    color: #2f6fe4;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-sep {
+    color: #a7b0c0;
+    font-weight: 900;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-date {
+    color: #7b879a;
+    font-weight: 800;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-title {
+    font-size: 15px;
+    font-weight: 900;
+    color: #1f2c3b;
+    margin-bottom: 6px;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-tag {
+    display: inline-flex;
+    align-items: center;
+    background: #dff0ff;
+    color: #1f5ed7;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 900;
+    white-space: nowrap;
+    margin-bottom: 10px;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-meta {
+    display: grid;
+    gap: 6px;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-row {
+    display: grid;
+    grid-template-columns: 120px 10px 1fr;
+    column-gap: 6px;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-lbl {
+    font-weight: 900;
+    color: #7b879a;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-col {
+    font-weight: 900;
+    color: #7b879a;
+    text-align: center;
+  }
+
+  header.app-header[data-active-page="fiscal"] ~ .app-body .apps-mob-card .fi-mob-val {
+    font-weight: 900;
+    color: #1f2c3b;
   }
 
   .fi-page {

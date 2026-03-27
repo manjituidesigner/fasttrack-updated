@@ -261,6 +261,93 @@
     place-items: center;
   }
 
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .apps-mob-act {
+    background: #ffffff;
+    border-color: #e6e9f3;
+    color: #000000;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .apps-mob-act i {
+    color: inherit;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #52627a;
+    margin-bottom: 8px;
+    padding-right: 28px;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-pin {
+    color: #2f6fe4;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-sep {
+    color: #a7b0c0;
+    font-weight: 900;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-date {
+    color: #7b879a;
+    font-weight: 800;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-title {
+    font-size: 15px;
+    font-weight: 900;
+    color: #1f2c3b;
+    margin-bottom: 6px;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-tag {
+    display: inline-flex;
+    align-items: center;
+    background: #dff0ff;
+    color: #1f5ed7;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 900;
+    white-space: nowrap;
+    margin-bottom: 10px;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-row {
+    display: grid;
+    grid-template-columns: 110px 10px 1fr;
+    gap: 6px;
+    align-items: start;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-lbl {
+    font-weight: 900;
+    color: #1f2c3b;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-col {
+    color: #a7b0c0;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  header.app-header[data-active-page="applications"] ~ .app-body .apps-mob-card .fi-mob-val {
+    font-weight: 900;
+    color: #1f2c3b;
+    word-break: break-word;
+  }
+
   .apps-mob-act.dropdown-toggle::after {
     display: none;
   }
