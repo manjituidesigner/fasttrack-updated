@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/style.css?v=20260317" />
+  <link rel="stylesheet" href="../css/theme.css?v=20260311" />
+  <link rel="stylesheet" href="../My-Project/my-project.css?v=20260317" />
+  <link rel="stylesheet" href="application-details.css?v=20260330" />
+  <title>Application Details</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="app-sidebar" aria-label="Sidebar">
+      <div class="sidebar-expand">
+        <button class="sidebar-expand-btn" type="button" aria-label="Expand sidebar"><i class="bi bi-chevron-right"></i></button>
+      </div>
+      <div class="sidebar-brand">
+        <img class="sidebar-gov-logo" src="../assets/images/govt-logo-white.png" alt="Government logo" />
+        <img class="sidebar-ft-logo" src="../assets/images/fasttrack-logo-white.png" alt="FastTrack logo" />
+      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="../index.html"><span class="nav-ic"><i class="bi bi-grid"></i></span><span class="nav-text" data-i18n="nav.home">Home</span></a>
+        <a class="nav-item" href="../My-Project/my-projects.html"><span class="nav-ic"><i class="bi bi-briefcase"></i></span><span class="nav-text" data-i18n="nav.my_projects">My Projects</span></a>
+        <a class="nav-item active" href="my-applications.html"><span class="nav-ic"><i class="bi bi-file-earmark-text"></i></span><span class="nav-text" data-i18n="nav.my_applications">My Applications</span></a>
+        <a class="nav-item" href="../Fiscal-Incentives/fiscal-incentives.html"><span class="nav-ic"><i class="bi bi-currency-rupee"></i></span><span class="nav-text" data-i18n="nav.fiscal_incentives">Fiscal Incentives</span></a>
+        <a class="nav-item" href="#"><span class="nav-ic"><i class="bi bi-card-list"></i></span><span class="nav-text" data-i18n="nav.fiscal_registrations">Fiscal Registrations</span></a>
+        <a class="nav-item" href="#"><span class="nav-ic"><i class="bi bi-patch-check"></i></span><span class="nav-text" data-i18n="nav.know_approvals">Know your Approvals</span></a>
+        <a class="nav-item" href="#"><span class="nav-ic"><i class="bi bi-person"></i></span><span class="nav-text" data-i18n="nav.my_account">My Account</span></a>
+        <a class="nav-item" href="#"><span class="nav-ic"><i class="bi bi-box-arrow-right"></i></span><span class="nav-text" data-i18n="nav.logout">Logout</span></a>
+      </nav>
+    </aside>
+
+    <div class="app-main">
+      <header class="app-header" data-active-page="applications">
+        <div class="header-left">
+          <button class="icon-btn mobile-menu-btn d-lg-none" type="button" aria-label="Menu" id="mobileMenuBtn"><i class="bi bi-list"></i><i class="bi bi-x-lg"></i></button>
+          <div class="header-logos">
+            <img class="header-gov-logo" src="../assets/images/govt-logo-dark.png" alt="Government logo" />
+            <img class="header-ft-logo" src="../assets/images/fasttrack-logo-dark.png" alt="FastTrack logo" />
+          </div>
+        </div>
+        <div class="header-center">
+          <div class="helpline">
+            <div class="helpline-ic"><i class="fa-solid fa-headset"></i></div>
+            <div class="helpline-txt">
+              <div class="small text-muted fw-semibold">HELP LINE : 0172-4866999</div>
+              <div class="small text-muted">9:00 AM TO 5:00 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="header-right"></div>
+      </header>
+
+      <div class="app-body">
+        <main class="content-area">
+          <div class="container-fluid px-3 px-lg-4">
+            <div class="d-flex align-items-center justify-content-between py-3 page-head">
+              <div class="page-title">Regulatory Clearances</div>
+              <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="my-applications.html">My Applications</a> / <span class="fw-semibold">Regulatory Clearances</span></div>
+            </div>
+
+            <div class="appdet-card">
+              <div class="appdet-top">
+                <div class="appdet-actions">
+                  <button class="appdet-btn primary" type="button">Apply for New Clearance</button>
+                  <button class="appdet-btn" type="button">Know Your Approvals</button>
+                  <button class="appdet-btn" type="button">View CAF</button>
+                  <button class="appdet-btn" type="button">Addendum</button>
+                </div>
+
+                <button class="appdet-back" type="button" id="appDetBack">Back</button>
+              </div>
+
+              <div class="appdet-body">
+                <div class="appdet-kv">
+                  <div class="appdet-col">
+                    <div class="appdet-kv-row"><div class="k">PIN</div><div class="v appdet-pinval" id="detPin">-</div></div>
+                    <div class="appdet-kv-row"><div class="k">Business Entity</div><div class="v">PRBDB</div></div>
+                    <div class="appdet-kv-row"><div class="k">Applicant Name</div><div class="v">Karamjit Singh</div></div>
+                    <div class="appdet-kv-row"><div class="k">Applicant Phone</div><div class="v">9780031773</div></div>
+                    <div class="appdet-kv-row"><div class="k">Applicant Email</div><div class="v">karamjitsing@gmail.com</div></div>
+                    <div class="appdet-kv-row"><div class="k">Project Sector</div><div class="v">Other Service Projects</div></div>
+                    <div class="appdet-kv-row"><div class="k">Project Purpose</div><div class="v">Test</div></div>
+                  </div>
+                  <div class="appdet-col">
+                    <div class="appdet-kv-row"><div class="k">Date</div><div class="v" id="detDate">-</div></div>
+                    <div class="appdet-kv-row"><div class="k">Project Name</div><div class="v">PRBDB</div></div>
+                    <div class="appdet-kv-row"><div class="k">Site Details</div><div class="v">SCO 61-62, S.A.S Nagar, Punjab</div></div>
+                    <div class="appdet-kv-row"><div class="k">Total Project Cost</div><div class="v">195000.00 Lakhs</div></div>
+                    <div class="appdet-kv-row"><div class="k">Type of Industry</div><div class="v">Large - &gt; Rs. 125 Crore</div></div>
+                  </div>
+                </div>
+
+                <div class="appdet-sec">
+                  <div class="appdet-sec-title">In Process</div>
+                  <div class="appdet-mcards d-sm-none" id="appdetMobCards" aria-label="In Process (Mobile)"></div>
+                  <div class="table-responsive appdet-table-wrap">
+                    <table class="table appdet-table mb-0">
+                      <thead>
+                        <tr>
+                          <th>Application ID <i class="bi bi-caret-down-fill th-sort"></i></th>
+                          <th>Application Name <i class="bi bi-caret-down-fill th-sort"></i></th>
+                          <th>Submitted Date <i class="bi bi-caret-down-fill th-sort"></i></th>
+                          <th>Completed Date <i class="bi bi-caret-down-fill th-sort"></i></th>
+                          <th>Current Status Updated On <i class="bi bi-caret-down-fill th-sort"></i></th>
+                          <th class="text-center">Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a class="pin-link" href="#">250535096</a></td>
+                          <td>Registration of Societies</td>
+                          <td>20-Aug-2025</td>
+                          <td>20-Aug-2025</td>
+                          <td>
+                            <div class="appdet-statuscell">
+                              <div class="appdet-statustxt">Forwarded to HOD for Further Processing</div>
+                              <div class="appdet-progline" data-tooltip="pending-at">
+                                <span class="appdet-days good">7</span>
+                                <div class="appdet-bar"><span class="appdet-bar-fill" style="width:38%"></span></div>
+                                <span class="appdet-days appdet-days-total bad">38/45</span>
+                                <button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <button class="appdet-ic" type="button" aria-label="Chat"><i class="bi bi-chat-left"></i></button>
+                            <button class="appdet-ic" type="button" aria-label="Rupee"><i class="bi bi-currency-rupee"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="pin-link" href="#">250535096</a></td>
+                          <td>Road Cutting Permission and Inspections</td>
+                          <td>01-May-2025</td>
+                          <td>01-May-2025</td>
+                          <td>
+                            <div class="appdet-statuscell">
+                              <div class="appdet-statustxt">Forwarded to HOD for Further Processing</div>
+                              <div class="appdet-progline" data-tooltip="pending-at">
+                                <span class="appdet-days good">15</span>
+                                <div class="appdet-bar"><span class="appdet-bar-fill" style="width:66%"></span></div>
+                                <span class="appdet-days appdet-days-total bad">30/45</span>
+                                <button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <button class="appdet-ic" type="button" aria-label="Chat"><i class="bi bi-chat-left"></i></button>
+                            <button class="appdet-ic" type="button" aria-label="Rupee"><i class="bi bi-currency-rupee"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="pin-link" href="#">250535096</a></td>
+                          <td>Registration of Societies</td>
+                          <td>01-May-2025</td>
+                          <td>01-May-2025</td>
+                          <td>
+                            <div class="appdet-statuscell">
+                              <div class="appdet-statustxt">Forwarded to HOD for Further Processing</div>
+                              <div class="appdet-progline" data-tooltip="pending-at">
+                                <span class="appdet-days good">7</span>
+                                <div class="appdet-bar"><span class="appdet-bar-fill" style="width:38%"></span></div>
+                                <span class="appdet-days appdet-days-total bad">38/45</span>
+                                <button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <button class="appdet-ic" type="button" aria-label="Chat"><i class="bi bi-chat-left"></i></button>
+                            <button class="appdet-ic" type="button" aria-label="Rupee"><i class="bi bi-currency-rupee"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="pin-link" href="#">250535097</a></td>
+                          <td>Fire NOC</td>
+                          <td>03-May-2025</td>
+                          <td>-</td>
+                          <td>
+                            <div class="appdet-statuscell">
+                              <div class="appdet-statustxt">Scrutiny Under Process</div>
+                              <div class="appdet-progline" data-tooltip="pending-at">
+                                <span class="appdet-days good">9</span>
+                                <div class="appdet-bar"><span class="appdet-bar-fill" style="width:45%"></span></div>
+                                <span class="appdet-days appdet-days-total bad">36/45</span>
+                                <button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <button class="appdet-ic" type="button" aria-label="Chat"><i class="bi bi-chat-left"></i></button>
+                            <button class="appdet-ic" type="button" aria-label="Rupee"><i class="bi bi-currency-rupee"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="pin-link" href="#">250535098</a></td>
+                          <td>Pollution Consent (CTE)</td>
+                          <td>05-May-2025</td>
+                          <td>-</td>
+                          <td>
+                            <div class="appdet-statuscell">
+                              <div class="appdet-statustxt">Pending for Clarification</div>
+                              <div class="appdet-progline" data-tooltip="pending-at">
+                                <span class="appdet-days good">12</span>
+                                <div class="appdet-bar"><span class="appdet-bar-fill" style="width:55%"></span></div>
+                                <span class="appdet-days appdet-days-total bad">33/45</span>
+                                <button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <button class="appdet-ic" type="button" aria-label="Chat"><i class="bi bi-chat-left"></i></button>
+                            <button class="appdet-ic" type="button" aria-label="Rupee"><i class="bi bi-currency-rupee"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="pin-link" href="#">250535099</a></td>
+                          <td>Factory License</td>
+                          <td>08-May-2025</td>
+                          <td>-</td>
+                          <td>
+                            <div class="appdet-statuscell">
+                              <div class="appdet-statustxt">Forwarded to Department</div>
+                              <div class="appdet-progline" data-tooltip="pending-at">
+                                <span class="appdet-days good">18</span>
+                                <div class="appdet-bar"><span class="appdet-bar-fill" style="width:72%"></span></div>
+                                <span class="appdet-days appdet-days-total bad">27/45</span>
+                                <button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <button class="appdet-ic" type="button" aria-label="Chat"><i class="bi bi-chat-left"></i></button>
+                            <button class="appdet-ic" type="button" aria-label="Rupee"><i class="bi bi-currency-rupee"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="pin-link" href="#">250535100</a></td>
+                          <td>Building Plan Approval</td>
+                          <td>10-May-2025</td>
+                          <td>-</td>
+                          <td>
+                            <div class="appdet-statuscell">
+                              <div class="appdet-statustxt">Site Inspection Scheduled</div>
+                              <div class="appdet-progline" data-tooltip="pending-at">
+                                <span class="appdet-days good">22</span>
+                                <div class="appdet-bar"><span class="appdet-bar-fill" style="width:80%"></span></div>
+                                <span class="appdet-days appdet-days-total bad">23/45</span>
+                                <button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <button class="appdet-ic" type="button" aria-label="Chat"><i class="bi bi-chat-left"></i></button>
+                            <button class="appdet-ic" type="button" aria-label="Rupee"><i class="bi bi-currency-rupee"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="pin-link" href="#">250535101</a></td>
+                          <td>Electricity Connection</td>
+                          <td>12-May-2025</td>
+                          <td>-</td>
+                          <td>
+                            <div class="appdet-statuscell">
+                              <div class="appdet-statustxt">Documents Verification</div>
+                              <div class="appdet-progline" data-tooltip="pending-at">
+                                <span class="appdet-days good">26</span>
+                                <div class="appdet-bar"><span class="appdet-bar-fill" style="width:86%"></span></div>
+                                <span class="appdet-days appdet-days-total bad">19/45</span>
+                                <button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <button class="appdet-ic" type="button" aria-label="Chat"><i class="bi bi-chat-left"></i></button>
+                            <button class="appdet-ic" type="button" aria-label="Rupee"><i class="bi bi-currency-rupee"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a class="pin-link" href="#">250535102</a></td>
+                          <td>Water Connection</td>
+                          <td>14-May-2025</td>
+                          <td>-</td>
+                          <td>
+                            <div class="appdet-statuscell">
+                              <div class="appdet-statustxt">Forwarded to HOD for Approval</div>
+                              <div class="appdet-progline" data-tooltip="pending-at">
+                                <span class="appdet-days good">31</span>
+                                <div class="appdet-bar"><span class="appdet-bar-fill" style="width:92%"></span></div>
+                                <span class="appdet-days appdet-days-total bad">14/45</span>
+                                <button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-center">
+                            <button class="appdet-ic" type="button" aria-label="Chat"><i class="bi bi-chat-left"></i></button>
+                            <button class="appdet-ic" type="button" aria-label="Rupee"><i class="bi bi-currency-rupee"></i></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="payReceiptModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content appdet-modal appdet-paymodal">
+        <div class="modal-header appdet-pay-hdr">
+          <div class="appdet-pay-title">Payment Receipt</div>
+          <div class="appdet-pay-hdr-right">
+            <a class="appdet-pay-dl" href="#" id="payDl" aria-label="Download Receipt"><i class="fa-solid fa-download"></i> Download Receipt</a>
+            <button type="button" class="appdet-pay-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+          </div>
+        </div>
+        <div class="modal-body appdet-pay-body">
+          <div class="appdet-pay-grid">
+            <div class="appdet-pay-row"><div class="k">Application Name:</div><div class="v" id="payAppName">Application Registration of Societies</div></div>
+            <div class="appdet-pay-row"><div class="k">Mode of Payment:</div><div class="v" id="payModeOfPayment">Allahabad Bank</div></div>
+
+            <div class="appdet-pay-row"><div class="k">Reference Number:</div><div class="v" id="payRef">5321456</div></div>
+            <div class="appdet-pay-row"><div class="k">Processing/ Application Fee:</div><div class="v" id="payProcFee">500</div></div>
+
+            <div class="appdet-pay-row"><div class="k">Transaction Id/Ref No.:</div><div class="v" id="payTxn">U212548B212354</div></div>
+            <div class="appdet-pay-row"><div class="k">Statutory Fee:</div><div class="v" id="payStatFee">0</div></div>
+
+            <div class="appdet-pay-row"><div class="k">Payment Mode:</div><div class="v" id="payPayMode">Offline Payment <span class="appdet-pay-pdf"><i class="fa-solid fa-file-pdf"></i></span></div></div>
+            <div class="appdet-pay-row"><div class="k">Balance Fee:</div><div class="v" id="payBal">0.00</div></div>
+
+            <div class="appdet-pay-row"><div class="k">Date:</div><div class="v" id="payDate">20/Aug/2025</div></div>
+            <div class="appdet-pay-row"><div class="k">Total:</div><div class="v" id="payTotal">500</div></div>
+          </div>
+
+          <div class="appdet-pay-foot">
+            <div class="appdet-pay-stat">Payment Status: <span class="ok" id="payStatus">Transaction Processed Successfully</span></div>
+            <div class="appdet-pay-grand"><span class="mut">Grand Total:</span> <span class="amt" id="payGrand">500</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="appLogsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content appdet-modal appdet-logmodal">
+        <div class="modal-header appdet-log-hdr">
+          <div class="appdet-log-hdr-left">
+            <div class="appdet-log-title">LOGS: <span id="logAppName">Application</span></div>
+            <div class="appdet-log-sub">ID: <span id="logAppId">-</span></div>
+          </div>
+          <div class="appdet-log-hdr-mid">
+            <div class="appdet-log-sum" id="logTotal">Total 45 Days</div>
+            <div class="appdet-log-count"><span class="good" id="logDone">9</span><span class="mut" id="logRemain">/36</span></div>
+          </div>
+          <div class="appdet-log-hdr-right">
+            <div class="appdet-log-start"><span class="mut">Start Date:</span> <span class="appdet-log-startdt" id="logStart">20 Aug 2025</span></div>
+            <button type="button" class="appdet-log-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+          </div>
+        </div>
+        <div class="modal-body appdet-log-body">
+          <div class="appdet-log-sc" id="logSteps" aria-label="Logs"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="wdCalModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content appdet-modal">
+        <div class="modal-header appdet-cal-hdr">
+          <div class="appdet-cal-hdr-left">
+            <div class="appdet-modal-title">Working Days Calendar</div>
+            <div class="appdet-cal-sub">Timing: 9 :00 AM to 5:00 PM</div>
+          </div>
+          <div class="appdet-cal-hdr-mid">
+            <div class="appdet-cal-sum">Total 45 Days</div>
+            <div class="appdet-cal-count"><span class="good">9</span><span class="mut">/36</span></div>
+          </div>
+          <div class="appdet-cal-hdr-right">
+            <div class="appdet-cal-start"><span class="mut">Start Date:</span> <span class="appdet-cal-startdt">20 Aug 2025</span></div>
+            <button type="button" class="appdet-cal-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+          </div>
+        </div>
+        <div class="modal-body appdet-cal-body">
+          <div class="appdet-cal-two">
+            <div class="appdet-month">
+              <div class="appdet-month-head">
+                <button class="appdet-month-nav" type="button" id="calPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+                <div class="appdet-month-lbl" id="calMonthLeft">AUG 2025</div>
+                <div class="appdet-month-sp"></div>
+              </div>
+              <div class="appdet-month-grid" id="calGridLeft" aria-label="Calendar Left"></div>
+            </div>
+
+            <div class="appdet-month">
+              <div class="appdet-month-head end">
+                <div class="appdet-month-sp"></div>
+                <div class="appdet-month-lbl" id="calMonthRight">SEP 2025</div>
+                <button class="appdet-month-nav" type="button" id="calNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="appdet-month-grid" id="calGridRight" aria-label="Calendar Right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="appdet-tip" id="pendingAtTip" role="tooltip" aria-hidden="true">
+    <div class="tip-head">PENDING AT:</div>
+    <div class="tip-row">
+      <div class="tip-av">MB</div>
+      <div>
+        <div class="tip-name">Narinder Singh</div>
+        <div class="tip-sub">(Nodal Officer)</div>
+        <div class="tip-st">Status : <span class="tip-st2">Scrutiny Observation raised</span></div>
+        <div class="tip-time">25 Aug 2025&nbsp;&nbsp;|&nbsp;&nbsp;11:30 AM</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/i18next@23.10.0/i18next.min.js"></script>
+  <script src="../js/shared-ui.js"></script>
+  <script>
+    (function(){
+      var qs=new URLSearchParams(location.search);
+      var pin=qs.get('pin')||'';var date=qs.get('date')||'';
+      var p=document.getElementById('detPin');var d=document.getElementById('detDate');
+      if(p&&pin)p.textContent=pin; if(d&&date)d.textContent=date;
+      var b=document.getElementById('appDetBack'); if(b)b.onclick=function(){history.back();};
+
+      var tip=document.getElementById('pendingAtTip');
+      function hideTip(){
+        if(!tip) return;
+        tip.style.display='none';
+        tip.setAttribute('aria-hidden','true');
+      }
+      function showTip(target){
+        if(!tip||!target) return;
+        var r=target.getBoundingClientRect();
+        tip.style.display='block';
+        tip.setAttribute('aria-hidden','false');
+        var left=Math.min(Math.max(12,r.left),window.innerWidth-tip.offsetWidth-12);
+        var top=r.top - tip.offsetHeight - 10;
+        if(top<12) top=r.bottom + 10;
+        tip.style.left=left+'px';
+        tip.style.top=top+'px';
+      }
+      var activeProg=null;
+      document.addEventListener('mouseover',function(e){
+        var t=e && e.target ? e.target.closest('.appdet-progline[data-tooltip="pending-at"]') : null;
+        if(!t) return;
+        if(e.target && e.target.closest && e.target.closest('button.appdet-cal')) return;
+        activeProg=t;
+        showTip(t);
+      });
+      document.addEventListener('mousemove',function(e){
+        if(!activeProg) return;
+        if(e.target && e.target.closest && e.target.closest('button.appdet-cal')) return;
+        showTip(activeProg);
+      });
+      document.addEventListener('mouseout',function(e){
+        var t=e && e.target ? e.target.closest('.appdet-progline[data-tooltip="pending-at"]') : null;
+        if(!t) return;
+        if(e.relatedTarget && t.contains(e.relatedTarget)) return;
+        activeProg=null;
+        hideTip();
+      });
+      document.addEventListener('scroll',hideTip,true);
+      window.addEventListener('resize',function(){ if(tip && tip.style.display==='block' && activeProg) showTip(activeProg); });
+      hideTip();
+
+      (function(){
+        var tbl=document.querySelector('table.appdet-table');
+        if(!tbl) return;
+        var headRow=tbl.querySelector('thead tr');
+        if(headRow && !headRow.querySelector('th[data-col="action"]')){
+          var th=document.createElement('th');
+          th.className='text-center';
+          th.textContent='Action';
+          th.setAttribute('data-col','action');
+          headRow.appendChild(th);
+        }
+        var rows=tbl.querySelectorAll('tbody tr');
+        rows.forEach(function(tr){
+          var tds=tr.querySelectorAll('td');
+          if(tds.length){
+            var detailsTd=tds[tds.length-1];
+            if(detailsTd && detailsTd.classList.contains('text-center')){
+              var btns=detailsTd.querySelectorAll('button.appdet-ic i');
+              if(btns.length>=2){
+                btns[0].className='fa-solid fa-comment-dots';
+                btns[1].className='fa-solid fa-indian-rupee-sign';
+              }
+            }
+          }
+          if(tr.querySelector('td[data-col="action"]')) return;
+          var td=document.createElement('td');
+          td.className='text-center';
+          td.setAttribute('data-col','action');
+          td.innerHTML=''
+            +'<div class="dropdown">'
+            +'<button class="appdet-ic" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions">'
+            +'<i class="fa-solid fa-ellipsis-vertical"></i>'
+            +'</button>'
+            +'<ul class="dropdown-menu dropdown-menu-end">'
+            +'<li><a class="dropdown-item" href="#">Withdraw</a></li>'
+            +'<li><a class="dropdown-item" href="#">Due Payment</a></li>'
+            +'<li><a class="dropdown-item" href="#">Edit</a></li>'
+            +'<li><a class="dropdown-item" href="#">Pull Back</a></li>'
+            +'</ul>'
+            +'</div>';
+          tr.appendChild(td);
+        });
+      })();
+
+      (function(){
+        var mobWrap=document.getElementById('appdetMobCards');
+        var tbl=document.querySelector('table.appdet-table');
+        if(!mobWrap || !tbl) return;
+
+        function esc(s){
+          return (s||'').replace(/[&<>"']/g,function(c){
+            return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'})[c]||c;
+          });
+        }
+
+        function build(){
+          try {
+            mobWrap.innerHTML='';
+            var rows=tbl.querySelectorAll('tbody tr');
+            rows.forEach(function(tr){
+              var tds=tr.querySelectorAll('td');
+              if(!tds || tds.length<6) return;
+              var appId=(tds[0].textContent||'').trim();
+              var appName=(tds[1].textContent||'').trim();
+              var subDt=(tds[2].textContent||'').trim();
+              var compDt=(tds[3].textContent||'').trim();
+              var statusTxtEl=tr.querySelector('.appdet-statustxt');
+              var statusTxt=(statusTxtEl ? (statusTxtEl.textContent||'') : '').trim();
+
+              var prog=tr.querySelector('.appdet-progline');
+              var daysGood=prog ? prog.querySelector('.appdet-days.good') : null;
+              var daysTotal=prog ? prog.querySelector('.appdet-days-total') : null;
+              var fill=prog ? prog.querySelector('.appdet-bar-fill') : null;
+              var w=fill ? (fill.style.width||'') : '';
+              var tip=prog ? (prog.getAttribute('data-tooltip')||'') : '';
+
+              var card=''
+                +'<div class="appdet-mcard">'
+                +  '<div class="appdet-mcard-top">'
+                +    '<div class="appdet-mmeta">'
+                +      '<div class="appdet-mpin"><span>Application ID:</span> <span class="val">'+esc(appId)+'</span></div>'
+                +      '<span class="sep">|</span>'
+                +      '<div class="appdet-mdate">'+esc(subDt)+'</div>'
+                +    '</div>'
+                +  '</div>'
+                +  '<div class="appdet-mtitle">'+esc(appName)+'</div>'
+                +  '<div class="appdet-mkv">'
+                +    '<div class="row"><div class="k">Submitted Date</div><div class="c">:</div><div class="v">'+esc(subDt)+'</div></div>'
+                +    '<div class="row"><div class="k">Completed Date</div><div class="c">:</div><div class="v">'+esc(compDt)+'</div></div>'
+                +  '</div>'
+                +  '<div class="appdet-mstatus">'+esc(statusTxt)+'</div>'
+                +  '<div class="appdet-mprog">'
+                +    '<div class="appdet-progline" data-tooltip="'+esc(tip)+'">'
+                +      '<span class="appdet-days good">'+esc(daysGood ? daysGood.textContent : '')+'</span>'
+                +      '<div class="appdet-bar"><span class="appdet-bar-fill" style="width:'+esc(w)+'"></span></div>'
+                +      '<span class="appdet-days appdet-days-total bad">'+esc(daysTotal ? daysTotal.textContent : '')+'</span>'
+                +      '<button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>'
+                +    '</div>'
+                +    '<div class="appdet-macts">'
+                +      '<button class="appdet-ic" type="button" aria-label="Chat"><i class="fa-solid fa-comment-dots"></i></button>'
+                +      '<button class="appdet-ic" type="button" aria-label="Rupee"><i class="fa-solid fa-indian-rupee-sign"></i></button>'
+                +    '</div>'
+                +  '</div>'
+                +'</div>';
+              mobWrap.insertAdjacentHTML('beforeend', card);
+            });
+          } catch(e) {}
+        }
+
+        build();
+        window.addEventListener('resize', function(){
+          if(window.innerWidth<=575) build();
+        });
+      })();
+
+      (function(){
+        var modalEl=document.getElementById('appLogsModal');
+        if(!modalEl) return;
+        var modal=null;
+        try { modal=bootstrap.Modal.getOrCreateInstance(modalEl); } catch(e) { modal=null; }
+
+        function esc(s){
+          return (s||'').replace(/[&<>"']/g,function(c){
+            return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'})[c]||c;
+          });
+        }
+
+        function initials(name){
+          var n=(name||'').trim();
+          if(!n) return 'NA';
+          var parts=n.split(/\s+/).filter(Boolean);
+          var a=(parts[0]||'').charAt(0);
+          var b=(parts.length>1?(parts[parts.length-1]||'').charAt(0):'');
+          return (a+b).toUpperCase();
+        }
+
+        function setText(id, val){
+          var el=document.getElementById(id);
+          if(el) el.textContent=val;
+        }
+
+        function fillLogs(tr){
+          var tds=tr ? tr.querySelectorAll('td') : null;
+          var appId=tds && tds[0] ? (tds[0].textContent||'').trim() : '-';
+          var appName=tds && tds[1] ? (tds[1].textContent||'').trim() : 'Application';
+          var start=tds && tds[2] ? (tds[2].textContent||'').trim() : '';
+          setText('logAppId', appId);
+          setText('logAppName', appName);
+          if(start) setText('logStart', start.replace(/-/g,' '));
+
+          var prog=tr ? tr.querySelector('.appdet-days-total') : null;
+          var mm=(prog ? (prog.textContent||'').trim() : '').match(/^(\d+)\s*\/\s*(\d+)$/);
+          var done=mm? (parseInt(mm[1],10)||0) : 0;
+          var total=mm? (parseInt(mm[2],10)||45) : 45;
+          var remain=total-done; if(remain<0) remain=0;
+          setText('logTotal','Total '+total+' Days');
+          setText('logDone',''+done);
+          setText('logRemain','/'+remain);
+
+          var steps=[
+            {by:'Vinod Kumar', role:'(Investor)', to:'', status:'Form Locked and Fee Pending', statusType:'warn', comment:'Form Locked and Fee Pending', time:'25 Aug 2025 | 11:30 AM'},
+            {by:'Vinod Kumar', role:'(Investor)', to:'Harmeet Singh', status:'Forwarded to Account Officer', statusType:'ok', comment:'Paid', time:'25 Aug 2025 | 15:10 PM'},
+            {by:'Mann Mohinder', role:'(Additional Registrar of Society)', to:'Vinod kumar (Investor)', status:'Scrutiny Observation raised', statusType:'ok', comment:'Raise Pre-Scrutiny Observation', time:'25 Aug 2025 | 16:15 PM'},
+            {by:'Vinod Kumar', role:'(Investor)', to:'Mann Mohinder (Additional Registrar of Society)', status:'Scrutiny Observation Resolved', statusType:'ok', comment:'Resolve Observation', time:'25 Aug 2025 | 16:45 PM'},
+            {by:'Harmeet Singh', role:'(Account Officer)', to:'Vinod kumar (Investor)', status:'Fee Verified', statusType:'ok', comment:'Payment Verified Successfully', time:'26 Aug 2025 | 10:20 AM'},
+            {by:'Narinder Singh', role:'(Nodal Officer)', to:'Harmeet Singh', status:'Forwarded to HOD for Further Processing', statusType:'ok', comment:'Forwarded to Department', time:'26 Aug 2025 | 12:05 PM'}
+          ];
+
+          var sc=document.getElementById('logSteps');
+          if(sc) sc.innerHTML='';
+          steps.forEach(function(s, idx){
+            var stCls=s.statusType==='warn' ? 'warn' : 'ok';
+            if(sc){
+              sc.innerHTML += ''
+                +'<div class="appdet-log-card">'
+                +  '<div class="appdet-log-top">'
+                +    '<div class="appdet-log-av">'+esc(initials(s.by))+'</div>'
+                +    '<div class="appdet-log-meta">'
+                +      '<div class="appdet-log-name">'+esc(s.by)+'</div>'
+                +      '<div class="appdet-log-role">'+esc(s.role||'')+'</div>'
+                +      (s.to ? '<div class="appdet-log-to"><span class="mut">To :</span> '+esc(s.to)+'</div>' : '')
+                +      '<div class="appdet-log-st"><span class="mut">Status :</span> <span class="st '+stCls+'">'+esc(s.status)+'</span></div>'
+                +      '<div class="appdet-log-cmt"><span class="mut">Comments:</span> <span class="pill">'+esc(s.comment||'-')+'</span></div>'
+                +      '<div class="appdet-log-time">'+esc(s.time||'')+'</div>'
+                +    '</div>'
+                +  '</div>'
+                +  '<div class="appdet-log-stepno">'+(idx+1)+'</div>'
+                +'</div>';
+            }
+          });
+        }
+
+        document.addEventListener('click', function(e){
+          var btn=e && e.target ? e.target.closest('button.appdet-ic[aria-label="Chat"]') : null;
+          if(!btn) return;
+          var tr=btn.closest('tr');
+          if(!tr) return;
+          fillLogs(tr);
+          if(modal) modal.show();
+        });
+      })();
+
+      (function(){
+        var modalEl=document.getElementById('payReceiptModal');
+        if(!modalEl) return;
+        var modal=null;
+        try { modal=bootstrap.Modal.getOrCreateInstance(modalEl); } catch(e) { modal=null; }
+
+        function setText(id, val){
+          var el=document.getElementById(id);
+          if(el) el.textContent=val;
+        }
+
+        function fillPay(tr){
+          var tds=tr ? tr.querySelectorAll('td') : null;
+          var appId=tds && tds[0] ? (tds[0].textContent||'').trim() : '';
+          var appName=tds && tds[1] ? (tds[1].textContent||'').trim() : '';
+          var dt=tds && tds[2] ? (tds[2].textContent||'').trim() : '';
+          if(appName) setText('payAppName', 'Application '+appName);
+          if(appId) setText('payRef', appId);
+
+          if(dt){
+            var d2=dt.replace(/-/g,'/');
+            setText('payDate', d2);
+          }
+
+          var prog=tr ? tr.querySelector('.appdet-days-total') : null;
+          var mm=(prog ? (prog.textContent||'').trim() : '').match(/^(\d+)\s*\/\s*(\d+)$/);
+          var total=mm? (parseInt(mm[2],10)||500) : 500;
+          setText('payProcFee', ''+500);
+          setText('payTotal', ''+500);
+          setText('payGrand', ''+500);
+          setText('payStatus', 'Transaction Processed Successfully');
+        }
+
+        document.addEventListener('click', function(e){
+          var btn=e && e.target ? e.target.closest('button.appdet-ic[aria-label="Rupee"]') : null;
+          if(!btn) return;
+          var tr=btn.closest('tr');
+          if(!tr) return;
+          fillPay(tr);
+          if(modal) modal.show();
+        });
+      })();
+
+      var calGridLeft=document.getElementById('calGridLeft');
+      var calGridRight=document.getElementById('calGridRight');
+      var calMonthLeft=document.getElementById('calMonthLeft');
+      var calMonthRight=document.getElementById('calMonthRight');
+      var calPrev=document.getElementById('calPrev');
+      var calNext=document.getElementById('calNext');
+      var viewDate=new Date();
+      var startDate=new Date(2025,7,20);
+      var completedDays=0;
+      var totalDays=45;
+      var startDateEl=document.querySelector('.appdet-cal-startdt');
+      var countGoodEl=document.querySelector('.appdet-cal-count .good');
+      var countMutEl=document.querySelector('.appdet-cal-count .mut');
+
+      function pad2(n){return n<10?'0'+n:''+n;}
+      function key(d){return d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate());}
+
+      function parseDMonY(dateStr){
+        try {
+          if(!dateStr) return null;
+          var s=(dateStr+'').trim();
+          var m=s.match(/^(\d{1,2})-([A-Za-z]{3})-(\d{4})$/);
+          if(!m) return null;
+          var dd=parseInt(m[1],10);
+          var mon=(m[2]||'').toUpperCase();
+          var yyyy=parseInt(m[3],10);
+          var mons={JAN:0,FEB:1,MAR:2,APR:3,MAY:4,JUN:5,JUL:6,AUG:7,SEP:8,OCT:9,NOV:10,DEC:11};
+          if(mons[mon]===undefined) return null;
+          return new Date(yyyy,mons[mon],dd);
+        } catch(e){ return null; }
+      }
+
+      function fmtHuman(d){
+        try {
+          var months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+          return d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear();
+        } catch(e){ return ''; }
+      }
+
+      function isWorkingDay(d){
+        var dow=d.getDay();
+        if(dow===0 || dow===6) return false;
+        return true;
+      }
+
+      function addWorkingDays(d, count){
+        var cur=new Date(d.getFullYear(),d.getMonth(),d.getDate());
+        var added=0;
+        while(added<count){
+          if(isWorkingDay(cur)) added++;
+          if(added>=count) break;
+          cur.setDate(cur.getDate()+1);
+        }
+        return cur;
+      }
+
+      function countWorkingDays(from, to){
+        var cur=new Date(from.getFullYear(),from.getMonth(),from.getDate());
+        var end=new Date(to.getFullYear(),to.getMonth(),to.getDate());
+        var c=0;
+        while(cur<=end){
+          if(isWorkingDay(cur)) c++;
+          cur.setDate(cur.getDate()+1);
+        }
+        return c;
+      }
+
+      var holidays={
+        '2025-08-15':'Independence Day',
+        '2025-08-31':'Sunday'
+      };
+
+      function renderMonth(grid, y, m, rangeStart, rangeEnd){
+        if(!grid) return;
+        var first=new Date(y,m,1);
+        var startDay=first.getDay();
+        var lastDay=new Date(y,m+1,0).getDate();
+        grid.innerHTML='';
+        var dow=['SUN','MON','TUE','WED','THU','FRI','SAT'];
+        dow.forEach(function(n){
+          var h=document.createElement('div');
+          h.className='appdet-mcell dow';
+          h.textContent=n;
+          grid.appendChild(h);
+        });
+        for(var i=0;i<startDay;i++){
+          var e1=document.createElement('div');
+          e1.className='appdet-mcell empty';
+          grid.appendChild(e1);
+        }
+        var today=new Date();
+        for(var day=1;day<=lastDay;day++){
+          var d=new Date(y,m,day);
+          var cell=document.createElement('div');
+          cell.className='appdet-mcell day';
+          cell.textContent=day;
+          var k=key(d);
+          var isWeekend=d.getDay()===0 || d.getDay()===6;
+          var isHoliday=!!holidays[k];
+          if(isWeekend||isHoliday) cell.classList.add('holiday');
+
+          if(rangeStart && rangeEnd && isWorkingDay(d)){
+            if(d.getTime()===rangeStart.getTime()) cell.classList.add('sel');
+            if(d>=rangeStart && d<=rangeEnd) cell.classList.add('rng');
+          }
+
+          if(d.getFullYear()===today.getFullYear() && d.getMonth()===today.getMonth() && d.getDate()===today.getDate()) cell.classList.add('today');
+          if(isHoliday) cell.setAttribute('title',holidays[k]);
+          grid.appendChild(cell);
+        }
+      }
+
+      function renderCal(){
+        var y=viewDate.getFullYear();
+        var m=viewDate.getMonth();
+        var y2=new Date(y,m+1,1).getFullYear();
+        var m2=new Date(y,m+1,1).getMonth();
+        var monthNames=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+        if(calMonthLeft) calMonthLeft.textContent=monthNames[m]+' '+y;
+        if(calMonthRight) calMonthRight.textContent=monthNames[m2]+' '+y2;
+        var rs=new Date(startDate.getFullYear(),startDate.getMonth(),startDate.getDate());
+        var re=null;
+        if(completedDays>0) re=addWorkingDays(rs,completedDays);
+        renderMonth(calGridLeft,y,m,rs,re);
+        renderMonth(calGridRight,y2,m2,rs,re);
+
+        if(startDateEl) startDateEl.textContent=fmtHuman(rs);
+        var remain=totalDays-completedDays;
+        if(remain<0) remain=0;
+        if(countGoodEl) countGoodEl.textContent=''+completedDays;
+        if(countMutEl) countMutEl.textContent='/'+remain;
+      }
+
+      document.addEventListener('click', function(e){
+        try {
+          var btn=e && e.target ? e.target.closest('button.appdet-cal') : null;
+          if(!btn) return;
+          var tr=btn.closest('tr');
+          if(!tr) return;
+          var tds=tr.querySelectorAll('td');
+          if(tds && tds.length>=3){
+            var dtTxt=(tds[2].textContent||'').trim();
+            var dt=parseDMonY(dtTxt);
+            if(dt){
+              startDate=dt;
+              viewDate=new Date(startDate.getFullYear(), startDate.getMonth(), 1);
+            }
+          }
+
+          completedDays=0;
+          totalDays=45;
+          var prog=tr.querySelector('.appdet-days-total');
+          var progTxt=prog ? (prog.textContent||'').trim() : '';
+          var mm=progTxt.match(/^(\d+)\s*\/\s*(\d+)$/);
+          if(mm){
+            completedDays=parseInt(mm[1],10) || 0;
+            totalDays=parseInt(mm[2],10) || 45;
+          }
+        } catch(ex) {}
+      });
+
+      if(calPrev) calPrev.addEventListener('click',function(){ viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()-1,1); renderCal(); });
+      if(calNext) calNext.addEventListener('click',function(){ viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()+1,1); renderCal(); });
+      var calModal=document.getElementById('wdCalModal');
+      if(calModal) calModal.addEventListener('shown.bs.modal',function(){ renderCal(); });
+    })();
+  </script>
+</body>
+</html>

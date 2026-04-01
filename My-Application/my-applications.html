@@ -1492,9 +1492,56 @@
                     }
 
                     if (!pin) return;
-                    var url = '../My-Project/project-details.html?pin=' + encodeURIComponent(pin);
+                    var url = 'application-details.html?pin=' + encodeURIComponent(pin);
                     if (date) url += '&date=' + encodeURIComponent(date);
                     window.location.href = url;
+                });
+            } catch (e) {}
+        })();
+    </script>
+    <script>
+        (function () {
+            try {
+                function goToDetails(pin, date) {
+                    if (!pin) return;
+                    var url = 'application-details.html?pin=' + encodeURIComponent(pin);
+                    if (date) url += '&date=' + encodeURIComponent(date);
+                    window.location.href = url;
+                }
+
+                document.addEventListener('click', function (e) {
+                    var pinA = e && e.target ? e.target.closest('a.pin-link') : null;
+                    if (!pinA) return;
+                    var table = pinA.closest('.projects-table');
+                    if (!table) return;
+                    e.preventDefault();
+                    var pin = (pinA.textContent || '').trim();
+                    goToDetails(pin, '');
+                });
+
+                document.addEventListener('click', function (e) {
+                    var a = e && e.target ? e.target.closest('.dropdown-menu .dropdown-item') : null;
+                    if (!a) return;
+                    if (!a.querySelector('i.bi-eye')) return;
+                    var row = a.closest('tr');
+                    var card = a.closest('.apps-mob-card');
+                    if (!row && !card) return;
+                    e.preventDefault();
+
+                    var pin = '';
+                    var date = '';
+
+                    if (row) {
+                        var pinEl = row.querySelector('a.pin-link');
+                        if (pinEl) pin = (pinEl.textContent || '').trim();
+                    } else if (card) {
+                        var pinLink = card.querySelector('a.pin-link');
+                        if (pinLink) pin = (pinLink.textContent || '').trim();
+                        var dateEl = card.querySelector('.fi-mob-date, .apps-mob-date');
+                        if (dateEl) date = (dateEl.textContent || '').trim();
+                    }
+
+                    goToDetails(pin, date);
                 });
             } catch (e) {}
         })();

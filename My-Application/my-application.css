@@ -3,9 +3,13 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow);
-  overflow: auto;
+  /* overflow: auto; */
   padding: 12px;
-  max-height: 72vh;
+  /* max-height: 72vh; */
+}
+.apps-section {
+    max-height: 56vh;
+    overflow: auto;
 }
 
 .apps-head {
