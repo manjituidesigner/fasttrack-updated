@@ -969,11 +969,62 @@
     }
 
     function mountHeader() {
-        var header = document.querySelector('.app-header');
+        var header = document.querySelector('header.app-header');
         if (!header) return;
-
         var activePage = header.getAttribute('data-active-page') || '';
         header.innerHTML = getHeaderTemplate(activePage);
+    }
+
+    function mountChatbotWidget() {
+        try {
+            if (document.getElementById('chatbotOffcanvas')) return;
+            if (document.querySelector('.chatbot-fab')) return;
+
+            var prefix = getAssetPrefix();
+            var iconSrc = prefix + 'assets/images/chatbot-icon.png';
+
+            var wrap = document.createElement('div');
+            wrap.innerHTML = ''
+                + '<button class="chatbot-fab" type="button" data-bs-toggle="offcanvas" data-bs-target="#chatbotOffcanvas" aria-controls="chatbotOffcanvas" aria-label="Open chatbot">'
+                + '  <img src="' + iconSrc + '" alt="Chatbot">'
+                + '</button>'
+                + '<div class="offcanvas offcanvas-end chatbot-canvas" tabindex="-1" id="chatbotOffcanvas" aria-labelledby="chatbotOffcanvasLabel">'
+                + '  <div class="offcanvas-header chatbot-head">'
+                + '    <div class="chatbot-title" id="chatbotOffcanvasLabel">'
+                + '      <img class="chatbot-head-ic" src="' + iconSrc + '" alt="Chatbot">'
+                + '      <div>'
+                + '        <div class="chatbot-name" data-i18n="chatbot.title">Ease Punjab AI</div>'
+                + '      </div>'
+                + '    </div>'
+                + '    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>'
+                + '  </div>'
+                + '  <div class="offcanvas-body chatbot-body">'
+                + '    <div class="chatbot-label" data-i18n="chatbot.label_app_id">Please provide Application ID or PIN</div>'
+                + '    <input class="form-control chatbot-input" type="text" placeholder="Enter application ID" data-i18n-placeholder="chatbot.placeholder_app_id">'
+                + '    <div class="chatbot-label mt-3" data-i18n="chatbot.label_help">How can I assist you today?</div>'
+                + '    <div class="chatbot-msgs">'
+                + '      <div class="chatbot-pill" data-i18n="chatbot.pill_status">What is the status of my application?</div>'
+                + '      <div class="chatbot-card">'
+                + '        <div class="chatbot-card-h">ID: 25087917</div>'
+                + '        <div class="chatbot-card-b">Vishav Monga <span class="text-muted" data-i18n="common.to">To</span> Vinod Kumar</div>'
+                + '        <div class="chatbot-card-b"><span data-i18n="common.on">On</span>: 05-Aug-2025</div>'
+                + '        <div class="chatbot-card-b"><span data-i18n="common.status">Status</span> : <span class="chatbot-status" data-i18n="projects.status.verified">Verified</span></div>'
+                + '      </div>'
+                + '    </div>'
+                + '  </div>'
+                + '  <div class="chatbot-footer">'
+                + '    <input class="form-control chatbot-input" type="text" placeholder="Write your message here..." data-i18n-placeholder="chatbot.placeholder_message">'
+                + '    <button class="chatbot-send" type="button" aria-label="Send">'
+                + '      <i class="bi bi-send"></i>'
+                + '    </button>'
+                + '  </div>'
+                + '</div>';
+
+            var body = document.body;
+            if (!body) return;
+            while (wrap.firstChild) body.appendChild(wrap.firstChild);
+        } catch (e) {
+        }
     }
 
     function setupThemeToggle() {
@@ -1296,6 +1347,7 @@
             applyTheme(getStoredTheme());
             initI18n();
             mountHeader();
+            mountChatbotWidget();
             setupLanguageSwitcher();
             applyTranslations();
             setupAccessibilityControls();
@@ -1311,6 +1363,7 @@
         applyTheme(getStoredTheme());
         initI18n();
         mountHeader();
+        mountChatbotWidget();
         setupLanguageSwitcher();
         applyTranslations();
         setupAccessibilityControls();

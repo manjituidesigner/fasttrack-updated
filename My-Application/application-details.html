@@ -400,7 +400,7 @@
               <div class="appdet-month-head">
                 <button class="appdet-month-nav" type="button" id="calPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
                 <div class="appdet-month-lbl" id="calMonthLeft">AUG 2025</div>
-                <div class="appdet-month-sp"></div>
+                <button class="appdet-month-nav appdet-month-nav-next" type="button" id="calNextMobile" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
               </div>
               <div class="appdet-month-grid" id="calGridLeft" aria-label="Calendar Left"></div>
             </div>
@@ -559,6 +559,7 @@
               var fill=prog ? prog.querySelector('.appdet-bar-fill') : null;
               var w=fill ? (fill.style.width||'') : '';
               var tip=prog ? (prog.getAttribute('data-tooltip')||'') : '';
+              var progressTxt=(daysTotal ? (daysTotal.textContent||'') : '').trim();
 
               var card=''
                 +'<div class="appdet-mcard">'
@@ -580,7 +581,7 @@
                 +      '<span class="appdet-days good">'+esc(daysGood ? daysGood.textContent : '')+'</span>'
                 +      '<div class="appdet-bar"><span class="appdet-bar-fill" style="width:'+esc(w)+'"></span></div>'
                 +      '<span class="appdet-days appdet-days-total bad">'+esc(daysTotal ? daysTotal.textContent : '')+'</span>'
-                +      '<button class="appdet-cal" type="button" aria-label="Calendar" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>'
+                +      '<button class="appdet-cal" type="button" aria-label="Calendar" data-start-date="'+esc(subDt)+'" data-progress="'+esc(progressTxt)+'" data-bs-toggle="modal" data-bs-target="#wdCalModal"><i class="fa-solid fa-calendar-days"></i></button>'
                 +    '</div>'
                 +    '<div class="appdet-macts">'
                 +      '<button class="appdet-ic" type="button" aria-label="Chat"><i class="fa-solid fa-comment-dots"></i></button>'
@@ -867,21 +868,27 @@
           var btn=e && e.target ? e.target.closest('button.appdet-cal') : null;
           if(!btn) return;
           var tr=btn.closest('tr');
-          if(!tr) return;
-          var tds=tr.querySelectorAll('td');
-          if(tds && tds.length>=3){
-            var dtTxt=(tds[2].textContent||'').trim();
-            var dt=parseDMonY(dtTxt);
-            if(dt){
-              startDate=dt;
-              viewDate=new Date(startDate.getFullYear(), startDate.getMonth(), 1);
-            }
+          var dtTxt='';
+          var progTxt='';
+
+          if(tr){
+            var tds=tr.querySelectorAll('td');
+            if(tds && tds.length>=3) dtTxt=(tds[2].textContent||'').trim();
+            var prog=tr.querySelector('.appdet-days-total');
+            progTxt=prog ? (prog.textContent||'').trim() : '';
+          } else {
+            dtTxt=(btn.getAttribute('data-start-date')||'').trim();
+            progTxt=(btn.getAttribute('data-progress')||'').trim();
+          }
+
+          var dt=parseDMonY(dtTxt);
+          if(dt){
+            startDate=dt;
+            viewDate=new Date(startDate.getFullYear(), startDate.getMonth(), 1);
           }
 
           completedDays=0;
           totalDays=45;
-          var prog=tr.querySelector('.appdet-days-total');
-          var progTxt=prog ? (prog.textContent||'').trim() : '';
           var mm=progTxt.match(/^(\d+)\s*\/\s*(\d+)$/);
           if(mm){
             completedDays=parseInt(mm[1],10) || 0;
@@ -892,6 +899,8 @@
 
       if(calPrev) calPrev.addEventListener('click',function(){ viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()-1,1); renderCal(); });
       if(calNext) calNext.addEventListener('click',function(){ viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()+1,1); renderCal(); });
+      var calNextMobile=document.getElementById('calNextMobile');
+      if(calNextMobile) calNextMobile.addEventListener('click',function(){ viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()+1,1); renderCal(); });
       var calModal=document.getElementById('wdCalModal');
       if(calModal) calModal.addEventListener('shown.bs.modal',function(){ renderCal(); });
     })();

@@ -772,6 +772,158 @@ header.app-header[data-active-page="applications"] ~ .app-body .appdet-cal-body 
   padding: 14px 18px 18px;
 }
 
+@media (max-width: 575.98px) {
+  #wdCalModal .modal-dialog {
+    max-width: 92vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #wdCalModal .modal-content.appdet-modal {
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  #wdCalModal .appdet-cal-hdr {
+    grid-template-columns: 1fr;
+    padding: 14px 16px 10px;
+    gap: 8px;
+    position: relative;
+  }
+
+  #wdCalModal .appdet-cal-hdr-left {
+    padding-right: 0;
+  }
+
+  #wdCalModal .appdet-modal-title {
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  #wdCalModal .appdet-cal-hdr-right {
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  #wdCalModal .appdet-cal-start {
+    margin-right: 0;
+  }
+
+  #wdCalModal .appdet-cal-close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+  }
+
+  #wdCalModal .appdet-cal-hdr-mid {
+    justify-self: start;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  #wdCalModal .appdet-cal-sum {
+    display: inline-block;
+    padding-bottom: 0;
+    border-bottom: 0;
+    line-height: 1.05;
+  }
+
+  #wdCalModal .appdet-cal-count {
+    font-size: 14px;
+    border-right: 0;
+    padding-right: 0;
+    margin-left: auto;
+  }
+
+  #wdCalModal .appdet-cal-start {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #d9dee7;
+  }
+
+  #wdCalModal .appdet-cal-startdt {
+    font-weight: 500;
+  }
+
+  #wdCalModal .appdet-cal-body {
+    padding: 10px 16px 16px;
+  }
+
+  #wdCalModal .appdet-cal-two {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  #wdCalModal .appdet-cal-two .appdet-month:nth-child(2) {
+    display: none;
+  }
+
+  #wdCalModal .appdet-month {
+    position: relative;
+  }
+
+  #wdCalModal .appdet-month-head {
+    grid-template-columns: 32px 1fr 32px;
+    margin-bottom: 10px;
+    padding: 2px 0;
+    border-top: 1px solid #d9dee7;
+    border-bottom: 1px solid #d9dee7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #wdCalModal .appdet-month-lbl {
+    color: #9aa6b8;
+    letter-spacing: 0.6px;
+  }
+
+  #wdCalModal .appdet-month-nav {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: transparent;
+    border: 0;
+  }
+
+  #wdCalModal .appdet-month-nav-next {
+    display: grid;
+    place-items: center;
+  }
+
+  #wdCalModal .appdet-month-grid {
+    gap: 10px;
+  }
+
+  #wdCalModal .appdet-mcell {
+    height: 32px;
+  }
+
+  #wdCalModal .appdet-mcell.day {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0e2a55;
+  }
+
+  #wdCalModal .appdet-mcell.day.rng {
+    background: #bdf2d4;
+  }
+
+  #wdCalModal .appdet-mcell.day.sel {
+    background: #8ae7b2;
+  }
+}
+
 header.app-header[data-active-page="applications"] ~ .app-body .appdet-cal-two {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -815,6 +967,10 @@ header.app-header[data-active-page="applications"] ~ .app-body .appdet-month-nav
 header.app-header[data-active-page="applications"] ~ .app-body .appdet-month-nav i {
   color: #0e2a55;
   font-size: 18px;
+}
+
+header.app-header[data-active-page="applications"] ~ .app-body .appdet-month-nav-next {
+  display: none;
 }
 
 header.app-header[data-active-page="applications"] ~ .app-body .appdet-month-grid {
